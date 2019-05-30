@@ -226,7 +226,7 @@ button {
     }
 }
 /*TITLE*/
-.title {
+.title_top {
     padding-top: 40px;
     padding-bottom: 40px;
     h1{
@@ -958,7 +958,7 @@ button {
                     }
 
                     h4 {
-                        top: 53%;
+                        top: 54%;
                     }
                 }
             }
@@ -975,6 +975,8 @@ button {
             }
 
             .name {
+                text-align: center;
+
                 h3 {
                     text-transform: uppercase;
                     color: @text_dark;
@@ -2110,7 +2112,7 @@ button {
             display: none;
         }
         .burger {
-	padding: 0;
+	        padding: 0;
             background-color: @section_bkg;
             box-shadow: none;
             margin: 0;
@@ -2120,7 +2122,26 @@ button {
             }
 }
         .photo_bl {
-	padding-top: 60px;
+	       padding-top: 60px;
+        .photo {
+            &:hover{
+                .name{
+                    hr{
+                        top: 43%;
+                        width: 180px;
+                    }
+                }
+            }
+            .name {
+                h3 {
+                    font-size: 14px;
+                }
+
+                h4 {
+                    font-size: 12px;
+                }
+            }
+        }
 }
     }
 .footer{
@@ -2266,6 +2287,30 @@ button {
             }
 }
 }
+.team{
+    .photo_bl {
+	    .photo {
+        &:hover{
+            .name{
+                hr{
+                    width: 180px;
+                    top: 42%;
+                }
+            }
+        }
+	    .name {
+
+        h3{
+            font-size: 12px;
+        }
+
+        h4{
+            font-size: 10px;
+        }
+}
+        }
+    }
+}
 }
 
 // Большие девайсы (большие десктопы, >= 992px)
@@ -2306,6 +2351,20 @@ button {
             }
 }
 }
+    .team{
+        .photo_bl {
+	.photo {
+	.name {
+        h3{
+            font-size: 17px;
+        }
+        h4{
+            font-size: 15px;
+        }
+}
+}
+}
+    }
 }
 // Большие девайсы (большие десктопы, >= 1200px)
 @media (min-width: 1200px) { 

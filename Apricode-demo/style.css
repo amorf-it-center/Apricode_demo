@@ -168,11 +168,11 @@ button:focus {
   line-height: 200px;
 }
 /*TITLE*/
-.title {
+.title_top {
   padding-top: 40px;
   padding-bottom: 40px;
 }
-.title h1 {
+.title_top h1 {
   margin: 0;
   position: relative;
   font-size: 28px;
@@ -183,7 +183,7 @@ button:focus {
   margin-bottom: 10px;
   text-align: center;
 }
-.title h1::before {
+.title_top h1::before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -358,6 +358,7 @@ button:focus {
   z-index: 100;
   text-align: center;
   display: flex;
+  justify-content: center;
   align-items: center;
   padding: 30px 60px;
   background-color: #f3f3f3;
@@ -712,22 +713,16 @@ button:focus {
   left: 0;
   z-index: 0;
 }
-.team .left_bkg {
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin-top: 160px;
-  background-color: #f9f9f9;
-  height: 200px;
-  width: 100%;
-  background-size: cover;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  z-index: 100;
-}
 .team .burger {
-  padding-top: 233px;
+  margin-top: 208px;
   position: relative;
   z-index: 110;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 60px;
+  background-color: #f3f3f3;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 .team .burger h3 {
   font-family: 'OnePlusOne 2015', sans-serif;
@@ -767,7 +762,7 @@ button:focus {
   width: 280px;
 }
 .team .photo_bl .photo:hover .name h4 {
-  top: 53%;
+  top: 54%;
 }
 .team .photo_bl .photo .over-color {
   position: absolute;
@@ -778,6 +773,9 @@ button:focus {
   opacity: 0;
   transition: 0.5s;
   cursor: pointer;
+}
+.team .photo_bl .photo .name {
+  text-align: center;
 }
 .team .photo_bl .photo .name h3 {
   text-transform: uppercase;
@@ -1334,6 +1332,12 @@ button:focus {
   width: 36px;
   height: 36px;
 }
+.footer .adress {
+  font-family: 'OnePlusOne 2015', sans-serif;
+}
+.footer .mail {
+  font-family: 'OnePlusOne 2015', sans-serif;
+}
 /*****MEDIA*****/
 @media (max-width: 575.98px) {
   .title {
@@ -1382,6 +1386,9 @@ button:focus {
   .about .btn {
     margin-bottom: 60px;
   }
+  .about .btn span {
+    letter-spacing: 3px;
+  }
   .project {
     padding-top: 60px;
   }
@@ -1398,6 +1405,12 @@ button:focus {
   .project .slide_btn {
     display: block;
     text-align: center;
+  }
+  .service .graphic::after {
+    display: none;
+  }
+  .service .branding::before {
+    display: none;
   }
   .portfolio .custom_bkg {
     display: none;
@@ -1447,7 +1460,8 @@ button:focus {
   .partners .col-md-3 {
     padding-left: 10px;
     padding-right: 10px;
-    height: 180px;
+    height: 200px;
+    margin-bottom: 0;
   }
   .partners .byke {
     width: 100%;
@@ -1527,31 +1541,67 @@ button:focus {
   .footer .footer_contact {
     text-align: center;
   }
+  .footer .footer_contact p {
+    font-size: 14px;
+  }
   .footer .form h3 {
     font-size: 22px;
+  }
+  .footer .form form .btn {
+    margin-bottom: 30px;
+  }
+  .footer .form form .btn span {
+    letter-spacing: 3px;
+  }
+  .footer .footer_menu ul li a {
+    font-size: 14px;
+  }
+  .footer .footer_social h4 {
+    padding-top: 20px;
   }
   .footer .footer_social ul li {
     padding: 0;
     padding-right: 8px;
   }
+  .footer .copyright {
+    padding-top: 30px;
+  }
+  .footer .copyright p {
+    font-size: 9px;
+  }
+  .footer .adress {
+    font-size: 14px;
+  }
+  .footer .mail {
+    font-size: 14px;
+  }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
+  .about {
+    text-align: center;
+  }
   .about .custom_bkg {
     display: none;
   }
-  .about .left_bkg {
-    margin-top: 100px;
-    display: none;
-  }
   .about .burger {
+    margin: 0;
+    box-shadow: none;
     padding-top: 80px;
-    text-align: center;
+  }
+  .about .burger h3 {
+    font-size: 28px;
   }
   .about .vardan {
-    padding-top: 80px;
+    padding-top: 0;
   }
-  .about .sandwich {
-    text-align: center;
+  .about .sandwich h2 {
+    font-size: 60px;
+  }
+  .about .sandwich h3 {
+    font-size: 22px;
+  }
+  .project {
+    padding-top: 0;
   }
   .project .right_bkg {
     display: none;
@@ -1562,16 +1612,33 @@ button:focus {
   .project .tablet_title {
     display: block;
     padding-bottom: 30px;
+    padding-top: 80px;
+    margin: 0;
+  }
+  .project .tablet_title h3 {
+    font-size: 28px;
   }
   .project .slide_btn {
     display: block;
     text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
   }
   .service .custom_bkg {
     display: none;
   }
   .portfolio .custom_bkg {
     display: none;
+  }
+  .portfolio .portfolio_menu {
+    margin: 0;
+  }
+  .portfolio .portfolio_menu .project-filter {
+    margin: 0;
+    margin-top: 40px;
+  }
+  .portfolio .portfolio_menu .project-filter li {
+    margin-right: 10px;
   }
   .partners .top_bkg {
     display: none;
@@ -1590,7 +1657,11 @@ button:focus {
     background-color: #f3f3f3;
     box-shadow: none;
     text-align: center;
-    margin-top: 60px;
+    padding-top: 80px;
+    margin: 0;
+  }
+  .partners .burger h3 {
+    font-size: 28px;
   }
   .partners .col-md-3 {
     padding-left: 10px;
@@ -1668,6 +1739,53 @@ button:focus {
   }
   .partners .keys::after {
     display: none;
+  }
+  .team .top_bkg {
+    display: none;
+  }
+  .team .line {
+    display: none;
+  }
+  .team .burger {
+    padding: 0;
+    background-color: #f3f3f3;
+    box-shadow: none;
+    margin: 0;
+    padding-top: 80px;
+  }
+  .team .burger h3 {
+    font-size: 28px;
+  }
+  .team .photo_bl {
+    padding-top: 60px;
+  }
+  .team .photo_bl .photo:hover .name hr {
+    top: 43%;
+    width: 180px;
+  }
+  .team .photo_bl .photo .name h3 {
+    font-size: 14px;
+  }
+  .team .photo_bl .photo .name h4 {
+    font-size: 12px;
+  }
+  .footer .form h3 {
+    font-size: 28px;
+  }
+  .footer .form form .btn {
+    margin-bottom: 30px;
+  }
+  .footer .footer_menu h4 {
+    padding-top: 20px;
+  }
+  .footer .footer_social h4 {
+    padding-top: 20px;
+  }
+  .footer .footer_contact h4 {
+    padding-top: 20px;
+  }
+  .footer .copyright {
+    padding-top: 30px;
   }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -1772,6 +1890,16 @@ button:focus {
   .partners .keys::after {
     display: none;
   }
+  .team .photo_bl .photo:hover .name hr {
+    width: 180px;
+    top: 42%;
+  }
+  .team .photo_bl .photo .name h3 {
+    font-size: 12px;
+  }
+  .team .photo_bl .photo .name h4 {
+    font-size: 10px;
+  }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .project .burger {
@@ -1791,5 +1919,11 @@ button:focus {
   }
   .partners .keys::before {
     width: 200px;
+  }
+  .team .photo_bl .photo .name h3 {
+    font-size: 17px;
+  }
+  .team .photo_bl .photo .name h4 {
+    font-size: 15px;
   }
 }
