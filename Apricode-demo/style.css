@@ -56,7 +56,7 @@ button:focus {
 }
 .header {
   width: 100%;
-  z-index: 2000;
+  z-index: 1000;
   padding: 0;
   position: absolute;
   top: 0;
@@ -102,6 +102,59 @@ button:focus {
 .header .navbar .navbar-nav a:hover::before {
   width: 92%;
 }
+.header .navbar .navbar-toggler {
+  border: none;
+}
+.header .navbar .navbar-toggler .nav-icon-5 {
+  width: 30px;
+  height: 25px;
+  margin: 10px 10px;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+.header .navbar .navbar-toggler .nav-icon-5 span {
+  background-color: #f9f9f9;
+  position: absolute;
+  border-radius: 2px;
+  transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  width: 100%;
+  height: 4px;
+  transition-duration: 500ms;
+}
+.header .navbar .navbar-toggler .nav-icon-5 span:nth-child(1) {
+  top: 0px;
+  left: 0px;
+}
+.header .navbar .navbar-toggler .nav-icon-5 span:nth-child(2) {
+  top: 10px;
+  left: 0px;
+  opacity: 1;
+}
+.header .navbar .navbar-toggler .nav-icon-5 span:nth-child(3) {
+  bottom: 0px;
+  left: 0px;
+}
+.header .navbar .navbar-toggler .nav-icon-5:not(.open):hover span:nth-child(1) {
+  transform: rotate(-3deg) scaleY(1.1);
+}
+.header .navbar .navbar-toggler .nav-icon-5:not(.open):hover span:nth-child(2) {
+  transform: rotate(3deg) scaleY(1.1);
+}
+.header .navbar .navbar-toggler .nav-icon-5:not(.open):hover span:nth-child(3) {
+  transform: rotate(-4deg) scaleY(1.1);
+}
+.header .navbar .navbar-toggler .nav-icon-5.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 13px;
+}
+.header .navbar .navbar-toggler .nav-icon-5.open span:nth-child(2) {
+  opacity: 0;
+}
+.header .navbar .navbar-toggler .nav-icon-5.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 13px;
+}
 .active {
   opacity: 1;
   background-color: rgba(32, 32, 44, 0.95);
@@ -117,6 +170,75 @@ button:focus {
 }
 .active .navbar img {
   width: 54px;
+}
+/*SELECT LANG*/
+.flag-AM {
+  background: url(images/flags/flags.png) no-repeat 0 9px;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: baseline;
+  position: relative;
+  overflow: hidden;
+  width: 16px;
+  height: 9px;
+  font-size: 0;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  background-position: 0 -63px;
+}
+.flag-RU {
+  background: url(images/flags/flags.png) no-repeat 0 9px;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: baseline;
+  position: relative;
+  overflow: hidden;
+  width: 16px;
+  height: 9px;
+  font-size: 0;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  background-position: 0 -1764px;
+}
+.select_lang {
+  position: absolute;
+  top: 7.5%;
+  right: 25%;
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  transition: 0.5s;
+}
+.select_lang:hover .am_lang {
+  display: block;
+}
+.select_lang li {
+  list-style: none;
+}
+.select_lang a {
+  display: block;
+  text-decoration: none;
+  color: #f9f9f9;
+  font-family: 'OnePlusOne 2015', sans-serif;
+  font-size: 14px;
+}
+.select_lang a i {
+  margin-left: 4px;
+}
+.select_lang a img {
+  margin-left: 10px;
+  margin-top: -2px;
+}
+.select_lang .am_lang {
+  display: none;
 }
 /*SLIDE SHOW */
 #container #slides img {
@@ -168,29 +290,30 @@ button:focus {
   line-height: 200px;
 }
 /*TITLE*/
-.title_top {
-  padding-top: 40px;
+.title_general {
+  text-align: center;
+  padding-top: 70px;
   padding-bottom: 40px;
 }
-.title_top h1 {
-  margin: 0;
-  position: relative;
-  font-size: 28px;
-  letter-spacing: 20px;
-  text-transform: uppercase;
+.title_general h1 {
   font-family: 'OnePlusOne 2015', sans-serif;
   color: #707070;
-  margin-bottom: 10px;
-  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 12px;
+  font-size: calc(15vw);
+  margin-bottom: 0;
 }
-.title_top h1::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
+.title_general hr {
+  width: 100px;
   height: 2px;
-  width: 100%;
   background-color: #fabf99;
+  border: 0;
+  margin-top: 10px;
+}
+.title_general h3 {
+  font-size: calc(10.84vw);
+  font-family: 'Mont-ExtraLightDEMO', sans-serif;
+  color: #707070;
 }
 /* HOME SECTION*/
 .home-section {
@@ -330,69 +453,45 @@ button:focus {
 .home-section .follow_us .social ul li {
   padding-bottom: 18px;
 }
-/* ABOUT SECTION*/
-.about {
-  position: relative;
-  height: 100%;
+/*ABOUT SECTION*/
+.about_section {
   background-color: #f3f3f3;
+  padding-bottom: 80px;
 }
-.about .vardan {
-  padding-top: 100px;
-  position: relative;
-  padding-left: 35px;
-}
-.about .custom_bkg {
-  position: absolute;
-  background-color: #f9f9f9;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  background-size: cover;
-  display: block;
-  right: calc(302%);
-  z-index: 0;
-}
-.about .burger {
-  margin-top: 333px;
-  position: relative;
-  z-index: 100;
+.about_section .about_logo {
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px 60px;
-  background-color: #f3f3f3;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
-.about .burger h3 {
-  font-family: 'OnePlusOne 2015', sans-serif;
-  font-size: 35px;
-  margin: 0;
+.about_section .about_logo img {
+  padding-top: 32px;
+  width: 100%;
+  height: 100%;
 }
-.about .burger span {
-  color: #fabf99;
-  text-transform: uppercase;
+.about_section .about_info {
+  padding-top: 10px;
+  padding-left: 30px;
 }
-.about .sandwich h2 {
+.about_section .about_info h2 {
   font-family: 'Impact', sans-serif;
-  font-size: 80px;
+  font-size: calc(19.5vw);
   color: #707070;
 }
-.about .sandwich h3 {
+.about_section .about_info h3 {
   text-transform: uppercase;
-  font-size: 25px;
+  font-size: calc(14.91vw);
   padding-bottom: 10px;
   color: #707070;
   font-family: 'OnePlusOne 2015', sans-serif;
 }
-.about .sandwich p {
+.about_section .about_info p {
   font-family: 'OnePlusOne 2015', sans-serif;
   color: #707070;
+  font-size: calc(14.16vw);
 }
-.about .btn {
+.about_section .about_btn {
   border: 1.2px solid #fabf99;
+  background-color: #f3f3f3;
   position: relative;
-  margin-top: 30px;
+  margin-top: 25px;
   z-index: 10;
   border-radius: 0;
   color: #fff;
@@ -401,16 +500,16 @@ button:focus {
   overflow: hidden;
   cursor: pointer;
   padding: 10px 40px;
-  margin-bottom: 125px;
+  margin-left: 30px;
 }
-.about .btn span {
+.about_section .about_btn span {
   letter-spacing: 8px;
   color: #fabf99;
   font-size: 15px;
   transition: 0.5s all ease;
   font-family: 'OnePlusOne 2015', sans-serif;
 }
-.about .btn::before {
+.about_section .about_btn::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -420,48 +519,52 @@ button:focus {
   z-index: -1;
   transition: 0.5s all ease;
 }
-.about .btn::before {
+.about_section .about_btn::before {
   width: 100%;
   height: 0;
   transform: translate(-50%, -50%) rotate(45deg);
 }
-.about .btn:hover::before {
+.about_section .about_btn:hover::before {
   height: 600%;
 }
-.about .btn:hover span {
+.about_section .about_btn:hover span {
   color: #707070;
 }
-/*PROJECT SECTION*/
-.project {
-  position: relative;
-  padding-top: 130px;
-}
-.project .tablet_title {
-  display: none;
+.about_section .about_slogan {
+  margin-top: 100px;
   text-align: center;
+  padding-top: 45%;
 }
-.project .tablet_title h3 {
+.about_section .about_slogan h3 {
+  font-size: calc(15.75vw);
   font-family: 'OnePlusOne 2015', sans-serif;
-  font-size: 35px;
-}
-.project .tablet_title span {
-  color: #fabf99;
-  text-transform: uppercase;
-}
-.project .photo img {
-  width: 100%;
-  height: 100%;
-  box-shadow: 0 0px 40px 0 rgba(0, 0, 0, 0.6);
-}
-.project .slide_btn {
-  display: inline-block;
-  font-size: 20px;
-  padding-top: 30px;
-}
-.project .slide_btn span {
   color: #707070;
 }
-.project .slide_btn .next::before {
+.about_section .about_slogan h3 span {
+  text-transform: uppercase;
+  color: #fabf99;
+}
+.about_section .photo_project {
+  margin-top: 100px;
+  box-shadow: 0 0 34px rgba(0, 0, 0, 0.55);
+}
+.about_section .photo_project img {
+  height: 100%;
+  width: 100%;
+}
+.about_section .s {
+  padding-top: 30px;
+  text-align: right;
+}
+.about_section .s .slide_btn {
+  display: inline-block;
+  bottom: 90px;
+  font-size: 20px;
+}
+.about_section .s .slide_btn span {
+  color: #707070;
+}
+.about_section .s .slide_btn .next::before {
   content: '';
   position: absolute;
   width: 15px;
@@ -472,11 +575,11 @@ button:focus {
   transform: translate(-100%, -50%) rotate(-45deg);
   transition: 0.2s;
 }
-.project .slide_btn .next span {
+.about_section .s .slide_btn .next span {
   overflow: hidden;
   position: relative;
 }
-.project .slide_btn .next span::after {
+.about_section .s .slide_btn .next span::after {
   content: '';
   width: 0px;
   height: 1.5px;
@@ -486,16 +589,16 @@ button:focus {
   right: 0;
   transform: translate(0%, -50%);
 }
-.project .slide_btn .next:hover::before {
+.about_section .s .slide_btn .next:hover::before {
   border-color: #fabf99;
   transform: translate(92%, -50%) rotate(-45deg);
 }
-.project .slide_btn .next:hover span::after {
+.about_section .s .slide_btn .next:hover span::after {
   width: 30px;
   background-color: #fabf99;
   left: 100%;
 }
-.project .slide_btn .prev::before {
+.about_section .s .slide_btn .prev::before {
   content: '';
   position: absolute;
   width: 15px;
@@ -506,11 +609,11 @@ button:focus {
   transform: translate(0%, -50%) rotate(-45deg);
   transition: 0.2s;
 }
-.project .slide_btn .prev span {
+.about_section .s .slide_btn .prev span {
   overflow: hidden;
   position: relative;
 }
-.project .slide_btn .prev span::after {
+.about_section .s .slide_btn .prev span::after {
   content: '';
   width: 0px;
   height: 1.5px;
@@ -520,300 +623,268 @@ button:focus {
   right: 0;
   transform: translate(-92%, -50%);
 }
-.project .slide_btn .prev:hover::before {
+.about_section .s .slide_btn .prev:hover::before {
   border-color: #fabf99;
   transform: translate(-180%, -50%) rotate(-45deg);
 }
-.project .slide_btn .prev:hover span::after {
+.about_section .s .slide_btn .prev:hover span::after {
   width: 30px;
   background-color: #fabf99;
   right: 100%;
 }
-.project .burger {
-  background-color: #f3f3f3;
-  margin-top: 198px;
-  text-align: center;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-}
-.project .burger h3 {
-  font-family: 'OnePlusOne 2015', sans-serif;
-  font-size: 35px;
-  margin: 0;
-  padding: 30px 60px;
-}
-.project .burger span {
-  color: #fabf99;
-  text-transform: uppercase;
-}
 /*SERVICE SECTION*/
-.service {
-  position: relative;
+.service_section {
   background-color: #20202c;
-  height: 100%;
+  padding-bottom: 80px;
 }
-.service .custom_bkg {
-  position: absolute;
-  background-color: #f9f9f9;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  background-size: cover;
-  display: block;
-  left: calc(302%);
-  z-index: 0;
+.service_section .title_general h1 {
+  color: #fcfcfc;
 }
-.service .col-md-3 h4 {
-  text-transform: uppercase;
-  font-family: 'Mont-ExtraLightDEMO', sans-serif;
-  color: #fabf99;
+.service_section .title_general h3 {
+  color: #fcfcfc;
+}
+.service_section .serv_logo {
   text-align: center;
-  padding-top: 150px;
-  color: #707070;
 }
-.service .col-md-3 svg {
+.service_section .serv_logo h2 {
+  font-family: 'Mont-ExtraLightDEMO', sans-serif;
+  color: #707070;
+  text-transform: uppercase;
+  font-size: calc(14.5vw);
+  padding-top: 20px;
+  padding-bottom: 30px;
+  transition: 0.5s;
+}
+.service_section .serv_logo ul {
+  padding: 0;
+  list-style: none;
+}
+.service_section .serv_logo ul li {
+  color: #fcfcfc;
+  font-size: calc(0.4vw 14px);
+  position: relative;
+  padding: 0;
+  font-family: 'Mont-ExtraLightDEMO', sans-serif;
+}
+.service_section .serv_logo ul li::before {
+  content: '';
+  position: absolute;
   display: block;
-  margin: 0 auto;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #fabf99;
+  top: 27%;
+  margin-right: 10px;
+}
+.service_section .serv_logo svg {
+  fill: red;
+}
+.service_section .serv_logo a {
+  text-decoration: none;
+}
+.service_section .serv_logo a:hover h2 {
+  color: #fabf99;
+}
+.service_section .serv_logo a:hover svg {
+  fill: #fabf99;
+}
+/*PRICE SECTION*/
+.price_section {
+  position: relative;
+  text-align: center;
+  background-color: #f3f3f3;
+  padding-bottom: 80px;
+}
+.price_section .price_box {
+  background-color: #fcfcfc;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
+}
+.price_section .price_box h4 {
+  font-size: calc(14.7vw);
+  font-family: 'OnePlusOne 2015', sans-serif;
+  text-transform: uppercase;
+  padding-top: 50px;
+}
+.price_section .price_box hr {
+  width: 100px;
+  background-color: #fabf99;
+  height: 2px;
+  border: 0;
+}
+.price_section .price_box .price_item {
+  cursor: pointer;
+  transition: 0.5s;
+}
+.price_section .price_box .price_item h5 {
+  padding-top: 20px;
+  font-size: calc(14.5vw);
+  font-family: 'Mont-ExtraLightDEMO', sans-serif;
+}
+.price_section .price_box .price_item p {
+  padding-bottom: 20px;
+  color: #fabf99;
+  font-family: 'Mont-ExtraLightDEMO', sans-serif;
+  font-size: calc(14.7vw);
+  margin: 0;
+}
+.price_section .price_box .price_item:hover {
+  background-color: #20202c;
+}
+.price_section .price_box .price_item:hover h5 {
+  color: #fcfcfc;
+}
+.price_section .modal_window {
+  position: absolute;
+  z-index: 2000;
+  box-shadow: 0 0 79px rgba(0, 0, 0, 0.2);
+  padding-bottom: 80px;
+  right: 15%;
+  left: 15%;
+  top: 5%;
+  width: 70%;
+  position: fixed;
+  background-color: #f9f9f9;
+  display: block;
+}
+.price_section .modal_window .modal_title {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: relative;
+}
+.price_section .modal_window .modal_title h2 {
+  font-size: calc(15vw);
+  font-family: 'OnePlusOne 2015', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  color: #707070;
+  letter-spacing: 12px;
+}
+.price_section .modal_window .modal_title hr {
+  width: 100px;
+  height: 2px;
+  background-color: #fabf99;
+  border: 0;
+  margin-top: 10px;
+}
+.price_section .modal_window .modal_title .close {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 5%;
+  top: 28%;
+  cursor: pointer;
+  transition: color 200ms, transform 500ms;
+}
+.price_section .modal_window .modal_title .close:hover,
+.price_section .modal_window .modal_title .close:focus {
+  color: #fabf99;
+  transform: rotate(360deg);
+}
+.price_section .modal_window .questions {
+  position: relative;
+}
+.price_section .modal_window .questions::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 1px;
+  height: 350px;
+  background-color: #707070;
+  top: 0;
+  right: 0;
+}
+.price_section .modal_window .questions h3 {
+  font-size: calc(14.7vw);
+  color: #707070;
+  font-family: 'Mont-ExtraLightDEMO', sans-serif;
+}
+.price_section .modal_window .questions ul {
+  margin: 0;
+  padding: 0;
+  padding-top: 30px;
+  list-style: none;
+  margin-left: 60px;
+}
+.price_section .modal_window .questions ul li {
+  font-size: calc(14.5vw);
+  color: #707070;
+  font-family: 'Mont-ExtraLightDEMO', sans-serif;
+  padding-bottom: 20px;
+  position: relative;
+  text-align: left;
+  padding-left: 20px;
+}
+.price_section .modal_window .questions ul li::before {
+  position: absolute;
+  content: '';
+  display: block;
+  height: 10px;
+  width: 10px;
+  background-color: #fabf99;
+  border-radius: 50%;
+  top: 20%;
+  left: 0;
+}
+.price_section .modal_window .desc_info h3 {
+  font-size: calc(14.7vw);
+  color: #707070;
+  font-family: 'Mont-ExtraLightDEMO', sans-serif;
+}
+.price_section .modal_window .desc_info p {
+  padding-top: 30px;
+  font-family: 'Mont-ExtraLightDEMO', sans-serif;
+  font-weight: 700;
+  font-size: calc(12.2vw);
+  color: #707070;
+  padding-right: 60px;
+  padding-left: 60px;
+  text-align: left;
+}
+.price_section .modal_window .col-md-6 {
+  padding: 0;
+}
+.price_section .modal_window .modal_btn {
+  border: 1.2px solid #fabf99;
+  background-color: #f9f9f9;
+  position: relative;
+  margin-top: 35px;
+  z-index: 10;
+  border-radius: 0;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 10px 40px;
+}
+.price_section .modal_window .modal_btn span {
+  letter-spacing: 8px;
+  color: #fabf99;
+  font-size: 15px;
+  transition: 0.5s all ease;
+  font-family: 'OnePlusOne 2015', sans-serif;
+}
+.price_section .modal_window .modal_btn::before {
+  content: '';
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  fill: #707070;
-  stroke: #707070;
+  background: #fabf99;
+  z-index: -1;
+  transition: 0.5s all ease;
 }
-.service .service_logo {
-  padding-top: 150px;
-  padding-bottom: 150px;
-}
-.service .design {
-  height: 220px;
+.price_section .modal_window .modal_btn::before {
   width: 100%;
-  position: relative;
-  transition: 0.5s;
-  cursor: pointer;
+  height: 0;
+  transform: translate(-50%, -50%) rotate(45deg);
 }
-.service .design::before {
-  content: '';
-  display: block;
-  width: 2px;
-  top: 0;
-  right: -15px;
-  position: absolute;
-  background-color: #707070;
-  height: 215px;
+.price_section .modal_window .modal_btn:hover::before {
+  height: 600%;
 }
-.service .design:hover {
-  background-color: #707070;
-}
-.service .design:hover h4 {
-  color: #fabf99;
-}
-.service .design:hover svg {
-  fill: #fabf99;
-  stroke: #fabf99;
-}
-.service .web {
-  height: 220px;
-  width: 100%;
-  position: relative;
-  cursor: pointer;
-  transition: 0.5s;
-}
-.service .web:hover {
-  background-color: #707070;
-}
-.service .web:hover h4 {
-  color: #fabf99;
-}
-.service .web:hover svg {
-  fill: #fabf99;
-  stroke: #fabf99;
-}
-.service .graphic {
-  height: 220px;
-  width: 100%;
-  position: relative;
-  margin-top: 28px;
-  cursor: pointer;
-  transition: 0.5s;
-}
-.service .graphic::after {
-  content: '';
-  display: block;
-  background-color: #707070;
-  width: 310px;
-  height: 2px;
-  top: -14px;
-  left: 0;
-  position: absolute;
-}
-.service .graphic::before {
-  content: '';
-  display: block;
-  background-color: #707070;
-  width: 2px;
-  height: 215px;
-  position: absolute;
-  right: -15px;
-  bottom: 0;
-}
-.service .graphic:hover {
-  background-color: #707070;
-}
-.service .graphic:hover h4 {
-  color: #fabf99;
-}
-.service .graphic:hover svg {
-  fill: #fabf99;
-  stroke: #fabf99;
-}
-.service .branding {
-  height: 220px;
-  width: 100%;
-  padding: 10px;
-  position: relative;
-  margin-top: 28px;
-  cursor: pointer;
-  transition: 0.5s;
-}
-.service .branding::before {
-  content: '';
-  width: 310px;
-  height: 2px;
-  background-color: #707070;
-  position: absolute;
-  top: -14px;
-  right: 0;
-}
-.service .branding:hover {
-  background-color: #707070;
-}
-.service .branding:hover h4 {
-  color: #fabf99;
-}
-.service .branding:hover svg {
-  fill: #fabf99;
-  stroke: #fabf99;
-}
-/*TEAM SECTION*/
-.team {
-  position: relative;
-  background-color: #f3f3f3;
-  height: 100%;
-  padding-bottom: 100px;
-}
-.team .top_bkg {
-  position: absolute;
-  background-color: #f9f9f9;
-  top: 0;
-  width: 100%;
-  height: 270px;
-  right: 0;
-  background-size: cover;
-  display: block;
-  left: 0;
-  z-index: 0;
-}
-.team .burger {
-  margin-top: 208px;
-  position: relative;
-  z-index: 110;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px 60px;
-  background-color: #f3f3f3;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-}
-.team .burger h3 {
-  font-family: 'OnePlusOne 2015', sans-serif;
-  font-size: 35px;
-}
-.team .burger span {
-  color: #fabf99;
-  text-transform: uppercase;
-}
-.team .line {
-  position: absolute;
-  right: 0;
-  background-color: #fabf99;
-  height: 2px;
-  background-size: cover;
-  width: 100%;
-  z-index: 90;
-  top: 260px;
-}
-.team .photo_bl {
-  padding-top: 165px;
-  position: relative;
-}
-.team .photo_bl .photo {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-}
-.team .photo_bl .photo:hover .over-color {
-  opacity: 0.7;
-}
-.team .photo_bl .photo:hover .name h3 {
-  top: 45%;
-}
-.team .photo_bl .photo:hover .name hr {
-  width: 280px;
-}
-.team .photo_bl .photo:hover .name h4 {
-  top: 54%;
-}
-.team .photo_bl .photo .over-color {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  background-color: black;
-  opacity: 0;
-  transition: 0.5s;
-  cursor: pointer;
-}
-.team .photo_bl .photo .name {
-  text-align: center;
-}
-.team .photo_bl .photo .name h3 {
-  text-transform: uppercase;
-  color: #fcfcfc;
-  font-family: 'Mont-ExtraLightDEMO', sans-serif;
-  font-size: 20px;
-  position: absolute;
-  top: -45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: 0.5s;
-}
-.team .photo_bl .photo .name hr {
-  background-color: #fabf99;
-  height: 1px;
-  width: 0px;
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: 0.4s;
-}
-.team .photo_bl .photo .name h4 {
-  font-family: 'Mont-ExtraLightDEMO', sans-serif;
-  color: #fcfcfc;
-  font-size: 18px;
-  position: absolute;
-  top: 153%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: 0.5s;
-}
-.team img {
-  width: 100%;
-  height: 100%;
-}
-.team .col-md-4 {
-  margin-bottom: 20px;
+.price_section .modal_window .modal_btn:hover span {
+  color: #707070;
 }
 /*PORTFOLIO SECTION*/
 .portfolio {
@@ -822,23 +893,14 @@ button:focus {
   padding-bottom: 100px;
   background-color: #20202c;
 }
-.portfolio .custom_bkg {
-  position: absolute;
-  background-color: #f9f9f9;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  background-size: cover;
-  display: block;
-  right: calc(302%);
-  z-index: 0;
+.portfolio .title_general h1 {
+  color: #fcfcfc !important;
 }
 .portfolio .projects-holder .mix {
   display: none;
 }
 .portfolio .portfolio_menu ul {
   padding: 0;
-  margin-top: 30px;
   text-align: center;
   margin-left: 40px;
 }
@@ -846,9 +908,13 @@ button:focus {
   display: inline-block;
   margin-right: 25px;
   transition: 0.5s;
+  cursor: pointer;
 }
 .portfolio .portfolio_menu ul li:hover {
   transform: scale(1.2);
+}
+.portfolio .portfolio_menu ul li:hover span {
+  color: #fabf99;
 }
 .portfolio .portfolio_menu ul li span {
   font-size: 16px;
@@ -856,11 +922,6 @@ button:focus {
   text-transform: uppercase;
   color: #fcfcfc;
   text-decoration: none;
-  transition: 0.5s;
-  cursor: pointer;
-}
-.portfolio .portfolio_menu ul li span:hover {
-  color: #fabf99;
 }
 .portfolio img {
   width: 100%;
@@ -902,7 +963,7 @@ button:focus {
   text-transform: uppercase;
   color: #fcfcfc;
   font-family: 'Mont-ExtraLightDEMO', sans-serif;
-  font-size: 22px;
+  font-size: calc(14.7vw);
   transform: scale(3, 3);
   width: 100%;
   transition: 0.5s;
@@ -919,7 +980,8 @@ button:focus {
 .portfolio .photo .name h4 {
   font-family: 'Mont-ExtraLightDEMO', sans-serif;
   color: #fcfcfc;
-  font-size: 16px;
+  padding-top: 10px;
+  font-size: calc(14.16vw);
   transition: 0.5s;
   transform: scale(3, 3);
 }
@@ -932,230 +994,108 @@ button:focus {
   margin-top: 30px;
 }
 /*PARTNERS SECTION*/
-.partners {
-  position: relative;
+.partners_section {
   background-color: #f3f3f3;
+  padding-bottom: 80px;
 }
-.partners .top_bkg {
-  position: absolute;
-  background-color: #f9f9f9;
-  top: 0;
-  width: 100%;
-  height: 270px;
-  right: 0;
-  background-size: cover;
-  display: block;
-  left: 0;
-  z-index: 0;
-}
-.partners .burger {
-  background-color: #f9f9f9;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  padding: 30px 60px;
-  margin-top: 210px;
-  position: relative;
-  z-index: 100;
+.partners_section .partners_logo {
   text-align: center;
 }
-.partners .burger h3 {
-  font-family: 'OnePlusOne 2015', sans-serif;
-  font-size: 35px;
-  margin: 0;
+.partners_section .partners_logo img {
+  margin: 0 20px;
 }
-.partners .burger span {
-  color: #fabf99;
-  text-transform: uppercase;
+.partners_section .partners_logo hr {
+  border: 0;
+  height: 2px;
+  background-color: #20202c;
+  margin-top: 40px;
 }
-.partners .line {
+.partners_section .feed_box {
+  background-color: #fcfcfc;
+  padding: 40px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
+}
+.partners_section .feed_box:hover {
+  background-color: #20202c;
+}
+.partners_section .feed_box:hover .name {
+  color: #fcfcfc;
+}
+.partners_section .feed_box:hover .date {
+  color: #fcfcfc;
+}
+.partners_section .feed_box:hover h4 {
+  color: #fcfcfc;
+}
+.partners_section .feed_box:hover p {
+  color: #fcfcfc;
+}
+.partners_section .feed_box .date {
+  font-family: 'Mont-ExtraLightDEMO', sans-serif;
+  color: #707070;
+  margin-bottom: 30px;
+  position: relative;
+  padding: 0;
+}
+.partners_section .feed_box .date::before {
   position: absolute;
-  left: 0;
+  content: '';
+  display: block;
   background-color: #fabf99;
   height: 2px;
-  background-size: cover;
-  width: 100%;
-  z-index: 5;
-  top: 260px;
+  width: 50px;
+  bottom: 0;
 }
-.partners .part_bl {
-  margin-top: 120px;
+.partners_section .feed_box h4 {
+  font-family: 'OnePlusOne 2015', sans-serif;
+  color: #707070;
 }
-.partners .col-md-3 {
-  margin-bottom: 10px;
+.partners_section .feed_box p {
+  font-family: 'Mont-ExtraLightDEMO', sans-serif;
+  color: #707070;
+  padding-bottom: 40px;
+}
+.partners_section .feed_box .name {
+  font-family: 'OnePlusOne 2015', sans-serif;
+  text-transform: uppercase;
+  position: relative;
   padding: 0;
-  height: 250px;
 }
-.partners .col-md-3:hover img {
-  opacity: 1;
-}
-.partners .col-md-3 img {
-  height: 180px;
-  width: 180px;
+.partners_section .feed_box .name::before {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  opacity: 0.5;
-  transform: translate(-50%, -50%);
-}
-.partners .keys {
-  width: 90%;
-  height: 90%;
-  position: relative;
-}
-.partners .keys::after {
   content: '';
   display: block;
-  position: absolute;
-  background-color: #20202c;
-  top: 0;
-  right: -15px;
-  width: 1px;
-  height: 215px;
-  opacity: 0.5;
+  background-color: #fabf99;
+  height: 2px;
+  width: 80px;
+  top: -10%;
 }
-.partners .keys::before {
-  content: '';
-  display: block;
-  position: absolute;
-  background-color: #20202c;
-  left: 0;
-  bottom: -17px;
-  width: 245px;
-  height: 1px;
-  opacity: 0.5;
+.partners_section .btn_group {
+  text-align: center;
 }
-.partners .motor {
-  width: 90%;
-  height: 90%;
-  position: relative;
-}
-.partners .motor::after {
-  content: '';
-  display: block;
-  position: absolute;
-  background-color: #20202c;
-  top: 0;
-  right: -16px;
-  width: 1px;
-  height: 215px;
-  opacity: 0.5;
-}
-.partners .motor::before {
-  content: '';
-  display: block;
-  position: absolute;
-  background-color: #20202c;
-  left: 50%;
-  transform: translate(-50%);
-  bottom: -17px;
-  width: 245px;
-  height: 1px;
-  opacity: 0.5;
-}
-.partners .glasses {
-  width: 90%;
-  height: 90%;
-  position: relative;
-}
-.partners .glasses::after {
-  content: '';
-  display: block;
-  position: absolute;
-  background-color: #20202c;
-  top: 0;
-  right: -16px;
-  width: 1px;
-  height: 215px;
-  opacity: 0.5;
-}
-.partners .glasses::before {
-  content: '';
-  display: block;
-  position: absolute;
-  background-color: #20202c;
-  left: 50%;
-  transform: translate(-50%);
-  bottom: -17px;
-  width: 245px;
-  height: 1px;
-  opacity: 0.5;
-}
-.partners .byke {
-  width: 90%;
-  height: 90%;
-  position: relative;
-}
-.partners .byke::before {
-  content: '';
-  display: block;
-  position: absolute;
-  background-color: #20202c;
-  right: 0;
-  bottom: -17px;
-  width: 245px;
-  height: 1px;
-  opacity: 0.5;
-}
-.partners .keys1 {
-  width: 90%;
-  height: 90%;
-  position: relative;
-}
-.partners .keys1::after {
-  content: '';
-  display: block;
-  position: absolute;
-  background-color: #20202c;
-  bottom: 0;
-  right: -15px;
-  width: 1px;
-  height: 215px;
-  opacity: 0.5;
-}
-.partners .motor2 {
-  width: 90%;
-  height: 90%;
-  position: relative;
-}
-.partners .motor2::after {
-  content: '';
-  display: block;
-  position: absolute;
-  background-color: #20202c;
-  bottom: 0;
-  right: -16px;
-  width: 1px;
-  height: 215px;
-  opacity: 0.5;
-}
-.partners .glasses3 {
-  width: 90%;
-  height: 90%;
-  position: relative;
-}
-.partners .glasses3::after {
-  content: '';
-  display: block;
-  position: absolute;
-  background-color: #20202c;
-  bottom: 0;
-  right: -15px;
-  width: 1px;
-  height: 215px;
-  opacity: 0.5;
-}
-.partners .byke4 {
-  width: 90%;
-  height: 90%;
-  position: relative;
+.partners_section .btn_group button {
+  background-color: #fabf99;
+  height: 10px;
+  width: 10px;
+  border: 0;
+  border-radius: 50%;
+  padding: 0 ;
+  margin: 0 5px;
 }
 /*FOOTER SECTION*/
 .footer {
   position: relative;
   background-color: #20202c;
 }
+.footer .title_general h1 {
+  color: #fcfcfc !important;
+}
 .footer .form h3 {
-  font-family: 'OnePlusOne 2015', sans-serif;
-  font-size: 35px;
+  font-family: 'Mont-ExtraLightDEMO', sans-serif;
+  font-size: calc(15.75vw);
   color: #fcfcfc;
   padding-top: 60px;
 }
@@ -1174,6 +1114,7 @@ button:focus {
   padding: 20px;
   padding-left: 10px;
   color: #fcfcfc;
+  font-family: 'Mont-ExtraLightDEMO', sans-serif;
 }
 .footer .form form textarea {
   width: 100%;
@@ -1184,10 +1125,12 @@ button:focus {
   padding-left: 10px;
   padding-top: 40px;
   color: #fcfcfc;
+  font-family: 'Mont-ExtraLightDEMO', sans-serif;
 }
-.footer .form form .btn {
+.footer .form form .btn_footer {
   border: 1.2px solid #fabf99;
   position: relative;
+  background-color: #20202c;
   margin-top: 30px;
   z-index: 10;
   border-radius: 0;
@@ -1197,16 +1140,16 @@ button:focus {
   overflow: hidden;
   cursor: pointer;
   padding: 10px 40px;
-  margin-bottom: 125px;
+  margin-bottom: 80px;
 }
-.footer .form form .btn span {
+.footer .form form .btn_footer span {
   letter-spacing: 12px;
   color: #fabf99;
   font-size: 15px;
   transition: 0.5s all ease;
   font-family: 'OnePlusOne 2015', sans-serif;
 }
-.footer .form form .btn::before {
+.footer .form form .btn_footer::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -1216,15 +1159,15 @@ button:focus {
   z-index: -1;
   transition: 0.5s all ease;
 }
-.footer .form form .btn::before {
+.footer .form form .btn_footer::before {
   width: 100%;
   height: 0;
   transform: translate(-50%, -50%) rotate(45deg);
 }
-.footer .form form .btn:hover::before {
+.footer .form form .btn_footer:hover::before {
   height: 600%;
 }
-.footer .form form .btn:hover span {
+.footer .form form .btn_footer:hover span {
   color: #20202c;
 }
 .footer h4 {
@@ -1235,44 +1178,11 @@ button:focus {
   font-weight: 100;
   margin-bottom: 0;
   letter-spacing: 2px;
-  padding-top: 50px;
+  padding-top: 30px;
 }
-.footer hr {
-  background-color: #707070;
-  width: 100%;
-  margin-top: 0;
-}
-.footer .footer_menu ul {
-  padding-left: 0;
-}
-.footer .footer_menu ul li {
-  list-style: none;
-  margin-bottom: 5px;
-}
-.footer .footer_menu ul li a {
-  text-decoration: none;
-  color: #707070;
-  font-family: 'Mont-ExtraLightDEMO', sans-serif;
-  font-size: 16px;
-  text-transform: uppercase;
-  position: relative;
-  transition: 0.5s;
-}
-.footer .footer_menu ul li a:hover {
-  color: #fabf99;
-  margin-left: 10px;
-}
-.footer .footer_menu ul li a:hover::before {
-  display: block;
-}
-.footer .footer_menu ul li a::before {
-  content: '>';
-  color: #fabf99;
-  padding-right: 5px;
-  left: -10px;
-  position: absolute;
-  display: none;
-  transition: 0.5s;
+.footer .footer_info {
+  padding-left: 80px;
+  padding-top: 162px;
 }
 .footer .footer_social ul {
   padding: 0;
@@ -1280,31 +1190,40 @@ button:focus {
 .footer .footer_social ul li {
   list-style: none;
   display: inline-block;
-  padding-right: 35px;
+  padding-right: 25px;
   padding-top: 10px;
 }
 .footer .footer_social ul li:last-child {
   padding-right: 0;
 }
 .footer .footer_social ul li svg {
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   fill: #707070;
   transition: 0.2s;
+  transform: scale(1);
 }
 .footer .footer_social ul li svg:hover {
   fill: #fabf99;
+  transform: scale(1.2);
+}
+.footer .footer_social hr {
+  background-color: #707070;
 }
 .footer .footer_contact {
   text-align: left;
 }
+.footer .footer_contact hr {
+  background-color: #707070;
+}
 .footer .footer_contact .adress {
+  padding-top: 0;
   margin-bottom: 10px;
 }
 .footer .footer_contact p {
   color: #707070;
   font-family: 'OnePlusOne 2015', sans-serif;
-  padding-bottom: 20px;
+  padding-bottom: 0px;
 }
 .footer .footer_contact a {
   color: #fabf99;
@@ -1315,7 +1234,6 @@ button:focus {
 }
 .footer .copyright {
   text-align: center;
-  padding-top: 60px;
   padding-bottom: 20px;
 }
 .footer .copyright p {
@@ -1340,590 +1258,44 @@ button:focus {
 }
 /*****MEDIA*****/
 @media (max-width: 575.98px) {
-  .title {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-  .title h1 {
-    letter-spacing: normal;
-    padding: 0;
-    font-size: 25px;
-  }
-  .title_left {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-  .title_left h1 {
-    letter-spacing: normal;
-    padding: 0;
-    font-size: 25px;
-  }
-  .about .custom_bkg {
-    display: none;
-  }
-  .about .burger {
-    padding: 0;
-    box-shadow: none;
-    margin: 0;
-    padding-top: 60px;
-  }
-  .about .burger h3 {
-    font-size: 22px;
-  }
-  .about .sandwich {
-    text-align: center;
-  }
-  .about .vardan {
-    padding-top: 30px;
-    padding-left: 15px;
-  }
-  .about .vardan h2 {
-    font-size: 40px;
-  }
-  .about .vardan h3 {
-    font-size: 20px;
-  }
-  .about .btn {
-    margin-bottom: 60px;
-  }
-  .about .btn span {
+  .title_general h1 {
     letter-spacing: 3px;
   }
-  .project {
-    padding-top: 60px;
-  }
-  .project .burger {
-    display: none;
-  }
-  .project .tablet_title {
-    display: block;
-    padding-bottom: 30px;
-  }
-  .project .tablet_title h3 {
-    font-size: 22px;
-  }
-  .project .slide_btn {
-    display: block;
+  .about_section {
     text-align: center;
   }
-  .service .graphic::after {
-    display: none;
-  }
-  .service .branding::before {
-    display: none;
-  }
-  .portfolio .custom_bkg {
-    display: none;
-  }
-  .portfolio .col-md-4 {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  .portfolio .portfolio_menu {
+  .about_section .about_btn {
     margin: 0;
+    margin-top: 20px;
   }
-  .portfolio .portfolio_menu .project-filter {
-    margin: 0;
-    margin-top: 60px;
-  }
-  .portfolio .portfolio_menu .project-filter li {
-    margin-right: 10px;
-    margin-bottom: 5px;
-  }
-  .portfolio .photo:hover .name hr {
-    width: 200px;
-  }
-  .portfolio .photo .over-color .name h3 {
-    font-size: 20px;
-  }
-  .partners .top_bkg {
-    display: none;
-  }
-  .partners .part_bl {
-    margin: 0;
-  }
-  .partners .line {
-    display: none;
-  }
-  .partners .burger {
-    box-shadow: none;
-    background-color: #f3f3f3;
-    text-align: center;
+  .about_section .about_info {
     padding: 0;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    margin: 0;
   }
-  .partners .burger h3 {
-    font-size: 22px;
+  .about_section .s {
+    text-align: center;
   }
-  .partners .col-md-3 {
-    padding-left: 10px;
-    padding-right: 10px;
-    height: 200px;
-    margin-bottom: 0;
+  .about_section .about_logo img {
+    padding: 0;
+    padding-bottom: 20px;
   }
-  .partners .byke {
-    width: 100%;
-  }
-  .partners .byke::before {
-    display: none;
-  }
-  .partners .byke::after {
-    display: none;
-  }
-  .partners .byke4 {
-    width: 100%;
-  }
-  .partners .byke4::before {
-    display: none;
-  }
-  .partners .byke4::after {
-    display: none;
-  }
-  .partners .motor {
-    width: 100%;
-  }
-  .partners .motor::before {
-    display: none;
-  }
-  .partners .motor::after {
-    display: none;
-  }
-  .partners .motor2 {
-    width: 100%;
-  }
-  .partners .motor2::before {
-    display: none;
-  }
-  .partners .motor2::after {
-    display: none;
-  }
-  .partners .glasses {
-    width: 100%;
-  }
-  .partners .glasses::before {
-    display: none;
-  }
-  .partners .glasses::after {
-    display: none;
-  }
-  .partners .glasses3 {
-    width: 100%;
-  }
-  .partners .glasses3::before {
-    display: none;
-  }
-  .partners .glasses3::after {
-    display: none;
-  }
-  .partners .keys1 {
-    width: 100%;
-  }
-  .partners .keys1::before {
-    display: none;
-  }
-  .partners .keys1::after {
-    display: none;
-  }
-  .partners .keys {
-    width: 100%;
-  }
-  .partners .keys::before {
-    display: none;
-  }
-  .partners .keys::after {
-    display: none;
+  .about_section .about_slogan {
+    margin-top: 20px;
+    padding-top: 10%;
   }
   .footer {
     text-align: center;
   }
+  .footer .footer_info {
+    padding: 0;
+  }
+  .footer .form h3 {
+    padding-top: 20px;
+  }
+  .footer .form form .btn_footer {
+    margin-bottom: 20px;
+    padding: 10px 30px;
+  }
   .footer .footer_contact {
     text-align: center;
-  }
-  .footer .footer_contact p {
-    font-size: 14px;
-  }
-  .footer .form h3 {
-    font-size: 22px;
-  }
-  .footer .form form .btn {
-    margin-bottom: 30px;
-  }
-  .footer .form form .btn span {
-    letter-spacing: 3px;
-  }
-  .footer .footer_menu ul li a {
-    font-size: 14px;
-  }
-  .footer .footer_social h4 {
-    padding-top: 20px;
-  }
-  .footer .footer_social ul li {
-    padding: 0;
-    padding-right: 8px;
-  }
-  .footer .copyright {
-    padding-top: 30px;
-  }
-  .footer .copyright p {
-    font-size: 9px;
-  }
-  .footer .adress {
-    font-size: 14px;
-  }
-  .footer .mail {
-    font-size: 14px;
-  }
-}
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .about {
-    text-align: center;
-  }
-  .about .custom_bkg {
-    display: none;
-  }
-  .about .burger {
-    margin: 0;
-    box-shadow: none;
-    padding-top: 80px;
-  }
-  .about .burger h3 {
-    font-size: 28px;
-  }
-  .about .vardan {
-    padding-top: 0;
-  }
-  .about .sandwich h2 {
-    font-size: 60px;
-  }
-  .about .sandwich h3 {
-    font-size: 22px;
-  }
-  .project {
-    padding-top: 0;
-  }
-  .project .right_bkg {
-    display: none;
-  }
-  .project .burger {
-    display: none;
-  }
-  .project .tablet_title {
-    display: block;
-    padding-bottom: 30px;
-    padding-top: 80px;
-    margin: 0;
-  }
-  .project .tablet_title h3 {
-    font-size: 28px;
-  }
-  .project .slide_btn {
-    display: block;
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 20px;
-  }
-  .service .custom_bkg {
-    display: none;
-  }
-  .portfolio .custom_bkg {
-    display: none;
-  }
-  .portfolio .portfolio_menu {
-    margin: 0;
-  }
-  .portfolio .portfolio_menu .project-filter {
-    margin: 0;
-    margin-top: 40px;
-  }
-  .portfolio .portfolio_menu .project-filter li {
-    margin-right: 10px;
-  }
-  .partners .top_bkg {
-    display: none;
-  }
-  .partners .right_bkg {
-    display: none;
-  }
-  .partners .line {
-    display: none;
-  }
-  .partners .part_bl {
-    margin-top: 60px;
-  }
-  .partners .burger {
-    padding: 0;
-    background-color: #f3f3f3;
-    box-shadow: none;
-    text-align: center;
-    padding-top: 80px;
-    margin: 0;
-  }
-  .partners .burger h3 {
-    font-size: 28px;
-  }
-  .partners .col-md-3 {
-    padding-left: 10px;
-    padding-right: 10px;
-    height: 200px;
-  }
-  .partners .byke {
-    width: 100%;
-  }
-  .partners .byke::before {
-    display: none;
-  }
-  .partners .byke::after {
-    display: none;
-  }
-  .partners .byke4 {
-    width: 100%;
-  }
-  .partners .byke4::before {
-    display: none;
-  }
-  .partners .byke4::after {
-    display: none;
-  }
-  .partners .motor {
-    width: 100%;
-  }
-  .partners .motor::before {
-    display: none;
-  }
-  .partners .motor::after {
-    display: none;
-  }
-  .partners .motor2 {
-    width: 100%;
-  }
-  .partners .motor2::before {
-    display: none;
-  }
-  .partners .motor2::after {
-    display: none;
-  }
-  .partners .glasses {
-    width: 100%;
-  }
-  .partners .glasses::before {
-    display: none;
-  }
-  .partners .glasses::after {
-    display: none;
-  }
-  .partners .glasses3 {
-    width: 100%;
-  }
-  .partners .glasses3::before {
-    display: none;
-  }
-  .partners .glasses3::after {
-    display: none;
-  }
-  .partners .keys1 {
-    width: 100%;
-  }
-  .partners .keys1::before {
-    display: none;
-  }
-  .partners .keys1::after {
-    display: none;
-  }
-  .partners .keys {
-    width: 100%;
-  }
-  .partners .keys::before {
-    display: none;
-  }
-  .partners .keys::after {
-    display: none;
-  }
-  .team .top_bkg {
-    display: none;
-  }
-  .team .line {
-    display: none;
-  }
-  .team .burger {
-    padding: 0;
-    background-color: #f3f3f3;
-    box-shadow: none;
-    margin: 0;
-    padding-top: 80px;
-  }
-  .team .burger h3 {
-    font-size: 28px;
-  }
-  .team .photo_bl {
-    padding-top: 60px;
-  }
-  .team .photo_bl .photo:hover .name hr {
-    top: 43%;
-    width: 180px;
-  }
-  .team .photo_bl .photo .name h3 {
-    font-size: 14px;
-  }
-  .team .photo_bl .photo .name h4 {
-    font-size: 12px;
-  }
-  .footer .form h3 {
-    font-size: 28px;
-  }
-  .footer .form form .btn {
-    margin-bottom: 30px;
-  }
-  .footer .footer_menu h4 {
-    padding-top: 20px;
-  }
-  .footer .footer_social h4 {
-    padding-top: 20px;
-  }
-  .footer .footer_contact h4 {
-    padding-top: 20px;
-  }
-  .footer .copyright {
-    padding-top: 30px;
-  }
-}
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .project .right_bkg {
-    margin-top: 60px;
-  }
-  .project .burger {
-    padding-top: 150px;
-  }
-  .service .custom_bkg {
-    display: none;
-  }
-  .partners .part_bl {
-    margin-top: 60px;
-  }
-  .partners .col-md-3 {
-    padding-left: 10px;
-    padding-right: 10px;
-    height: 200px;
-  }
-  .partners .col-md-3 img {
-    height: 150px;
-    width: 150px;
-  }
-  .partners .byke {
-    width: 100%;
-    height: 100%;
-  }
-  .partners .byke::before {
-    display: none;
-  }
-  .partners .byke::after {
-    display: none;
-  }
-  .partners .byke4 {
-    width: 100%;
-    height: 100%;
-  }
-  .partners .byke4::before {
-    display: none;
-  }
-  .partners .byke4::after {
-    display: none;
-  }
-  .partners .motor {
-    width: 100%;
-    height: 100%;
-  }
-  .partners .motor::before {
-    display: none;
-  }
-  .partners .motor::after {
-    display: none;
-  }
-  .partners .motor2 {
-    width: 100%;
-    height: 100%;
-  }
-  .partners .motor2::before {
-    display: none;
-  }
-  .partners .motor2::after {
-    display: none;
-  }
-  .partners .glasses {
-    width: 100%;
-    height: 100%;
-  }
-  .partners .glasses::before {
-    display: none;
-  }
-  .partners .glasses::after {
-    display: none;
-  }
-  .partners .glasses3 {
-    width: 100%;
-    height: 100%;
-  }
-  .partners .glasses3::before {
-    display: none;
-  }
-  .partners .glasses3::after {
-    display: none;
-  }
-  .partners .keys1 {
-    width: 100%;
-    height: 100%;
-  }
-  .partners .keys1::before {
-    display: none;
-  }
-  .partners .keys1::after {
-    display: none;
-  }
-  .partners .keys {
-    width: 100%;
-    height: 100%;
-  }
-  .partners .keys::before {
-    display: none;
-  }
-  .partners .keys::after {
-    display: none;
-  }
-  .team .photo_bl .photo:hover .name hr {
-    width: 180px;
-    top: 42%;
-  }
-  .team .photo_bl .photo .name h3 {
-    font-size: 12px;
-  }
-  .team .photo_bl .photo .name h4 {
-    font-size: 10px;
-  }
-}
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  .project .burger {
-    margin-top: 150px;
-  }
-  .partners .byke::before {
-    width: 200px;
-  }
-  .partners .motor::before {
-    width: 200px;
-  }
-  .partners .glasses::before {
-    width: 200px;
-  }
-  .partners .keys1::before {
-    width: 100px;
-  }
-  .partners .keys::before {
-    width: 200px;
-  }
-  .team .photo_bl .photo .name h3 {
-    font-size: 17px;
-  }
-  .team .photo_bl .photo .name h4 {
-    font-size: 15px;
   }
 }
