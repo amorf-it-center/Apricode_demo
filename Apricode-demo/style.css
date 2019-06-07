@@ -711,7 +711,7 @@ button:focus {
   padding: 20px;
 }
 .price_section .price_box h4 {
-  font-size: calc(14.7vw);
+  font-size: calc(12.7vw);
   font-family: 'OnePlusOne 2015', sans-serif;
   text-transform: uppercase;
   padding-top: 50px;
@@ -737,6 +737,7 @@ button:focus {
   font-family: 'Mont-ExtraLightDEMO', sans-serif;
   font-size: calc(14.7vw);
   margin: 0;
+  font-weight: 600;
 }
 .price_section .price_box .price_item:hover {
   background-color: #20202c;
