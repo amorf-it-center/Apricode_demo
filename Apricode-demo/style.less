@@ -1544,6 +1544,7 @@ button {
         ul{
             margin: 0;
             li{
+                margin-right: 15px;
                 span{
                     font-size: 12px;
                 }
@@ -1551,7 +1552,7 @@ button {
         }
 }
 }
-.price_section {
+    .price_section {
 	.price_box {
         h4{
             padding-top: 20px;
@@ -1599,12 +1600,49 @@ button {
 }
 // Малые девайсы («ландшафтные», >= 575px)
 @media (min-width: 576px) and (max-width: 767.98px) {
+    .footer {
+	.footer_info {
+     padding-top: 0;
+        padding-left: 0;
+}
+    .form{
+        form{
 
+
+        .btn_footer {
+	margin-bottom: 20px;
+}
+            }
+    }
+    h4{
+        text-align: center;
+    }
+    .footer_social {
+	text-align: center;
+}
+}
+    .about_section {
+	.about_slogan {
+	padding-top: 0;
+        margin-top: 40px;
+}
+}
 }
 
 // Средние девайсы («таблетки», >= 768px) 
 @media (min-width: 768px) and (max-width: 991.98px) {
-
+    .footer{
+        .footer_info {
+	padding-top: 82px;
+            padding-left: 20px;
+}
+    }
+    .about_section {
+	.about_slogan {
+	padding-top: 100px;
+	padding-top: 100px;
+}
+}
 }
 
 // Большие девайсы (большие десктопы, >= 992px)
