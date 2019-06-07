@@ -908,7 +908,6 @@ button:focus {
 .portfolio .portfolio_menu ul {
   padding: 0;
   text-align: center;
-  margin-left: 40px;
 }
 .portfolio .portfolio_menu ul li {
   display: inline-block;
@@ -923,7 +922,7 @@ button:focus {
   color: #fabf99;
 }
 .portfolio .portfolio_menu ul li span {
-  font-size: 16px;
+  font-size: calc(14.16px);
   font-family: 'Mont-ExtraLightDEMO', sans-serif;
   text-transform: uppercase;
   color: #fcfcfc;
@@ -1264,6 +1263,10 @@ button:focus {
 }
 /*****MEDIA*****/
 @media (max-width: 575.98px) {
+  .title_general {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
   .title_general h1 {
     letter-spacing: 3px;
   }
@@ -1287,6 +1290,15 @@ button:focus {
   .about_section .about_slogan {
     margin-top: 20px;
     padding-top: 10%;
+  }
+  .portfolio .portfolio_menu ul {
+    margin: 0;
+  }
+  .portfolio .portfolio_menu ul li span {
+    font-size: 12px;
+  }
+  .price_section .price_box h4 {
+    padding-top: 20px;
   }
   .footer {
     text-align: center;

@@ -1089,7 +1089,6 @@ button {
         ul {
             padding: 0;
             text-align: center;
-            margin-left: 40px;
 
             li {
                 display: inline-block;
@@ -1106,7 +1105,7 @@ button {
                 }
 
                 span {
-                    font-size: 16px;
+                    font-size: calc(0.16 + 14px);
                     .MontExtraLight;
                     text-transform: uppercase;
                     color: @text_dark;
@@ -1504,6 +1503,8 @@ button {
 // Экстрамалые девайсы («портретные телефоны», < 576px)
 @media (max-width: 575.98px) {
     .title_general {
+        padding-top: 40px;
+        padding-bottom: 40px;
         h1 {
             letter-spacing: 3px;
         }
@@ -1538,7 +1539,25 @@ button {
         }
 
     }
-
+    .portfolio {
+	.portfolio_menu {
+        ul{
+            margin: 0;
+            li{
+                span{
+                    font-size: 12px;
+                }
+            }
+        }
+}
+}
+.price_section {
+	.price_box {
+        h4{
+            padding-top: 20px;
+        }
+}
+}
     .footer {
         text-align: center;
 
