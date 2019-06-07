@@ -208,36 +208,41 @@ button:focus {
   padding: 0;
   background-position: 0 -1764px;
 }
-.select_lang {
+.select_lang_box {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+.select_lang_box .select_lang {
   position: absolute;
-  top: 7.5%;
-  right: 25%;
-  position: fixed;
+  top: 55px;
+  right: calc(60%);
   margin: 0;
   padding: 0;
   transition: 0.5s;
+  z-index: 1500;
 }
-.select_lang:hover .am_lang {
+.select_lang_box .select_lang:hover .am_lang {
   display: block;
 }
-.select_lang li {
+.select_lang_box .select_lang li {
   list-style: none;
 }
-.select_lang a {
+.select_lang_box .select_lang a {
   display: block;
   text-decoration: none;
   color: #f9f9f9;
   font-family: 'OnePlusOne 2015', sans-serif;
   font-size: 14px;
 }
-.select_lang a i {
+.select_lang_box .select_lang a i {
   margin-left: 4px;
 }
-.select_lang a img {
+.select_lang_box .select_lang a img {
   margin-left: 10px;
   margin-top: -2px;
 }
-.select_lang .am_lang {
+.select_lang_box .select_lang .am_lang {
   display: none;
 }
 /*SLIDE SHOW */

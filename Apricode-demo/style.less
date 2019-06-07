@@ -262,14 +262,18 @@ button {
     padding: 0;
     background-position: 0 -1764px;
 }
-.select_lang {
-    position: absolute;
-    top: 7.5%;
-    right: 25%;
-    position: fixed;
-    margin: 0;
-    padding: 0;
-    transition: 0.5s;
+.select_lang_box {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+	.select_lang {
+        position: absolute;
+        top: 55px;
+        right: calc(10% + 50px);
+        margin: 0;
+        padding: 0;
+        transition: 0.5s;
+        z-index: 1500;
 
     &:hover {
         .am_lang {
@@ -302,6 +306,8 @@ button {
         display: none;
     }
 }
+}
+
 /*SLIDE SHOW */
 @import url(css/style2.css);
 #container {
