@@ -696,9 +696,14 @@ button:focus {
   background-color: #f3f3f3;
   padding-bottom: 80px;
 }
+.price_section .col-md-4 {
+  margin-bottom: 20px;
+}
 .price_section .price_box {
   background-color: #fcfcfc;
   box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  padding: 20px;
 }
 .price_section .price_box h4 {
   font-size: calc(14.7vw);
@@ -745,7 +750,7 @@ button:focus {
   width: 70%;
   position: fixed;
   background-color: #f9f9f9;
-  display: block;
+  display: none;
 }
 .price_section .modal_window .modal_title {
   padding-top: 40px;
@@ -789,7 +794,7 @@ button:focus {
   content: '';
   display: block;
   width: 1px;
-  height: 350px;
+  height: 360px;
   background-color: #707070;
   top: 0;
   right: 0;
@@ -804,7 +809,8 @@ button:focus {
   padding: 0;
   padding-top: 30px;
   list-style: none;
-  margin-left: 60px;
+  margin-left: 10%;
+  padding-right: 10%;
 }
 .price_section .modal_window .questions ul li {
   font-size: calc(14.5vw);
@@ -1297,5 +1303,18 @@ button:focus {
   }
   .footer .footer_contact {
     text-align: center;
+  }
+  .footer .adress {
+    margin-top: 20px;
+    padding-bottom: 10px;
+  }
+  .footer .mail {
+    margin-bottom: 10px;
+  }
+  .footer .footer_social {
+    margin-bottom: 30px;
+  }
+  .footer .copyright p {
+    font-size: 8px;
   }
 }
