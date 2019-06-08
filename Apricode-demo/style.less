@@ -159,7 +159,7 @@ button {
                 transition: .3s cubic-bezier(.8, .5, .2, 1.4);
                 width: 100%;
                 height: 3px;
-                transition-duration: 500ms
+                transition-duration: 500ms;
             }
 
             .nav-icon-5 span:nth-child(1) {
@@ -284,17 +284,44 @@ button {
                     color: @text_dark;
                 }
 
-                img {
+                .flag-RU {
                     transition: 0.3s;
                 }
 
-                img:hover {
+                .flag-RU:hover {
+                    transform: scale(1.3);
+
+                }
+                .flag-AM {
+                    transition: 0.3s;
+                }
+
+                .flag-AM:hover {
                     transform: scale(1.3);
 
                 }
             }
         }
     }
+     .flag-AM, .flag-RU {
+             background: url(images/flags/flags.png) no-repeat 0 9px;
+            display: -moz-inline-box;
+            -moz-box-orient: vertical;
+            display: inline-block;
+            *display: inline;
+            *zoom: 1;
+            vertical-align: baseline;
+            position: relative;
+            overflow: hidden;
+            width: 16px;
+            height: 9px;
+            font-size: 0;
+            line-height: 0;
+            margin: 0;
+            padding: 0;
+    }
+    .flag-RU { background-position: 0 -1764px; }
+    .flag-AM { background-position: 0 -63px; }
 }
 
 .fixed_Lang{
@@ -1249,6 +1276,9 @@ button {
             .name {
                 h3 {
                     transform: scale(1, 1);
+                    span{
+                        font-family: none;
+                    }
                 }
 
                 h4 {
@@ -1359,6 +1389,9 @@ button {
             margin-bottom: 30px;
             position: relative;
             padding: 0;
+            span{
+                font-family: none;
+            }
             &::before{
                 position: absolute;
                 content: '';
