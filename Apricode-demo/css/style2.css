@@ -25,8 +25,8 @@
 
 #slides .slide .title .title-text {
   display: block;
-  -webkit-transform: translateY(1.8em);
-          transform: translateY(1.8em);
+  -webkit-transform: translateY(8em);
+          transform: translateY(8em);
   -webkit-transition: -webkit-transform 1s ease-in-out;
   transition: -webkit-transform 1s ease-in-out;
   transition: transform 1s ease-in-out;
@@ -43,20 +43,10 @@
   transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
 }
 
-#slides .slide .title-bottom .title-ump-bottom {
-  display: block;
-  -webkit-transform: translateY(-1.8em);
-          transform: translateY(-1.8em);
-  -webkit-transition: -webkit-transform 1s ease-in-out;
-  transition: -webkit-transform 1s ease-in-out;
-  transition: transform 1s ease-in-out;
-  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
-}
-
 #slides .slide .title-bottom .title-text-bottom {
   display: block;
-  -webkit-transform: translateY(-1.8em);
-          transform: translateY(-1.8em);
+  -webkit-transform: translateY(-8em);
+          transform: translateY(-8em);
   -webkit-transition: -webkit-transform 1s ease-in-out;
   transition: -webkit-transform 1s ease-in-out;
   transition: transform 1s ease-in-out;

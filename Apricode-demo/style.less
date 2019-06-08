@@ -319,13 +319,14 @@ button {
         .slide {
             .shaurma {
                 position: relative;
+                left: 10%;
 
                 .title {
                     position: absolute;
-                    top: calc(31% + 0.03em);
-                    left: 15%;
+                    //top: calc(30% + 0.03em);
+                    //left: 15%;
                     z-index: 2;
-                    font-size: 90px;
+                    font-size: calc(6vw + 5px);
                     color: @text_dark;
                     text-transform: capitalize;
                     overflow: hidden;
@@ -335,10 +336,9 @@ button {
 
                 .title-top {
                     position: absolute;
-                    left: 14%;
-                    top: 36%;
-                    font-size: 15px;
-                    margin-left: 10px;
+                    //left: calc(14% + 5px);
+                    //top: 35%;
+                    font-size: calc(0.3vw + 8px);
                     letter-spacing: 3px;
                     text-transform: uppercase;
                     .MontExtraLight;
@@ -348,20 +348,20 @@ button {
 
                 .title-bottom {
                     position: absolute;
-                    bottom: calc(30% - 0.01em);
-                    left: calc(14% + 0.06em);
+                    //bottom: 30%;
+                    //left: calc(14% + 0.2em);
                     z-index: 2;
                     text-transform: uppercase;
-                    font-size: 90px;
+                    font-size: calc(5vw + 0em);
                     color: @text_dark;
                     overflow: hidden;
                     .impact;
-                    line-height: 180px;
+                    line-height: 200px;
 
                     .ump {
                         color: @main_color;
                         .impact;
-                        font-size: 115px;
+                        font-size: calc(1vw + 1.1em;);
                         line-height: 200px;
                     }
                 }
@@ -369,6 +369,93 @@ button {
         }
     }
 }
+
+@media (min-width: 992px) {
+    #container {
+        .shaurma {
+            .title {
+                top: 31%;
+            }
+
+            .title-top {
+                top: 36%;
+            }
+
+            .title-bottom {
+                top: 42%;
+                line-height: 180px;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+    #container {
+        .shaurma {
+            padding-left: 20px!important;
+            .title {
+                top: 35%;
+            }
+
+            .title-top {
+                top: 43%;
+            }
+
+            .title-bottom {
+                top: calc(41% - 0.01em);
+                line-height: 150px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) and (min-width: 576px) {
+    #container {
+        .shaurma {
+            padding-left: 50px!important;
+            .title {
+                top: 28%;
+            }
+
+            .title-top {
+                top: 36%;
+            }
+
+            .title-bottom {
+                top: 34%;
+                line-height: 100px;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    #container {
+        .shaurma {
+            .title {
+                top: 20%;
+            }
+
+            .title-top {
+                top: 29%;
+            }
+
+            .title-bottom {
+                top: 24%;
+                line-height: 150px;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .home-section {
+        .follow_us {
+            display: none;
+        }
+    }
+}
+
 /*TITLE*/
 .title_general{
         text-align: center;

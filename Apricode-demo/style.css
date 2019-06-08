@@ -557,19 +557,19 @@ button:focus {
   height: 100%;
   width: 100%;
 }
-.about_section .s {
+.about_section {
   padding-top: 30px;
   text-align: right;
 }
-.about_section .s .slide_btn {
+.about_section .slide_btn {
   display: inline-block;
   bottom: 90px;
   font-size: 20px;
 }
-.about_section .s .slide_btn span {
+.about_section .slide_btn span {
   color: #707070;
 }
-.about_section .s .slide_btn .next::before {
+.about_section .slide_btn .next::before {
   content: '';
   position: absolute;
   width: 15px;
@@ -580,11 +580,11 @@ button:focus {
   transform: translate(-100%, -50%) rotate(-45deg);
   transition: 0.2s;
 }
-.about_section .s .slide_btn .next span {
+.about_section .slide_btn .next span {
   overflow: hidden;
   position: relative;
 }
-.about_section .s .slide_btn .next span::after {
+.about_section .slide_btn .next span::after {
   content: '';
   width: 0px;
   height: 1.5px;
@@ -594,16 +594,16 @@ button:focus {
   right: 0;
   transform: translate(0%, -50%);
 }
-.about_section .s .slide_btn .next:hover::before {
+.about_section .slide_btn .next:hover::before {
   border-color: #fabf99;
   transform: translate(92%, -50%) rotate(-45deg);
 }
-.about_section .s .slide_btn .next:hover span::after {
+.about_section .slide_btn .next:hover span::after {
   width: 30px;
   background-color: #fabf99;
   left: 100%;
 }
-.about_section .s .slide_btn .prev::before {
+.about_section .slide_btn .prev::before {
   content: '';
   position: absolute;
   width: 15px;
@@ -614,11 +614,11 @@ button:focus {
   transform: translate(0%, -50%) rotate(-45deg);
   transition: 0.2s;
 }
-.about_section .s .slide_btn .prev span {
+.about_section .slide_btn .prev span {
   overflow: hidden;
   position: relative;
 }
-.about_section .s .slide_btn .prev span::after {
+.about_section .slide_btn .prev span::after {
   content: '';
   width: 0px;
   height: 1.5px;
@@ -628,11 +628,11 @@ button:focus {
   right: 0;
   transform: translate(-92%, -50%);
 }
-.about_section .s .slide_btn .prev:hover::before {
+.about_section .slide_btn .prev:hover::before {
   border-color: #fabf99;
   transform: translate(-180%, -50%) rotate(-45deg);
 }
-.about_section .s .slide_btn .prev:hover span::after {
+.about_section .slide_btn .prev:hover span::after {
   width: 30px;
   background-color: #fabf99;
   right: 100%;
