@@ -1039,6 +1039,7 @@ button:focus {
 }
 .portfolio .photo:hover .name h3 span {
   font-family: none;
+  font-weight: 100;
 }
 .portfolio .photo:hover .name h4 {
   transform: scale(1, 1);
@@ -1143,6 +1144,7 @@ button:focus {
 }
 .partners_section .feed_box .date span {
   font-family: none;
+  font-weight: 100;
 }
 .partners_section .feed_box .date::before {
   position: absolute;
