@@ -660,7 +660,7 @@ button {
                 align-content: center;
                 position: absolute;
                 top: 50%;
-                left: 175px;
+                left: 155px;
             }
         }
 
@@ -702,18 +702,17 @@ button {
     .about_logo {
         text-align: center;
         img{
-            padding-top: 32px;
+            padding:10px 50px 50px 50px ;
             width: 100%;
             height: 100%;
         }
 }
     .about_info {
-        padding-top: 10px;
-        padding-left: 30px;
         h2{
             .impact;
             font-size: calc(5.5vw + 14px);
             color: @text_light;
+            font-weight: 400;
         }
         h3{
             text-transform: uppercase;
@@ -741,7 +740,6 @@ button {
         overflow: hidden;
         cursor: pointer;
         padding: 10px 40px;
-        margin-left: 30px;
 
         span {
             letter-spacing: 8px;
@@ -777,10 +775,13 @@ button {
             color: @text_light;
         }
     }
+    .hr{
+        margin: calc(4vw + 10px) 0;
+        padding: 0.1px;
+        background-color: @section_bkg2;
+    }
     .about_slogan {
-        margin-top: 100px;
         text-align: center;
-        padding-top: 45%;
         h3{
            font-size: calc(1.75vw + 14px);
             .OnePlusOne;
@@ -792,7 +793,6 @@ button {
         }
 }
     .photo_project {
-        margin-top: calc(4vw + 20px);
         box-shadow: 0 0 34px rgba(0, 0, 0, 0.55);
         img{
             height: 100%;
@@ -910,6 +910,16 @@ button {
 
             }
         }
+    }
+}
+@media(min-width: 769px){
+    .about_slogan{
+        padding: 40% 0;
+    }
+}
+@media(max-width: 768px){
+    .about_slogan{
+        padding-bottom: 30px;
     }
 }
 
@@ -1200,6 +1210,13 @@ button {
     height: 100%;
     padding-bottom: 100px;
     background-color: @section_bkg2;
+    .project-filter .active{
+        box-shadow: none;
+
+        span{
+            color: @main_color;
+        }
+    }
     .title_general{
         h1{
           color: @text_dark !important;
@@ -1221,6 +1238,7 @@ button {
                 margin-right: 25px;
                 transition: 0.5s;
                 cursor: pointer;
+                transform: scale(1);
 
                 &:hover {
                     transform: scale(1.2);
@@ -1657,22 +1675,12 @@ button {
             padding: 0;
         }
 
-        .s {
-            text-align: center;
-        }
-
         .about_logo {
             img {
                 padding: 0;
                 padding-bottom: 20px;
             }
         }
-
-        .about_slogan {
-            margin-top: 20px;
-            padding-top: 10%;
-        }
-
     }
     .portfolio {
 	.portfolio_menu {
@@ -1757,12 +1765,6 @@ button {
 	text-align: center;
 }
 }
-    .about_section {
-	.about_slogan {
-	padding-top: 0;
-        margin-top: 40px;
-}
-}
 }
 
 // Средние девайсы («таблетки», >= 768px) 
@@ -1774,12 +1776,6 @@ button {
             padding-left: 20px;
 }
     }
-    .about_section {
-	.about_slogan {
-	padding-top: 100px;
-	padding-top: 100px;
-}
-}
 }
 
 // Большие девайсы (большие десктопы, >= 992px)
