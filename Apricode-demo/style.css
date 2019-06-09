@@ -298,92 +298,6 @@ button:focus {
   color: #fabf99;
   font-family: 'Impact', sans-serif;
 }
-@media (min-width: 992px) {
-  #container .shaurma .title {
-    top: 37%;
-    font-size: 85px;
-  }
-  #container .shaurma .title-top {
-    top: 36%;
-    font-size: 13px;
-  }
-  #container .shaurma .title-bottom {
-    top: 42%;
-    font-size: 80px;
-    line-height: 180px;
-  }
-  #container .shaurma .title-bottom .ump {
-    font-size: 95px;
-  }
-}
-@media (max-width: 992px) and (min-width: 768px) {
-  #container .shaurma {
-    padding-left: 20px!important;
-  }
-  #container .shaurma .title {
-    top: 35%;
-    font-size: 65px;
-  }
-  #container .shaurma .title-top {
-    top: 33%;
-    font-size: 11px;
-  }
-  #container .shaurma .title-bottom {
-    top: calc(40.99%);
-    font-size: 60px;
-    line-height: 150px;
-  }
-  #container .shaurma .title-bottom .ump {
-    font-size: 65px;
-  }
-}
-@media (max-width: 768px) and (min-width: 576px) {
-  #container .shaurma {
-    padding-left: 50px!important;
-  }
-  #container .shaurma .title {
-    top: 38%;
-    font-size: 55px;
-  }
-  #container .shaurma .title-top {
-    top: 36%;
-    font-size: 10px;
-  }
-  #container .shaurma .title-bottom {
-    top: 47%;
-    font-size: 45px;
-    line-height: 100px;
-  }
-  #container .shaurma .title-bottom .ump {
-    font-size: 60px;
-  }
-}
-@media (max-width: 576px) {
-  #container .shaurma {
-    padding-left: 20px!important;
-  }
-  #container .shaurma .title {
-    top: 40%;
-    font-size: 50px;
-  }
-  #container .shaurma .title-top {
-    top: 38%;
-    font-size: 10px;
-  }
-  #container .shaurma .title-bottom {
-    top: 45%;
-    font-size: 32px;
-    line-height: 90px;
-  }
-  #container .shaurma .title-bottom .ump {
-    font-size: 35px;
-  }
-}
-@media (max-width: 991px) {
-  .home-section .follow_us {
-    display: none;
-  }
-}
 /*TITLE*/
 .title_general {
   text-align: center;
@@ -1503,5 +1417,91 @@ button:focus {
   }
   .about_slogan {
     padding-bottom: 30px;
+  }
+}
+@media (min-width: 992px) {
+  #container .shaurma .title {
+    top: 37%;
+    font-size: 85px;
+  }
+  #container .shaurma .title-top {
+    top: 36%;
+    font-size: 13px;
+  }
+  #container .shaurma .title-bottom {
+    top: 42%;
+    font-size: 80px;
+    line-height: 180px;
+  }
+  #container .shaurma .title-bottom .ump {
+    font-size: 95px;
+  }
+}
+@media (max-width: 992px) and (min-width: 768px) {
+  #container .shaurma {
+    padding-left: 20px!important;
+  }
+  #container .shaurma .title {
+    top: 35%;
+    font-size: 65px;
+  }
+  #container .shaurma .title-top {
+    top: 33%;
+    font-size: 11px;
+  }
+  #container .shaurma .title-bottom {
+    top: calc(40.99%);
+    font-size: 60px;
+    line-height: 150px;
+  }
+  #container .shaurma .title-bottom .ump {
+    font-size: 65px;
+  }
+}
+@media (max-width: 768px) and (min-width: 576px) {
+  #container .shaurma {
+    padding-left: 50px!important;
+  }
+  #container .shaurma .title {
+    top: 38%;
+    font-size: 55px;
+  }
+  #container .shaurma .title-top {
+    top: 36%;
+    font-size: 10px;
+  }
+  #container .shaurma .title-bottom {
+    top: 47%;
+    font-size: 45px;
+    line-height: 100px;
+  }
+  #container .shaurma .title-bottom .ump {
+    font-size: 60px;
+  }
+}
+@media (max-width: 576px) {
+  #container .shaurma {
+    padding-left: 20px!important;
+  }
+  #container .shaurma .title {
+    top: 40%;
+    font-size: 50px;
+  }
+  #container .shaurma .title-top {
+    top: 38%;
+    font-size: 10px;
+  }
+  #container .shaurma .title-bottom {
+    top: 45%;
+    font-size: 32px;
+    line-height: 90px;
+  }
+  #container .shaurma .title-bottom .ump {
+    font-size: 35px;
+  }
+}
+@media (max-width: 991px) {
+  .home-section .follow_us {
+    display: none;
   }
 }
