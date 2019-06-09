@@ -702,12 +702,13 @@ button {
     .about_logo {
         text-align: center;
         img{
-            padding:10px 50px 50px 50px ;
+            padding-top: 10px;
             width: 100%;
             height: 100%;
         }
 }
     .about_info {
+        padding-left: 40px;
         h2{
             .impact;
             font-size: calc(5.5vw + 14px);
@@ -724,7 +725,7 @@ button {
         p {
             .OnePlusOne;
             color: @text_light;
-            font-size: calc(0.16vw + 14px );
+            font-size: calc(0.16vw + 13px );
         }
 }
     .about_btn {
@@ -740,6 +741,7 @@ button {
         overflow: hidden;
         cursor: pointer;
         padding: 10px 40px;
+        margin-left: 40px;
 
         span {
             letter-spacing: 8px;
@@ -776,6 +778,11 @@ button {
         }
     }
     .hr{
+        margin: calc(4vw + 10px) 0;
+        padding: 0.1px;
+        background-color: @section_bkg2;
+    }
+    .hr-2{
         margin: calc(4vw + 10px) 0;
         padding: 0.1px;
         background-color: @section_bkg2;
@@ -912,16 +919,6 @@ button {
         }
     }
 }
-@media(min-width: 769px){
-    .about_slogan{
-        padding: 40% 0;
-    }
-}
-@media(max-width: 768px){
-    .about_slogan{
-        padding-bottom: 30px;
-    }
-}
 
 /*SERVICE SECTION*/
 .service_section {
@@ -1025,7 +1022,6 @@ button {
                 .MontExtraLight;
                 font-size: calc(0.7vw + 14px);
                 margin: 0;
-                font-weight: 600;
             }
             &:hover{
                 background-color: @section_bkg2;
@@ -1208,7 +1204,7 @@ button {
 .portfolio {
     position: relative;
     height: 100%;
-    padding-bottom: 100px;
+    padding-bottom: 80px;
     background-color: @section_bkg2;
     .project-filter .active{
         box-shadow: none;
@@ -1224,6 +1220,8 @@ button {
 
     }
     .projects-holder {
+        padding-right: 5px;
+        padding-left: 5px;
         .mix {
             display: none;
         }
@@ -1337,9 +1335,9 @@ button {
         }
     }
     .col-md-4 {
-        margin-bottom: 15px;
-        padding-left: 15px;
-        padding-right: 15px;
+        margin-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .photo_bl {
         margin-top: 30px;
@@ -1408,6 +1406,7 @@ button {
         h4{
             .OnePlusOne;
             color: @text_light;
+            font-size: calc(0.7vw + 12px);
         }
         p{
             .MontExtraLight;
@@ -1443,7 +1442,6 @@ button {
             margin: 0 5px;
         }
     }
-
 }
 
 /*FOOTER SECTION*/
@@ -1664,8 +1662,6 @@ button {
     }
 
     .about_section {
-        text-align: center;
-
         .about_btn {
             margin: 0;
             margin-top: 20px;
@@ -1745,9 +1741,16 @@ button {
 // Малые девайсы («ландшафтные», >= 575px)
 @media (min-width: 576px) and (max-width: 767.98px) {
     .footer {
+        h3{
+            text-align: center;
+        }
+
 	.footer_info {
      padding-top: 0;
         padding-left: 0;
+}
+        .footer_contact {
+	text-align: center;
 }
     .form{
         form{
@@ -1758,6 +1761,7 @@ button {
 }
             }
     }
+        text-align: center;
     h4{
         text-align: center;
     }
@@ -1765,6 +1769,18 @@ button {
 	text-align: center;
 }
 }
+    .about_section{
+        .about_logo {
+	padding-top: 0;
+}
+        .about_info {
+	padding-left: 0;
+            padding-top: 20px;
+}
+        .about_btn{
+            margin-left: 0;
+        }
+    }
 }
 
 // Средние девайсы («таблетки», >= 768px) 
@@ -1776,6 +1792,16 @@ button {
             padding-left: 20px;
 }
     }
+    .about_section {
+	.about_info {
+	padding-left: 0;
+}
+        .about_btn{
+            margin-left: 0;
+            margin-top: 0;
+        }
+
+}
 }
 
 // Большие девайсы (большие десктопы, >= 992px)
@@ -1785,4 +1811,23 @@ button {
 // Большие девайсы (большие десктопы, >= 1200px)
 @media (min-width: 1200px) { 
     
+}
+
+@media(min-width: 769px){
+    .about_slogan{
+        padding: 40% 0;
+    }
+}
+@media(max-width: 767px){
+    .about_section{
+        text-align: center;
+    }
+    .price_item{
+        p{
+            font-weight: 600;
+        }
+    }
+    .about_slogan{
+        padding-bottom: 30px;
+    }
 }

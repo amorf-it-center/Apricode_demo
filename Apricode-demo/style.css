@@ -519,7 +519,7 @@ button:focus {
   align-content: center;
   position: absolute;
   top: 50%;
-  left: 175px;
+  left: 155px;
 }
 .home-section .follow_us .social {
   position: absolute;
@@ -555,18 +555,18 @@ button:focus {
   text-align: center;
 }
 .about_section .about_logo img {
-  padding-top: 32px;
+  padding-top: 10px;
   width: 100%;
   height: 100%;
 }
 .about_section .about_info {
-  padding-top: 10px;
-  padding-left: 30px;
+  padding-left: 40px;
 }
 .about_section .about_info h2 {
   font-family: 'Impact', sans-serif;
   font-size: calc(19.5vw);
   color: #707070;
+  font-weight: 400;
 }
 .about_section .about_info h3 {
   text-transform: uppercase;
@@ -578,7 +578,7 @@ button:focus {
 .about_section .about_info p {
   font-family: 'OnePlusOne 2015', sans-serif;
   color: #707070;
-  font-size: calc(14.16vw);
+  font-size: calc(13.16vw);
 }
 .about_section .about_btn {
   border: 1.2px solid #fabf99;
@@ -593,7 +593,7 @@ button:focus {
   overflow: hidden;
   cursor: pointer;
   padding: 10px 40px;
-  margin-left: 30px;
+  margin-left: 40px;
 }
 .about_section .about_btn span {
   letter-spacing: 8px;
@@ -623,10 +623,18 @@ button:focus {
 .about_section .about_btn:hover span {
   color: #707070;
 }
+.about_section .hr {
+  margin: calc(14vw) 0;
+  padding: 0.1px;
+  background-color: #20202c;
+}
+.about_section .hr-2 {
+  margin: calc(14vw) 0;
+  padding: 0.1px;
+  background-color: #20202c;
+}
 .about_section .about_slogan {
-  margin-top: 100px;
   text-align: center;
-  padding-top: 45%;
 }
 .about_section .about_slogan h3 {
   font-size: calc(15.75vw);
@@ -638,7 +646,6 @@ button:focus {
   color: #fabf99;
 }
 .about_section .photo_project {
-  margin-top: calc(24vw);
   box-shadow: 0 0 34px rgba(0, 0, 0, 0.55);
 }
 .about_section .photo_project img {
@@ -824,7 +831,6 @@ button:focus {
   font-family: 'Mont-ExtraLightDEMO', sans-serif;
   font-size: calc(14.7vw);
   margin: 0;
-  font-weight: 600;
 }
 .price_section .price_box .price_item:hover {
   background-color: #20202c;
@@ -989,11 +995,21 @@ button:focus {
 .portfolio {
   position: relative;
   height: 100%;
-  padding-bottom: 100px;
+  padding-bottom: 80px;
   background-color: #20202c;
+}
+.portfolio .project-filter .active {
+  box-shadow: none;
+}
+.portfolio .project-filter .active span {
+  color: #fabf99;
 }
 .portfolio .title_general h1 {
   color: #fcfcfc !important;
+}
+.portfolio .projects-holder {
+  padding-right: 5px;
+  padding-left: 5px;
 }
 .portfolio .projects-holder .mix {
   display: none;
@@ -1007,6 +1023,7 @@ button:focus {
   margin-right: 25px;
   transition: 0.5s;
   cursor: pointer;
+  transform: scale(1);
 }
 .portfolio .portfolio_menu ul li:hover {
   transform: scale(1.2);
@@ -1088,9 +1105,9 @@ button:focus {
   transform: scale(3, 3);
 }
 .portfolio .col-md-4 {
-  margin-bottom: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .portfolio .photo_bl {
   margin-top: 30px;
@@ -1158,6 +1175,7 @@ button:focus {
 .partners_section .feed_box h4 {
   font-family: 'OnePlusOne 2015', sans-serif;
   color: #707070;
+  font-size: calc(12.7vw);
 }
 .partners_section .feed_box p {
   font-family: 'Mont-ExtraLightDEMO', sans-serif;
@@ -1371,9 +1389,6 @@ button:focus {
   .title_general h1 {
     letter-spacing: 3px;
   }
-  .about_section {
-    text-align: center;
-  }
   .about_section .about_btn {
     margin: 0;
     margin-top: 20px;
@@ -1381,16 +1396,9 @@ button:focus {
   .about_section .about_info {
     padding: 0;
   }
-  .about_section .s {
-    text-align: center;
-  }
   .about_section .about_logo img {
     padding: 0;
     padding-bottom: 20px;
-  }
-  .about_section .about_slogan {
-    margin-top: 20px;
-    padding-top: 10%;
   }
   .portfolio .portfolio_menu ul {
     margin: 0;
@@ -1435,9 +1443,18 @@ button:focus {
   }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
+  .footer {
+    text-align: center;
+  }
+  .footer h3 {
+    text-align: center;
+  }
   .footer .footer_info {
     padding-top: 0;
     padding-left: 0;
+  }
+  .footer .footer_contact {
+    text-align: center;
   }
   .footer .form form .btn_footer {
     margin-bottom: 20px;
@@ -1448,9 +1465,15 @@ button:focus {
   .footer .footer_social {
     text-align: center;
   }
-  .about_section .about_slogan {
+  .about_section .about_logo {
     padding-top: 0;
-    margin-top: 40px;
+  }
+  .about_section .about_info {
+    padding-left: 0;
+    padding-top: 20px;
+  }
+  .about_section .about_btn {
+    margin-left: 0;
   }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -1458,7 +1481,27 @@ button:focus {
     padding-top: 82px;
     padding-left: 20px;
   }
-  .about_section .about_slogan {
-    padding-top: 100px;
+  .about_section .about_info {
+    padding-left: 0;
+  }
+  .about_section .about_btn {
+    margin-left: 0;
+    margin-top: 0;
+  }
+}
+@media (min-width: 769px) {
+  .about_slogan {
+    padding: 40% 0;
+  }
+}
+@media (max-width: 767px) {
+  .about_section {
+    text-align: center;
+  }
+  .price_item p {
+    font-weight: 600;
+  }
+  .about_slogan {
+    padding-bottom: 30px;
   }
 }
