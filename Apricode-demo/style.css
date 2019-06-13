@@ -1667,3 +1667,197 @@ button:focus {
   transition: 0.5s;
   transform: scale(3, 3);
 }
+/******************LANDING PAGE******************/
+.landing_page {
+  position: relative;
+  background-image: url(images/landin-page/landing_bkg.jpg);
+  height: 75vh;
+  width: auto;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.landing_page .container {
+  position: relative;
+}
+.landing_page .container .select_lang_box {
+  position: absolute;
+  right: 90px;
+}
+.landing_page .fill {
+  position: absolute;
+  height: 75vh;
+  background-color: black;
+  opacity: 0.7;
+  width: 100%;
+}
+.landing_page .title_about_page h1 {
+  font-size: calc(34vw);
+  font-family: 'Impact', sans-serif;
+  color: #f9f9f9;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 250px;
+}
+/*INFO SECTION*/
+.info_section_landing {
+  padding-bottom: 70px;
+}
+.info_section_landing img {
+  width: 100%;
+  height: 100%;
+}
+.info_section_landing p {
+  font-family: 'OnePlusOne 2015', sans-serif;
+  color: #707070;
+  font-size: calc(13.16vw);
+  padding-left: 40px;
+  padding-top: 60px;
+}
+/*INFO SLD*/
+.info_sld {
+  padding-bottom: 70px;
+  background-color: #f3f3f3;
+  /* Собственно сам слайдер */
+  /* Анимация слайдов */
+}
+.info_sld .photo_web img {
+  width: 100%;
+  height: 100%;
+}
+.info_sld .hr {
+  margin: calc(14vw) 0;
+  padding: 0.1px;
+  background-color: #20202c;
+}
+.info_sld .web_des_sld img {
+  width: 100%;
+  height: 100%;
+}
+.info_sld .s {
+  padding-top: 30px;
+  text-align: center;
+}
+.info_sld .s .slide_btn {
+  display: inline-block;
+  bottom: 90px;
+  font-size: 20px;
+}
+.info_sld .s .slide_btn span {
+  color: #707070;
+}
+.info_sld .s .slide_btn .next::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 1.5px solid #707070;
+  border-top: none;
+  border-left: none;
+  transform: translate(-100%, -50%) rotate(-45deg);
+  transition: 0.2s;
+}
+.info_sld .s .slide_btn .next span {
+  overflow: hidden;
+  position: relative;
+}
+.info_sld .s .slide_btn .next span::after {
+  content: '';
+  width: 0px;
+  height: 1.5px;
+  position: absolute;
+  transition: 0.2s;
+  left: 0;
+  right: 0;
+  transform: translate(0%, -50%);
+}
+.info_sld .s .slide_btn .next:hover::before {
+  border-color: #fabf99;
+  transform: translate(92%, -50%) rotate(-45deg);
+}
+.info_sld .s .slide_btn .next:hover span::after {
+  width: 30px;
+  background-color: #fabf99;
+  left: 100%;
+}
+.info_sld .s .slide_btn .prev::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 1.5px solid #707070;
+  border-bottom: none;
+  border-right: none;
+  transform: translate(0%, -50%) rotate(-45deg);
+  transition: 0.2s;
+}
+.info_sld .s .slide_btn .prev span {
+  overflow: hidden;
+  position: relative;
+}
+.info_sld .s .slide_btn .prev span::after {
+  content: '';
+  width: 0px;
+  height: 1.5px;
+  position: absolute;
+  transition: 0.2s;
+  left: 0;
+  right: 0;
+  transform: translate(-92%, -50%);
+}
+.info_sld .s .slide_btn .prev:hover::before {
+  border-color: #fabf99;
+  transform: translate(-180%, -50%) rotate(-45deg);
+}
+.info_sld .s .slide_btn .prev:hover span::after {
+  width: 30px;
+  background-color: #fabf99;
+  right: 100%;
+}
+.info_sld .slider {
+  max-width: 90%;
+  position: relative;
+  margin: auto;
+  height: 100%;
+  margin-bottom: 15px;
+}
+.info_sld .slider .item {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*INFO RES*/
+.info_res {
+  padding-bottom: 70px;
+}
+.info_res .res-img img {
+  height: 100%;
+  width: 100%;
+}
+.info_res h3 {
+  font-family: 'OnePlusOne 2015', sans-serif;
+  text-transform: uppercase;
+  color: #fabf99;
+  font-size: calc(14.3vw);
+}
+.info_res p {
+  font-family: 'OnePlusOne 2015', sans-serif;
+  color: #707070;
+}

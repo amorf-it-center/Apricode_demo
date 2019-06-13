@@ -2020,3 +2020,243 @@ button {
         }
     }
 }
+
+/******************LANDING PAGE******************/
+.landing_page {
+    position: relative;
+    background-image: url(images/landin-page/landing_bkg.jpg);
+    height: 75vh;
+    width: auto;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .container {
+	position: relative;
+            .select_lang_box {
+        position: absolute;
+	    right: 90px;
+}
+}
+    .fill{
+        position: absolute;
+        height: 75vh;
+        background-color: black;
+        opacity: 0.7;
+        width: 100%;
+    }
+    .title_about_page {
+        h1{
+            font-size: calc(6vw + 28px);
+            .impact;
+            color: @body_color;
+            text-transform: uppercase;
+            text-align: center;
+            padding-top: 250px;
+        }
+}
+
+}
+
+/*INFO SECTION*/
+.info_section_landing {
+    padding-bottom: 70px;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+     p{
+        .OnePlusOne;
+        color: @text_light;
+        font-size: calc(0.16vw + 13px);
+         padding-left: 40px;
+         padding-top: 60px;
+    }
+}
+
+/*INFO SLD*/
+.info_sld {
+    padding-bottom: 70px;
+    background-color: @section_bkg;
+	.photo_web {
+        img{
+            width: 100%;
+            height: 100%;
+        }
+}
+    .hr{
+        margin: calc(4vw + 10px) 0;
+        padding: 0.1px;
+        background-color: @section_bkg2;
+    }
+    .web_des_sld {
+        img{
+            width: 100%;
+            height: 100%;
+        }
+}
+    .s {
+        padding-top: 30px;
+        text-align: center;
+
+        .slide_btn {
+
+            display: inline-block;
+            bottom: 90px;
+            font-size: 20px;
+
+            span {
+                color: @text_light;
+            }
+
+            .next {
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 15px;
+                    height: 15px;
+                    border: 1.5px solid @text_light;
+                    border-top: none;
+                    border-left: none;
+                    transform: translate(-100%, -50%) rotate(-45deg);
+                    transition: 0.2s;
+
+                }
+
+                span {
+                    overflow: hidden;
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        width: 0px;
+                        height: 1.5px;
+                        position: absolute;
+                        transition: 0.2s;
+                        left: 0;
+                        right: 0;
+                        transform: translate(0%, -50%);
+                    }
+
+                }
+
+                &:hover {
+                    &::before {
+                        border-color: @main_color;
+                        transform: translate(92%, -50%) rotate(-45deg);
+                    }
+
+                    span {
+                        &::after {
+                            width: 30px;
+                            background-color: @main_color;
+                            left: 100%;
+                        }
+                    }
+
+                }
+            }
+
+            .prev {
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 15px;
+                    height: 15px;
+                    border: 1.5px solid @text_light;
+                    border-bottom: none;
+                    border-right: none;
+                    transform: translate(0%, -50%) rotate(-45deg);
+                    transition: 0.2s;
+
+                }
+
+                span {
+                    overflow: hidden;
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        width: 0px;
+                        height: 1.5px;
+                        position: absolute;
+                        transition: 0.2s;
+                        left: 0;
+                        right: 0;
+                        transform: translate(-92%, -50%);
+                    }
+
+                }
+
+                &:hover {
+                    &::before {
+                        border-color: @main_color;
+                        transform: translate(-180%, -50%) rotate(-45deg);
+                    }
+
+                    span {
+                        &::after {
+                            width: 30px;
+                            background-color: @main_color;
+                            right: 100%;
+                        }
+                    }
+
+                }
+
+            }
+        }
+    }
+    /* Собственно сам слайдер */
+    .slider{
+    max-width: 90%;
+    position: relative;
+    margin: auto;
+    height: 100%;
+    margin-bottom: 15px;
+    }
+
+    /* Анимация слайдов */
+    .slider .item {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+    @-webkit-keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+}
+
+/*INFO RES*/
+.info_res {
+    padding-bottom: 70px;
+    .res-img{
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+    h3{
+        .OnePlusOne;
+        text-transform: uppercase;
+        color: @main_color;
+        font-size: calc(0.3vw + 14px);
+    }
+    p{
+        .OnePlusOne;
+        color: @text_light;
+    }
+}
