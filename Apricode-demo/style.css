@@ -174,7 +174,7 @@ button:focus {
 }
 /*SELECT LANG*/
 .select_lang_box {
-  z-index: 99999;
+  z-index: 1500;
   position: absolute;
   right: 90px;
   top: 50px;
@@ -464,6 +464,8 @@ button:focus {
 .about_section {
   background-color: #f3f3f3;
   padding-bottom: 80px;
+  /* Собственно сам слайдер */
+  /* Анимация слайдов */
 }
 .about_section .about_logo {
   text-align: center;
@@ -538,11 +540,6 @@ button:focus {
   color: #707070;
 }
 .about_section .hr {
-  margin: calc(14vw) 0;
-  padding: 0.1px;
-  background-color: #20202c;
-}
-.about_section .hr-2 {
   margin: calc(14vw) 0;
   padding: 0.1px;
   background-color: #20202c;
@@ -646,6 +643,35 @@ button:focus {
   background-color: #fabf99;
   right: 100%;
 }
+.about_section .slider {
+  max-width: 90%;
+  position: relative;
+  margin: auto;
+  height: 100%;
+  margin-bottom: 15px;
+}
+.about_section .slider .item {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /*SERVICE SECTION*/
 .service_section {
   background-color: #20202c;
@@ -709,6 +735,8 @@ button:focus {
   text-align: center;
   background-color: #f3f3f3;
   padding-bottom: 80px;
+  /* Стили для подложки */
+  /* Стили для активных классов подложки и окна */
 }
 .price_section .col-md-4 {
   margin-bottom: 20px;
@@ -763,7 +791,9 @@ button:focus {
   width: 70%;
   position: fixed;
   background-color: #f9f9f9;
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s all;
 }
 .price_section .modal_window .modal_title {
   padding-top: 40px;
@@ -904,6 +934,24 @@ button:focus {
 }
 .price_section .modal_window .modal_btn:hover span {
   color: #707070;
+}
+.price_section .overlay {
+  /* Скрываем подложку  */
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  transition: .3s all;
+}
+.price_section .modal_window.active,
+.price_section .overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
 /*PORTFOLIO SECTION*/
 .portfolio {
