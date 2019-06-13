@@ -1024,7 +1024,7 @@ button:focus {
   transform: scale(1, 1);
 }
 .portfolio .photo:hover .name hr {
-  width: 280px;
+  width: 70%;
 }
 .portfolio .photo .over-color {
   position: absolute;
@@ -1053,7 +1053,7 @@ button:focus {
 .portfolio .photo .name hr {
   background-color: #fabf99;
   height: .5px;
-  width: 0px;
+  width: 0%;
   transition: 1s;
   margin-top: 0;
   margin-bottom: 0;
@@ -1552,4 +1552,118 @@ button:focus {
   .home-section .follow_us {
     display: none;
   }
+}
+/******************ABOUT PAGE******************/
+/*ABOUT HOME*/
+.about_page {
+  position: relative;
+  background-image: url(images/about-page/about_page_bkg.jpg);
+  height: 75vh;
+  width: auto;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.about_page .container {
+  position: relative;
+}
+.about_page .container .select_lang_box {
+  position: absolute;
+  right: 90px;
+}
+.about_page .fill {
+  position: absolute;
+  height: 75vh;
+  background-color: black;
+  opacity: 0.7;
+  width: 100%;
+}
+.about_page .title_about_page h1 {
+  font-size: calc(34vw);
+  font-family: 'Impact', sans-serif;
+  color: #f9f9f9;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 250px;
+}
+/*INFO SECTION*/
+.info_section {
+  padding-bottom: 70px;
+}
+.info_section p {
+  font-family: 'OnePlusOne 2015', sans-serif;
+  color: #707070;
+  font-size: calc(13.16vw);
+}
+/*TEAM SECTION*/
+.team_section {
+  background-color: #f3f3f3;
+  padding-bottom: 70px;
+}
+.team_section img {
+  height: 100%;
+  width: 100%;
+}
+.team_section .photo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.team_section .photo:hover .over-color {
+  opacity: 0.7;
+}
+.team_section .photo:hover .name h3 {
+  transform: scale(1, 1);
+}
+.team_section .photo:hover .name h3 span {
+  font-family: none;
+  font-weight: 100;
+}
+.team_section .photo:hover .name h4 {
+  transform: scale(1, 1);
+}
+.team_section .photo:hover .name hr {
+  width: 70%;
+}
+.team_section .photo .over-color {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: #20202c;
+  opacity: 0;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.team_section .photo .name {
+  text-align: center;
+  padding-top: 40%;
+}
+.team_section .photo .name h3 {
+  text-transform: uppercase;
+  color: #fcfcfc;
+  font-family: 'Mont-ExtraLightDEMO', sans-serif;
+  font-size: calc(14.7vw);
+  transform: scale(3, 3);
+  width: 100%;
+  transition: 0.5s;
+  margin-bottom: 2px;
+}
+.team_section .photo .name hr {
+  background-color: #fabf99;
+  height: .5px;
+  width: 0%;
+  transition: 1s;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.team_section .photo .name h4 {
+  font-family: 'Mont-ExtraLightDEMO', sans-serif;
+  color: #fcfcfc;
+  padding-top: 10px;
+  font-size: calc(14.16vw);
+  transition: 0.5s;
+  transform: scale(3, 3);
 }

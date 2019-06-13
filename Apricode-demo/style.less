@@ -1227,7 +1227,7 @@ button {
                 }
 
                 hr {
-                    width: 280px;
+                    width: 70%;
 
                 }
             }
@@ -1260,7 +1260,7 @@ button {
             hr {
                 background-color: @main_color;
                 height: .5px;
-                width: 0px;
+                width: 0%;
                 transition: 1s;
                 margin-top: 0;
                 margin-bottom: 0;
@@ -1884,6 +1884,139 @@ button {
     .home-section {
         .follow_us {
             display: none;
+        }
+    }
+}
+
+
+/******************ABOUT PAGE******************/
+/*ABOUT HOME*/
+.about_page {
+    position: relative;
+    background-image: url(images/about-page/about_page_bkg.jpg);
+    height: 75vh;
+    width: auto;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .container {
+	position: relative;
+            .select_lang_box {
+        position: absolute;
+	    right: 90px;
+}
+}
+    .fill{
+        position: absolute;
+        height: 75vh;
+        background-color: black;
+        opacity: 0.7;
+        width: 100%;
+    }
+    .title_about_page {
+        h1{
+            font-size: calc(6vw + 28px);
+            .impact;
+            color: @body_color;
+            text-transform: uppercase;
+            text-align: center;
+            padding-top: 250px;
+        }
+}
+
+}
+
+/*INFO SECTION*/
+.info_section {
+    padding-bottom: 70px;
+    p{
+        .OnePlusOne;
+        color: @text_light;
+        font-size: calc(0.16vw + 13px);
+    }
+}
+
+/*TEAM SECTION*/
+.team_section {
+    background-color: @section_bkg;
+    padding-bottom: 70px;
+    img{
+         height: 100%;
+         width: 100%;
+     }
+    .photo {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        margin-bottom: 20px;
+
+        &:hover {
+            .over-color {
+                opacity: 0.7;
+            }
+
+            .name {
+                h3 {
+                    transform: scale(1, 1);
+                    span{
+                        font-family: none;
+                        font-weight: 100;
+                    }
+                }
+
+                h4 {
+                    transform: scale(1, 1);
+                }
+
+                hr {
+                    width: 70%;
+
+                }
+            }
+        }
+        .over-color {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            background-color: @section_bkg2;
+            opacity: 0;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+        .name {
+            text-align: center;
+            padding-top: 40%;
+
+            h3 {
+                text-transform: uppercase;
+                color: @text_dark;
+                .MontExtraLight;
+                font-size: calc(0.7vw + 14px);
+                transform: scale(3, 3);
+                width: 100%;
+                transition: 0.5s;
+                margin-bottom: 2px;
+            }
+
+            hr {
+                background-color: @main_color;
+                height: .5px;
+                width: 0%;
+                transition: 1s;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            h4 {
+                .MontExtraLight;
+                color: @text_dark;
+                padding-top: 10px;
+                font-size: calc(0.16vw + 14px);
+                transition: 0.5s;
+                transform: scale(3, 3);
+            }
         }
     }
 }
