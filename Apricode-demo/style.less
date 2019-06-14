@@ -963,15 +963,16 @@ button {
         transition: 0.3s all;
         .containt_window {
             position: fixed;
-            top: 5%;
+            top: calc(0.5vw + 5px);
+            bottom: calc(0.5vw + 5px);
             z-index: 9999;
             width: 100%;
             left: 50%;
             right: 50%;
-            padding: calc(4vw + 5px);
+            padding: calc(3vw + 5px);
             transform: translate(-50%);
             .info_window {
-                max-height: 80vh;
+                max-height: 90vh;
                 position: relative;
                 overflow-y: auto;
                 background-color: @body_color;
