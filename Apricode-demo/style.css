@@ -511,6 +511,9 @@ button:focus {
   padding: 10px 40px;
   margin-left: 40px;
 }
+.about_section .about_btn a {
+  text-decoration: none;
+}
 .about_section .about_btn span {
   letter-spacing: 8px;
   color: #fabf99;
@@ -789,16 +792,17 @@ button:focus {
 }
 .price_section .modal_window .containt_window {
   position: fixed;
-  top: 0;
+  top: calc(5.2vw);
+  bottom: calc(5.2vw);
   z-index: 9999;
   width: 100%;
   left: 50%;
   right: 50%;
-  padding: calc(9vw);
+  padding: calc(8vw);
   transform: translate(-50%);
 }
 .price_section .modal_window .containt_window .info_window {
-  max-height: 100vh;
+  max-height: 90vh;
   position: relative;
   overflow-y: auto;
   background-color: #f9f9f9;
