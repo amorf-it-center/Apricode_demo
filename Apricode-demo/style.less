@@ -987,10 +987,9 @@ button {
                         text-transform: uppercase;
                         margin-bottom: 0;
                         color: @text_light;
-                        letter-spacing: 12px;
+                        letter-spacing: calc(1vw + 1px);
                         margin-left: 12px;
                     }
-
                     hr {
                         width: 100px;
                         height: 1.5px;
@@ -1000,11 +999,9 @@ button {
                     }
 
                     .close {
-                        width: 30px;
-                        height: 30px;
                         position: absolute;
-                        right: 2%;
                         top: 0%;
+                        right: 2%;
                         cursor: pointer;
                         transition: color 200ms, transform 500ms;
 
