@@ -56,7 +56,7 @@ button:focus {
 }
 .header {
   width: 100%;
-  z-index: 1000;
+  z-index: 15;
   padding: 0;
   position: absolute;
   top: 0;
@@ -174,7 +174,7 @@ button:focus {
 }
 /*SELECT LANG*/
 .select_lang_box {
-  z-index: 1500;
+  z-index: 15;
   position: absolute;
   right: 90px;
   top: 50px;
@@ -511,6 +511,9 @@ button:focus {
   padding: 10px 40px;
   margin-left: 40px;
 }
+.about_section .about_btn a {
+  text-decoration: none;
+}
 .about_section .about_btn span {
   letter-spacing: 8px;
   color: #fabf99;
@@ -781,90 +784,104 @@ button:focus {
   color: #fcfcfc;
 }
 .price_section .modal_window {
-  position: absolute;
-  z-index: 2000;
-  box-shadow: 0 0 79px rgba(0, 0, 0, 0.2);
-  padding-bottom: 80px;
-  right: 15%;
-  left: 15%;
-  top: 5%;
-  width: 70%;
-  position: fixed;
-  background-color: #f9f9f9;
-  opacity: 0;
+  position: inherit;
+  z-index: 9999;
   visibility: hidden;
+  opacity: 0;
   transition: 0.3s all;
 }
-.price_section .modal_window .modal_title {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  position: relative;
+.price_section .modal_window .containt_window {
+  position: fixed;
+  top: calc(5.2vw);
+  bottom: calc(5.2vw);
+  z-index: 9999;
+  width: 100%;
+  left: 50%;
+  right: 50%;
+  padding: calc(8vw);
+  transform: translate(-50%);
 }
-.price_section .modal_window .modal_title h2 {
-  font-size: calc(15vw);
+.price_section .modal_window .containt_window .info_window {
+  max-height: 90vh;
+  position: relative;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 79px rgba(0, 0, 0, 0.2);
+  margin: 0;
+  width: 100%;
+  padding: calc(22vw) calc(6vw);
+}
+.price_section .modal_window .containt_window .info_window .modal_title {
+  padding-bottom: calc(5vw);
+}
+.price_section .modal_window .containt_window .info_window .modal_title h2 {
+  font-size: calc(9.2vw);
   font-family: 'OnePlusOne 2015', sans-serif;
   text-transform: uppercase;
   margin-bottom: 0;
   color: #707070;
-  letter-spacing: 12px;
+  letter-spacing: calc(2vw);
+  margin-left: 12px;
 }
-.price_section .modal_window .modal_title hr {
+.price_section .modal_window .containt_window .info_window .modal_title hr {
   width: 100px;
-  height: 2px;
+  height: 1.5px;
   background-color: #fabf99;
   border: 0;
-  margin-top: 10px;
+  margin-top: 5px;
 }
-.price_section .modal_window .modal_title .close {
-  width: 30px;
-  height: 30px;
+.price_section .modal_window .containt_window .info_window .modal_title .close {
   position: absolute;
-  right: 5%;
-  top: 28%;
+  top: 0%;
+  right: 2%;
   cursor: pointer;
   transition: color 200ms, transform 500ms;
 }
-.price_section .modal_window .modal_title .close:hover,
-.price_section .modal_window .modal_title .close:focus {
+.price_section .modal_window .containt_window .info_window .modal_title .close:hover,
+.price_section .modal_window .containt_window .info_window .modal_title .close:focus {
   color: #fabf99;
   transform: rotate(360deg);
 }
-.price_section .modal_window .questions {
-  position: relative;
-}
-.price_section .modal_window .questions::after {
-  position: absolute;
-  content: '';
-  display: block;
-  width: 1px;
-  height: 360px;
-  background-color: #707070;
-  top: 0;
-  right: 0;
-}
-.price_section .modal_window .questions h3 {
-  font-size: calc(14.7vw);
-  color: #707070;
-  font-family: 'Mont-ExtraLightDEMO', sans-serif;
-}
-.price_section .modal_window .questions ul {
-  margin: 0;
+.price_section .modal_window .containt_window .info_window .col-md-6 {
   padding: 0;
-  padding-top: 30px;
-  list-style: none;
-  margin-left: 10%;
-  padding-right: 10%;
 }
-.price_section .modal_window .questions ul li {
-  font-size: calc(14.5vw);
-  color: #707070;
-  font-family: 'Mont-ExtraLightDEMO', sans-serif;
-  padding-bottom: 20px;
+.price_section .modal_window .containt_window .info_window .questions {
   position: relative;
   text-align: left;
-  padding-left: 20px;
+  margin: 0 calc(4.5vw);
 }
-.price_section .modal_window .questions ul li::before {
+.price_section .modal_window .containt_window .info_window .questions h3 {
+  font-size: calc(13vw);
+  color: #707070;
+  position: relative;
+  display: inline-block;
+  font-family: 'Mont-ExtraLightDEMO', sans-serif;
+}
+.price_section .modal_window .containt_window .info_window .questions h3::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0%;
+  background-color: #fabf99;
+}
+.price_section .modal_window .containt_window .info_window .questions ul {
+  margin: 0;
+  padding: 0;
+  padding-top: calc(11vw);
+  list-style: none;
+}
+.price_section .modal_window .containt_window .info_window .questions ul li {
+  font-size: calc(12.5vw);
+  color: #707070;
+  font-family: 'Mont-ExtraLightDEMO', sans-serif;
+  margin-bottom: calc(9vw);
+  position: relative;
+  text-align: left;
+  padding-left: 25px;
+  line-height: 20px;
+}
+.price_section .modal_window .containt_window .info_window .questions ul li::before {
   position: absolute;
   content: '';
   display: block;
@@ -875,29 +892,41 @@ button:focus {
   top: 20%;
   left: 0;
 }
-.price_section .modal_window .desc_info h3 {
-  font-size: calc(14.7vw);
+.price_section .modal_window .containt_window .info_window .desc_info {
+  text-align: left;
+  margin: 0 calc(4.5vw);
+}
+.price_section .modal_window .containt_window .info_window .desc_info h3 {
+  font-size: calc(13vw);
   color: #707070;
+  position: relative;
+  display: inline-block;
   font-family: 'Mont-ExtraLightDEMO', sans-serif;
 }
-.price_section .modal_window .desc_info p {
-  padding-top: 30px;
+.price_section .modal_window .containt_window .info_window .desc_info h3::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0%;
+  background-color: #fabf99;
+}
+.price_section .modal_window .containt_window .info_window .desc_info p {
+  padding-top: 20px;
   font-family: 'Mont-ExtraLightDEMO', sans-serif;
   font-weight: 700;
-  font-size: calc(12.2vw);
+  font-size: calc(10.4vw);
   color: #707070;
-  padding-right: 60px;
-  padding-left: 60px;
-  text-align: left;
 }
-.price_section .modal_window .col-md-6 {
+.price_section .modal_window .containt_window .info_window .btn {
+  margin: 0;
   padding: 0;
 }
-.price_section .modal_window .modal_btn {
-  border: 1.2px solid #fabf99;
+.price_section .modal_window .containt_window .info_window .modal_btn {
+  border: 1px solid #fabf99;
   background-color: #f9f9f9;
   position: relative;
-  margin-top: 35px;
+  margin-top: calc(4.5vw);
   z-index: 10;
   border-radius: 0;
   color: #fff;
@@ -905,16 +934,16 @@ button:focus {
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
-  padding: 10px 40px;
+  padding: calc(5.3vw) calc(15vw);
 }
-.price_section .modal_window .modal_btn span {
+.price_section .modal_window .containt_window .info_window .modal_btn span {
   letter-spacing: 8px;
   color: #fabf99;
-  font-size: 15px;
+  font-size: calc(5.7vw);
   transition: 0.5s all ease;
   font-family: 'OnePlusOne 2015', sans-serif;
 }
-.price_section .modal_window .modal_btn::before {
+.price_section .modal_window .containt_window .info_window .modal_btn::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -924,15 +953,15 @@ button:focus {
   z-index: -1;
   transition: 0.5s all ease;
 }
-.price_section .modal_window .modal_btn::before {
+.price_section .modal_window .containt_window .info_window .modal_btn::before {
   width: 100%;
   height: 0;
   transform: translate(-50%, -50%) rotate(45deg);
 }
-.price_section .modal_window .modal_btn:hover::before {
+.price_section .modal_window .containt_window .info_window .modal_btn:hover::before {
   height: 600%;
 }
-.price_section .modal_window .modal_btn:hover span {
+.price_section .modal_window .containt_window .info_window .modal_btn:hover span {
   color: #707070;
 }
 .price_section .overlay {
@@ -1892,4 +1921,117 @@ button:focus {
   text-transform: uppercase;
   text-align: center;
   padding-top: 250px;
+}
+.logo_info {
+  padding-bottom: 70px;
+}
+.logo_info .logo_info_photo img {
+  height: 100%;
+  width: 100%;
+}
+.logo_info h3 {
+  font-family: 'OnePlusOne 2015', sans-serif;
+  text-transform: uppercase;
+  color: #fabf99;
+  font-size: calc(14.3vw);
+  padding-top: 70px;
+  padding-left: 40px;
+}
+.logo_info p {
+  font-family: 'OnePlusOne 2015', sans-serif;
+  color: #707070;
+  padding-left: 40px;
+}
+.logo_slider {
+  background-color: #f3f3f3;
+  padding-bottom: 70px;
+}
+.logo_slider .s {
+  padding-top: 30px;
+  text-align: center;
+}
+.logo_slider .s .slide_btn {
+  display: inline-block;
+  bottom: 90px;
+  font-size: 20px;
+}
+.logo_slider .s .slide_btn span {
+  color: #707070;
+}
+.logo_slider .s .slide_btn .next::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 1.5px solid #707070;
+  border-top: none;
+  border-left: none;
+  transform: translate(-100%, -50%) rotate(-45deg);
+  transition: 0.2s;
+}
+.logo_slider .s .slide_btn .next span {
+  overflow: hidden;
+  position: relative;
+}
+.logo_slider .s .slide_btn .next span::after {
+  content: '';
+  width: 0px;
+  height: 1.5px;
+  position: absolute;
+  transition: 0.2s;
+  left: 0;
+  right: 0;
+  transform: translate(0%, -50%);
+}
+.logo_slider .s .slide_btn .next:hover::before {
+  border-color: #fabf99;
+  transform: translate(92%, -50%) rotate(-45deg);
+}
+.logo_slider .s .slide_btn .next:hover span::after {
+  width: 30px;
+  background-color: #fabf99;
+  left: 100%;
+}
+.logo_slider .s .slide_btn .prev::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 1.5px solid #707070;
+  border-bottom: none;
+  border-right: none;
+  transform: translate(0%, -50%) rotate(-45deg);
+  transition: 0.2s;
+}
+.logo_slider .s .slide_btn .prev span {
+  overflow: hidden;
+  position: relative;
+}
+.logo_slider .s .slide_btn .prev span::after {
+  content: '';
+  width: 0px;
+  height: 1.5px;
+  position: absolute;
+  transition: 0.2s;
+  left: 0;
+  right: 0;
+  transform: translate(-92%, -50%);
+}
+.logo_slider .s .slide_btn .prev:hover::before {
+  border-color: #fabf99;
+  transform: translate(-180%, -50%) rotate(-45deg);
+}
+.logo_slider .s .slide_btn .prev:hover span::after {
+  width: 30px;
+  background-color: #fabf99;
+  right: 100%;
+}
+.logo_slider .col-md-4 {
+  margin-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.logo_slider img {
+  width: 100%;
+  height: 100%;
 }
