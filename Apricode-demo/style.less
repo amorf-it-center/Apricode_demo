@@ -63,7 +63,7 @@ button {
 
 /*COLORS*/
 @body_color: #F9F9F9;
-@main_color: #FABF99;
+@main_color: #f8a454;
 @text_dark: #FCFCFC;
 @text_light: #707070;
 @section_bkg: #F3F3F3;
@@ -382,27 +382,30 @@ button {
 /*TITLE*/
 .title_general{
         text-align: center;
-        padding-top: 70px;
-        padding-bottom: 40px;
+        padding:calc(3vw + 20px) 0;
+    text-align: center;
         h1{
             .OnePlusOne;
             color: @text_light;
             text-transform: uppercase;
-            letter-spacing: 12px;
+            letter-spacing: calc(1vw + 1px);
             font-size: calc(1vw + 14px) ;
-            margin-bottom: 0;
         }
         hr{
-            width: 100px;
-            height: 2px;
+            width: calc(3vw + 20px);
+            height: 1px;
             background-color: @main_color;
             border: 0;
-            margin-top: 10px;
+            margin: 0;
+            margin-left: auto;
+            margin-right: auto;
         }
         h3{
             font-size: calc(0.84vw + 10px);
+            padding: 10px 0;
             .MontExtraLight;
             color: @text_light;
+            margin: 0;
         }
     }
 
@@ -588,13 +591,12 @@ button {
     .about_logo {
         text-align: center;
         img{
-            padding-top: 10px;
+            padding: calc(1vw + 5px);
             width: 100%;
             height: 100%;
         }
 }
     .about_info {
-        padding-left: 40px;
         h2{
             .impact;
             font-size: calc(5.5vw + 14px);
@@ -618,7 +620,7 @@ button {
         border: 1.2px solid @main_color;
         background-color: @section_bkg;
         position: relative;
-        margin-top: 25px;
+        margin: 25px 0;
         z-index: 10;
         border-radius: 0;
         color: #fff;
@@ -627,7 +629,6 @@ button {
         overflow: hidden;
         cursor: pointer;
         padding: 10px 40px;
-        margin-left: 40px;
 
         span {
             letter-spacing: 8px;
@@ -665,8 +666,6 @@ button {
     }
     .hr{
         margin: calc(4vw + 10px) 0;
-        padding: 0.1px;
-        background-color: @section_bkg2;
     }
     .about_slogan {
         text-align: center;
@@ -845,7 +844,7 @@ button {
             color: @text_dark;
         }
 }
-    .serv_logo{
+    .serv{
         text-align: center;
         h2{
             .MontExtraLight;
@@ -865,17 +864,6 @@ button {
                 position: relative;
                 padding: 0;
                 .MontExtraLight;
-                &::before{
-                    content: '';
-                    position: absolute;
-                    display: block;
-                    height: 10px;
-                    width: 10px;
-                    border-radius: 50%;
-                    background-color: @main_color;
-                    top: 27%;
-                    margin-right: 10px;
-                }
             }
         }
         svg{
@@ -912,16 +900,16 @@ button {
         height: 100%;
 
         h4 {
-            font-size: calc(0.7vw + 12px);
+            font-size: calc(0.5vw + 15px);
             .OnePlusOne;
             text-transform: uppercase;
-            padding-top: 50px;
+            padding-top: calc(2vw + 20px);
         }
 
         hr {
             width: 100px;
             background-color: @main_color;
-            height: 2px;
+            height: 1px;
             border: 0;
         }
 
@@ -936,7 +924,7 @@ button {
             }
 
             p {
-                padding-bottom: 20px;
+                padding-bottom: calc(0.5vw + 8px);
                 color: @main_color;
                 .MontExtraLight;
                 font-size: calc(0.7vw + 14px);
@@ -1173,6 +1161,7 @@ button {
         visibility: visible;
     }
 }
+
 /*PORTFOLIO SECTION*/
 .portfolio {
     position: relative;
@@ -1206,7 +1195,7 @@ button {
 
             li {
                 display: inline-block;
-                margin-right: 25px;
+                margin-right: calc(1vw + 15px);
                 transition: 0.5s;
                 cursor: pointer;
                 transform: scale(1);
@@ -1220,7 +1209,7 @@ button {
                 }
 
                 span {
-                    font-size: calc(0.16 + 14px);
+                    font-size: calc(0.2vw + 12px);
                     .MontExtraLight;
                     text-transform: uppercase;
                     color: @text_dark;
@@ -1321,18 +1310,19 @@ button {
 .partners_section {
     background-color: @section_bkg;
     padding-bottom: 80px;
-	.partners_logo {
-	    text-align: center;
-        img{
-           margin: 0 20px;
+
+    .partners_logo{
+        box-sizing: border-box;
+
+        div{
+            text-align: center;
+            padding: 40px;
+            img{
+                width: calc(4vw + 80px);
+            }
         }
-         hr{
-            border: 0;
-            height: 2px;
-            background-color: @section_bkg2;
-            margin-top: 40px;
-        }
-}
+    }
+
     .feed_box{
         background-color: @text_dark;
         padding: 40px;
@@ -1360,7 +1350,7 @@ button {
             color: @text_light;
             margin-bottom: 30px;
             position: relative;
-            padding: 0;
+            padding: 10px 0;
             span{
                 font-family: none;
                 font-weight: 100;
@@ -1390,7 +1380,7 @@ button {
             .OnePlusOne;
             text-transform: uppercase;
             position: relative;
-            padding: 0;
+            padding: 10px 0;
             &::before{
                 position: absolute;
                 content: '';
@@ -1398,7 +1388,7 @@ button {
                 background-color: @main_color;
                 height: 2px;
                 width: 80px;
-                top: -10%;
+                top: 0%;
 
             }
         }
@@ -1431,7 +1421,7 @@ button {
             .MontExtraLight;
             font-size: calc(1.75vw + 14px);
             color: @text_dark;
-            padding-top: 60px;
+            //padding-top: 60px;
         }
 
         span {
@@ -1478,7 +1468,6 @@ button {
                 overflow: hidden;
                 cursor: pointer;
                 padding: 10px 40px;
-                margin-bottom: 80px;
 
                 span {
                     letter-spacing: 12px;
@@ -1530,8 +1519,8 @@ button {
 
     }
     .footer_info {
-	padding-left: 80px;
-        padding-top: 162px;
+	    padding-left: 80px;
+        padding-top: calc(4.8vw + 30px);
 }
 
     .footer_social {
@@ -1595,12 +1584,13 @@ button {
 
     .copyright {
         text-align: center;
-        padding-bottom: 20px;
+        padding: 20px 0;
 
         p {
             color: @text_dark;
             display: inline-block;
-            font-size: 12px;
+            font-size: calc(0.2vw + 10px);
+            padding: 0 5px;
             .MontExtraLight;
         }
 
@@ -1624,171 +1614,14 @@ button {
 
 /*****MEDIA*****/
 
-// Экстрамалые девайсы («портретные телефоны», < 576px)
-@media (max-width: 575.98px) {
-    .title_general {
-        padding-top: 40px;
-        padding-bottom: 40px;
-        h1 {
-            letter-spacing: 3px;
-        }
-    }
-
-    .about_section {
-        .about_btn {
-            margin: 0;
-            margin-top: 20px;
-        }
-
-        .about_info {
-            padding: 0;
-        }
-
-        .about_logo {
-            img {
-                padding: 0;
-                padding-bottom: 20px;
-            }
-        }
-    }
-    .portfolio {
-	.portfolio_menu {
-        ul{
-            margin: 0;
-            li{
-                margin-right: 15px;
-                span{
-                    font-size: 12px;
-                }
-            }
-        }
-}
-}
-    .price_section {
-	.price_box {
-        h4{
-            padding-top: 20px;
-        }
-}
-}
-    .footer {
-        text-align: center;
-
-        .footer_info {
-            padding: 0;
-        }
-
-        .form {
-            h3{
-                padding-top: 20px;
-            }
-            form {
-                .btn_footer {
-                    margin-bottom: 20px;
-                    padding: 10px 30px;
-                }
-            }
-        }
-        .footer_contact {
-	text-align: center;
-}
-        .adress {
-	        margin-top: 20px;
-            padding-bottom: 10px;
-}
-        .mail{
-            margin-bottom: 10px;
-        }
-        .footer_social {
-	margin-bottom: 30px;
-}
-        .copyright {
-            p{
-                font-size: 8px;
-            }
-}
-
-    }
-}
-
-// Малые девайсы («ландшафтные», >= 575px)
-@media (min-width: 576px) and (max-width: 767.98px) {
-    .footer {
-        h3{
-            text-align: center;
-        }
-
-	.footer_info {
-     padding-top: 0;
-        padding-left: 0;
-}
-        .footer_contact {
-	text-align: center;
-}
-    .form{
-        form{
-
-
-        .btn_footer {
-	margin-bottom: 20px;
-}
-            }
-    }
-        text-align: center;
-    h4{
-        text-align: center;
-    }
-    .footer_social {
-	text-align: center;
-}
-}
-    .about_section{
-        .about_logo {
-	padding-top: 0;
-}
-        .about_info {
-	padding-left: 0;
-            padding-top: 20px;
-}
-        .about_btn{
-            margin-left: 0;
-        }
-    }
-}
-
-// Средние девайсы («таблетки», >= 768px) 
-@media (min-width: 768px) and (max-width: 991.98px) {
-
-    .footer{
-        .footer_info {
-	padding-top: 82px;
-            padding-left: 20px;
-}
-    }
-    .about_section {
-	.about_info {
-	padding-left: 0;
-}
-        .about_btn{
-            margin-left: 0;
-            margin-top: 0;
-        }
-
-}
-}
-
-// Большие девайсы (большие десктопы, >= 992px)
-@media (min-width: 992px) and (max-width: 1199.98px) { 
-
-}
-// Большие девайсы (большие десктопы, >= 1200px)
-@media (min-width: 1200px) { 
-    
-}
-
 @media(min-width: 769px){
     .about_slogan{
         padding: 40% 0;
+    }
+    .footer{
+        .copyright{
+            padding-top: 80px;
+        }
     }
 }
 
@@ -1804,7 +1637,27 @@ button {
     .about_slogan{
         padding-bottom: 30px;
     }
+    .footer{
+        text-align: center;
+         .footer_info {
+            padding: 0;
+             margin-left: 0;
+             .footer_contact{
+                 text-align: center;
+             }
+        }
+    }
 }
+
+@media (max-width: 991px) {
+    .home-section {
+        .follow_us {
+            display: none;
+        }
+    }
+}
+
+/*Media querys for slide show*/
 
 @media (min-width: 992px) {
     #container {
@@ -1913,13 +1766,7 @@ button {
     }
 }
 
-@media (max-width: 991px) {
-    .home-section {
-        .follow_us {
-            display: none;
-        }
-    }
-}
+
 
 
 /******************ABOUT PAGE******************/
