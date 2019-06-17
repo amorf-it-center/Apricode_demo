@@ -598,10 +598,15 @@ button {
 }
     .about_info {
         h2{
-            .impact;
-            font-size: calc(5.5vw + 14px);
+            .MontExtraLight;
+            font-size: calc(5vw + 13px);
             color: @text_light;
             font-weight: 400;
+            span{
+                text-transform: uppercase;
+                color: @main_color;
+                .MontExtraLight;
+            }
         }
         h3{
             text-transform: uppercase;
@@ -629,7 +634,6 @@ button {
         overflow: hidden;
         cursor: pointer;
         padding: 10px 40px;
-        margin-left: 40px;
         a{
             text-decoration: none;
         }
@@ -894,6 +898,95 @@ button {
     text-align: center;
     background-color: @section_bkg;
     padding-bottom: 80px;
+    .price_widnow{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .price_list{
+        padding: 0;
+        position: relative;
+        transition: all 0.3s;
+        overflow: hidden;
+        &:hover{
+         .each_price{
+             left: 60%;
+             color: @text_dark;
+            }
+            h1{
+                display: none;
+            }
+            .price_content{
+                background-color: @section_bkg2;
+                &::after{
+                    transform: rotate(45deg) translateX(40%);
+                }
+            }
+        }
+        .price_content{
+            margin: 4px;
+            min-height: 300px;
+            background-color: @text_dark;
+            box-sizing: border-box;
+            display: flex;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s;
+            h1{
+                margin: auto;
+                .MontExtraLight;
+                font-size: calc(1.3vw + 15px);
+                color: @section_bkg2;
+                text-transform: uppercase;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                width: 200px;
+                height: 600px;
+                top: 0;
+                right: 0;
+                transition: all 0.3s;
+                background-color: @main_color;
+                transform: rotate(45deg) translateX(100%);
+            }
+        }
+        .each_price{
+            position: absolute;
+            top: 50%;
+            left: -25%;
+            text-align: left;
+            width: 100%;
+            color: @text_dark;
+            transform: translate(-50%, -50%);
+            .MontExtraLight;
+            transition: all 0.3s;
+            h5{
+                cursor: pointer;
+                transition: all 0.3s;
+                position: relative;
+                font-size: calc(0.5vw + 14px);
+                overflow-x: hidden;
+                &:hover{
+                    color: @main_color;
+                    margin-left: 20px;
+                    overflow-x: visible;
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: 102%;
+                    width: calc(0.3vw + 6px);
+                    transform: rotate(45deg) translate(-50%, -50%);
+                    height: calc(0.3vw + 6px);
+                    border: 0.5px solid @main_color;
+                    border-bottom-style: none;
+                    border-left-style: none;
+                }
+
+            }
+        }
+    }
 
     .col-md-4 {
         margin-bottom: 20px;
@@ -902,7 +995,7 @@ button {
     .price_box {
         background-color: @text_dark;
         box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
-        height: 100%;
+        height: auto;
 
         h4 {
             font-size: calc(0.5vw + 15px);
