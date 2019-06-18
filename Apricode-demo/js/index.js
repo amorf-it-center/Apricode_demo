@@ -113,7 +113,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
            parentModal.classList.remove('active');
            modalCont.style.transform = 'translateY(-200%) translateX(-50%)';
-           modalCont.style.transition = 'all 0.3s';
            overlay.classList.remove('active');
        });
 
