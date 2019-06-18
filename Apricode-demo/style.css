@@ -852,7 +852,7 @@ button:focus {
 }
 .price_section .modal_window .containt_window {
   position: fixed;
-  top: 0%;
+  top: calc(5.2vw);
   bottom: calc(5.2vw);
   z-index: 9999;
   left: 50%;
@@ -884,7 +884,7 @@ button:focus {
   margin-left: 12px;
 }
 .price_section .modal_window .containt_window .info_window .modal_title hr {
-  width: 100px;
+  width: calc(35vw);
   height: 1.5px;
   background-color: #f8a454;
   border: 0;
@@ -2042,22 +2042,8 @@ button:focus {
 }
 /*******MODAL WINDOWS*******/
 /* Стили для подложки */
-.modal_window {
-  position: inherit;
-  z-index: 9999;
-  opacity: 1;
-  transition: 0.3s all;
-}
 .modal_window .containt_window {
-  position: fixed;
-  top: 0%;
-  bottom: calc(5.2vw);
-  z-index: 9999;
-  left: 50%;
-  right: 50%;
   padding: calc(8vw);
-  transform: translateX(-50%) translateY(-200%);
-  transition: all 0.3s;
 }
 .modal_window .containt_window .info_window {
   max-height: calc(70%);
@@ -2080,6 +2066,16 @@ button:focus {
   color: #707070;
   letter-spacing: calc(2vw);
   margin-left: 12px;
+  text-align: center;
+}
+.modal_window .containt_window .info_window .modal_title h3 {
+  font-size: calc(8.8vw);
+  font-family: 'OnePlusOne 2015', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  color: #707070;
+  margin-left: 12px;
+  text-align: center;
 }
 .modal_window .containt_window .info_window .modal_title hr {
   width: 100px;
@@ -2149,6 +2145,9 @@ button:focus {
   border-radius: 50%;
   top: 20%;
   left: 0;
+}
+.modal_window .containt_window .info_window .questions ul li span {
+  font-family: none;
 }
 .modal_window .containt_window .info_window .desc_info {
   text-align: left;

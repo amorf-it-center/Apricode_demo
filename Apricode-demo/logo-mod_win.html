@@ -24,30 +24,45 @@
             <div class="container containt_window">
                 <div class="row info_window">
                     <div class="modal_title col-md-12">
-                        <h2>Сайт визитка</h2>
+                        <h2>Дизайн Логотипов</h2>
                         <hr>
+                        <h3>мы предлагаем вам несколько видов логотипов</h3>
                         <div class="close js-modal-close">&#10005;</div>
                     </div>
-                    <div class="col-md-6 col-ms-6 col-12">
+                    <div class="col-md-4 col-ms-4 col-12">
                         <div class="questions">
-                            <h3>Что входит в стоимость?</h3>
+                            <h3>Базовый</h3>
                             <ul>
-                                <li>Разработка от 3-х дней</li>
-                                <li>Система управления сайтом</li>
-                                <li>Дизайн-шаблон</li>
-                                <li>Регистрация в Google и Yandex</li>
-                                <li>Безопасность и защита</li>
-                                <li>Поддержка сайта</li>
+                                <li>Логотип высокого качества</li>
+                                <li>Размеры JPEG2</li>
+                                <li>Прозрачность PNG</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-6 col-ms-6 col-12">
-                        <div class="desc_info">
-                            <h3>Что такое сайт Визитка?</h3>
-                            <p>
-                                Небольшой сайт, как правило, состоящий из одной (или нескольких) веб-страниц и содержащий основную информацию об организации, частном лице, компании, товарах или услугах, прейскуранты, контактные данные.
-                                Часто сайт-визитку используют компании, которые не хотят нести большие затраты на создание отдельного сайта. Очень часто при покупке доменного имени для почты устанавливается сайт-заглушка или сайт-визитка.
-                            </p>
+                    <div class="col-md-4 col-ms-4 col-12">
+                        <div class="questions">
+                            <h3>Стандартный</h3>
+                            <ul>
+                                <li>Логотип высокого качества</li>
+                                <li>Размеры JPEG2</li>
+                                <li>Прозрачность PNG</li>
+                                <li>Цветная версия</li>
+                                <li>Исходный файл</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-ms-4 col-12">
+                        <div class="questions">
+                            <h3>Премиум</h3>
+                            <ul>
+                                <li>Логотип высокого качества</li>
+                                <li>Размеры JPEG2</li>
+                                <li>Прозрачность PNG</li>
+                                <li>Цветная версия</li>
+                                <li>Исходный файл</li>
+                                <li>SVG<span>/</span>EPS<span>/</span>PDF</li>
+                                <li>Макет</li>
+                            </ul>
                         </div>
                     </div>
                     <div class="btn col-md-12">
@@ -61,66 +76,9 @@
 
 
 <!--SCRIPTS-->
-    <script src="js/index.js"></script>
+<!--    <script src="js/index.js"></script>-->
     <script src="js/vendor/bootstrap.min.js"></script>
-    <script src="js/vendor/jquery-1.11.2.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
 
-    <script>
-        $(document).ready(function() {
-            // navigation click actions
-            $('.scroll-link').on('click', function(event) {
-                event.preventDefault();
-                var sectionID = $(this).attr("data-id");
-                scrollToID('#' + sectionID, 800);
-            });
-            // scroll to top action
-            $('.scroll-top').on('click', function(event) {
-                event.preventDefault();
-                $('html, body').animate({
-                    scrollTop: 0
-                }, 'slow');
-            });
 
-            //each artfact
-            $('#each-artfact').on('click', function(event) {
-                event.preventDefault();
-                $('html, body').animate({
-                    scrollTop: 0
-                }, 'slow');
-            });
-
-            // mobile nav toggle
-            $('#nav-toggle').on('click', function(event) {
-                event.preventDefault();
-                $('#main-nav').toggleClass("open");
-            });
-        });
-        // scroll function
-        function scrollToID(id, speed) {
-            var offSet = 60;
-            var targetOffset = $(id).offset().top - offSet;
-            var mainNav = $('#main-nav');
-            $('html,body').animate({
-                scrollTop: targetOffset
-            }, speed);
-            if (mainNav.hasClass("open")) {
-                mainNav.css("height", "1px").removeClass("in").addClass("collapse");
-                mainNav.removeClass("open");
-            }
-        }
-        if (typeof console === "undefined") {
-            console = {
-                log: function() {}
-            };
-        }
-        const icons = document.querySelectorAll('.icon');
-        icons.forEach(icon => {
-            icon.addEventListener('click', (event) => {
-                icon.classList.toggle("open");
-            });
-        });
-    </script>
 </body>
 </html>
