@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Apricode</title>
+
+    <!--CSS LINKS-->
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="style.less" type="text/less">
+
+    <!--SCRIPTS-->
+    <script src="js/less.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+</head>
+
+<body>
+        <div class="modal_window" data-modal="1">
+            <div class="container containt_window">
+                <div class="row info_window">
+                    <div class="modal_title col-md-12">
+                        <h2>Сайт визитка</h2>
+                        <hr>
+                        <div class="close js-modal-close">&#10005;</div>
+                    </div>
+                    <div class="col-md-6 col-ms-6 col-12">
+                        <div class="questions">
+                            <h3>Что входит в стоимость?</h3>
+                            <ul>
+                                <li>Разработка от 3-х дней</li>
+                                <li>Система управления сайтом</li>
+                                <li>Дизайн-шаблон</li>
+                                <li>Регистрация в Google и Yandex</li>
+                                <li>Безопасность и защита</li>
+                                <li>Поддержка сайта</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-ms-6 col-12">
+                        <div class="desc_info">
+                            <h3>Что такое сайт Визитка?</h3>
+                            <p>
+                                Небольшой сайт, как правило, состоящий из одной (или нескольких) веб-страниц и содержащий основную информацию об организации, частном лице, компании, товарах или услугах, прейскуранты, контактные данные.
+                                Часто сайт-визитку используют компании, которые не хотят нести большие затраты на создание отдельного сайта. Очень часто при покупке доменного имени для почты устанавливается сайт-заглушка или сайт-визитка.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="btn col-md-12">
+                        <button class="modal_btn"><a><span>Заказать</span></a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay js-overlay-modal"></div>
+        </div>
+
+
+
+<!--SCRIPTS-->
+    <script src="js/index.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/jquery-1.11.2.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // navigation click actions
+            $('.scroll-link').on('click', function(event) {
+                event.preventDefault();
+                var sectionID = $(this).attr("data-id");
+                scrollToID('#' + sectionID, 800);
+            });
+            // scroll to top action
+            $('.scroll-top').on('click', function(event) {
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 'slow');
+            });
+
+            //each artfact
+            $('#each-artfact').on('click', function(event) {
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 'slow');
+            });
+
+            // mobile nav toggle
+            $('#nav-toggle').on('click', function(event) {
+                event.preventDefault();
+                $('#main-nav').toggleClass("open");
+            });
+        });
+        // scroll function
+        function scrollToID(id, speed) {
+            var offSet = 60;
+            var targetOffset = $(id).offset().top - offSet;
+            var mainNav = $('#main-nav');
+            $('html,body').animate({
+                scrollTop: targetOffset
+            }, speed);
+            if (mainNav.hasClass("open")) {
+                mainNav.css("height", "1px").removeClass("in").addClass("collapse");
+                mainNav.removeClass("open");
+            }
+        }
+        if (typeof console === "undefined") {
+            console = {
+                log: function() {}
+            };
+        }
+        const icons = document.querySelectorAll('.icon');
+        icons.forEach(icon => {
+            icon.addEventListener('click', (event) => {
+                icon.classList.toggle("open");
+            });
+        });
+    </script>
+</body>
+</html>
