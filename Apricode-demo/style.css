@@ -63,11 +63,7 @@ button:focus {
   left: 0;
   right: 0;
 }
-.header .navbar {
-  padding: 30px 0 0 0;
-}
 .header .navbar .navbar-brand {
-  width: 64px;
   height: auto;
   margin-left: 5px;
 }
@@ -83,7 +79,7 @@ button:focus {
   margin-right: 0;
 }
 .header .navbar .navbar-nav .nav-link:hover {
-  color: #fabf99;
+  color: #f8a454;
 }
 .header .navbar .navbar-nav a {
   margin: 0 10px;
@@ -92,7 +88,7 @@ button:focus {
 }
 .header .navbar .navbar-nav a::before {
   content: '';
-  background-color: #fabf99;
+  background-color: #f8a454;
   height: 0.5px;
   width: 0;
   position: absolute;
@@ -106,7 +102,7 @@ button:focus {
   border: none;
 }
 .header .navbar .navbar-toggler .nav-icon-5 {
-  width: 30px;
+  width: 25px;
   height: 23.5px;
   margin: 10px 10px;
   position: relative;
@@ -116,21 +112,20 @@ button:focus {
 .header .navbar .navbar-toggler .nav-icon-5 span {
   background-color: #f9f9f9;
   position: absolute;
-  border-radius: 2px;
   transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
   width: 100%;
-  height: 3px;
+  height: 1px;
   transition-duration: 500ms;
 }
 .header .navbar .navbar-toggler .nav-icon-5 span:nth-child(1) {
   top: 0px;
-  left: 0px;
+  right: 0px;
 }
 .header .navbar .navbar-toggler .nav-icon-5 span:nth-child(2) {
   top: 10px;
   right: 0px;
-  width: 20px;
-  background-color: #fabf99;
+  width: 40px;
+  background-color: #f8a454;
 }
 .header .navbar .navbar-toggler .nav-icon-5 span:nth-child(3) {
   bottom: 0px;
@@ -166,18 +161,11 @@ button:focus {
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
   transition: 0.5s;
 }
-.active .navbar {
-  padding: 10px 0 10px 0;
-}
-.active .navbar img {
-  width: 54px;
-}
 /*SELECT LANG*/
 .select_lang_box {
   z-index: 15;
   position: absolute;
   right: 90px;
-  top: 50px;
 }
 .select_lang_box .position {
   position: relative;
@@ -258,10 +246,6 @@ button:focus {
 .select_lang_box .flag-AM {
   background-position: 0 -63px;
 }
-.fixed_Lang {
-  position: fixed;
-  top: 25.5px;
-}
 /*SLIDE SHOW */
 #container #slides img {
   filter: brightness(40%);
@@ -283,7 +267,7 @@ button:focus {
   letter-spacing: 3px;
   text-transform: uppercase;
   font-family: 'Mont-ExtraLightDEMO', sans-serif;
-  color: #fabf99;
+  color: #f8a454;
   overflow: hidden;
 }
 #container #slides .slide .shaurma .title-bottom {
@@ -295,34 +279,36 @@ button:focus {
   font-family: 'Impact', sans-serif;
 }
 #container #slides .slide .shaurma .title-bottom .ump {
-  color: #fabf99;
+  color: #f8a454;
   font-family: 'Impact', sans-serif;
 }
 /*TITLE*/
 .title_general {
+  padding: calc(23vw) 0;
   text-align: center;
-  padding-top: 70px;
-  padding-bottom: 40px;
 }
 .title_general h1 {
   font-family: 'OnePlusOne 2015', sans-serif;
   color: #707070;
   text-transform: uppercase;
-  letter-spacing: 12px;
+  letter-spacing: calc(2vw);
   font-size: calc(15vw);
-  margin-bottom: 0;
 }
 .title_general hr {
-  width: 100px;
-  height: 2px;
-  background-color: #fabf99;
+  width: calc(23vw);
+  height: 1px;
+  background-color: #f8a454;
   border: 0;
-  margin-top: 10px;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 .title_general h3 {
   font-size: calc(10.84vw);
+  padding: 10px 0;
   font-family: 'Mont-ExtraLightDEMO', sans-serif;
   color: #707070;
+  margin: 0;
 }
 /* HOME SECTION*/
 .home-section {
@@ -365,12 +351,12 @@ button:focus {
   transform: translate(0%, -50%);
 }
 .home-section .slide_btn .next:hover::before {
-  border-color: #fabf99;
+  border-color: #f8a454;
   transform: translate(20%, -50%) rotate(-45deg);
 }
 .home-section .slide_btn .next:hover span::after {
   width: 20px;
-  background-color: #fabf99;
+  background-color: #f8a454;
   left: 100%;
 }
 .home-section .slide_btn .prev::before {
@@ -399,12 +385,12 @@ button:focus {
   transform: translate(-92%, -50%);
 }
 .home-section .slide_btn .prev:hover::before {
-  border-color: #fabf99;
+  border-color: #f8a454;
   transform: translate(-110%, -50%) rotate(-45deg);
 }
 .home-section .slide_btn .prev:hover span::after {
   width: 20px;
-  background-color: #fabf99;
+  background-color: #f8a454;
   right: 100%;
 }
 .home-section .follow_us {
@@ -428,12 +414,12 @@ button:focus {
   content: '';
   height: 1px;
   min-width: 160px;
-  background-color: #fabf99;
+  background-color: #f8a454;
   display: block;
   align-content: center;
   position: absolute;
   top: 50%;
-  left: 155px;
+  left: 170px;
 }
 .home-section .follow_us .social {
   position: absolute;
@@ -449,7 +435,7 @@ button:focus {
   transition: 0.2s;
 }
 .home-section .follow_us .social svg:hover {
-  fill: #fabf99;
+  fill: #f8a454;
   transform: scale(1.3);
 }
 .home-section .follow_us .social ul {
@@ -471,18 +457,20 @@ button:focus {
   text-align: center;
 }
 .about_section .about_logo img {
-  padding-top: 10px;
+  padding: calc(6vw);
   width: 100%;
   height: 100%;
 }
-.about_section .about_info {
-  padding-left: 40px;
-}
 .about_section .about_info h2 {
-  font-family: 'Impact', sans-serif;
-  font-size: calc(19.5vw);
+  font-family: 'Mont-ExtraLightDEMO', sans-serif;
+  font-size: calc(18vw);
   color: #707070;
   font-weight: 400;
+}
+.about_section .about_info h2 span {
+  text-transform: uppercase;
+  color: #f8a454;
+  font-family: 'Mont-ExtraLightDEMO', sans-serif;
 }
 .about_section .about_info h3 {
   text-transform: uppercase;
@@ -497,10 +485,10 @@ button:focus {
   font-size: calc(13.16vw);
 }
 .about_section .about_btn {
-  border: 1.2px solid #fabf99;
+  border: 1.2px solid #f8a454;
   background-color: #f3f3f3;
   position: relative;
-  margin-top: 25px;
+  margin: 25px 0;
   z-index: 10;
   border-radius: 0;
   color: #fff;
@@ -509,14 +497,13 @@ button:focus {
   overflow: hidden;
   cursor: pointer;
   padding: 10px 40px;
-  margin-left: 40px;
 }
 .about_section .about_btn a {
   text-decoration: none;
 }
 .about_section .about_btn span {
   letter-spacing: 8px;
-  color: #fabf99;
+  color: #f8a454;
   font-size: 15px;
   transition: 0.5s all ease;
   font-family: 'OnePlusOne 2015', sans-serif;
@@ -527,7 +514,7 @@ button:focus {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #fabf99;
+  background: #f8a454;
   z-index: -1;
   transition: 0.5s all ease;
 }
@@ -544,8 +531,6 @@ button:focus {
 }
 .about_section .hr {
   margin: calc(14vw) 0;
-  padding: 0.1px;
-  background-color: #20202c;
 }
 .about_section .about_slogan {
   text-align: center;
@@ -557,7 +542,7 @@ button:focus {
 }
 .about_section .about_slogan h3 span {
   text-transform: uppercase;
-  color: #fabf99;
+  color: #f8a454;
 }
 .about_section .photo_project {
   box-shadow: 0 0 34px rgba(0, 0, 0, 0.55);
@@ -604,12 +589,12 @@ button:focus {
   transform: translate(0%, -50%);
 }
 .about_section .s .slide_btn .next:hover::before {
-  border-color: #fabf99;
+  border-color: #f8a454;
   transform: translate(92%, -50%) rotate(-45deg);
 }
 .about_section .s .slide_btn .next:hover span::after {
   width: 30px;
-  background-color: #fabf99;
+  background-color: #f8a454;
   left: 100%;
 }
 .about_section .s .slide_btn .prev::before {
@@ -638,12 +623,12 @@ button:focus {
   transform: translate(-92%, -50%);
 }
 .about_section .s .slide_btn .prev:hover::before {
-  border-color: #fabf99;
+  border-color: #f8a454;
   transform: translate(-180%, -50%) rotate(-45deg);
 }
 .about_section .s .slide_btn .prev:hover span::after {
   width: 30px;
-  background-color: #fabf99;
+  background-color: #f8a454;
   right: 100%;
 }
 .about_section .slider {
@@ -686,10 +671,10 @@ button:focus {
 .service_section .title_general h3 {
   color: #fcfcfc;
 }
-.service_section .serv_logo {
+.service_section .serv {
   text-align: center;
 }
-.service_section .serv_logo h2 {
+.service_section .serv h2 {
   font-family: 'Mont-ExtraLightDEMO', sans-serif;
   color: #707070;
   text-transform: uppercase;
@@ -698,39 +683,28 @@ button:focus {
   padding-bottom: 30px;
   transition: 0.5s;
 }
-.service_section .serv_logo ul {
+.service_section .serv ul {
   padding: 0;
   list-style: none;
 }
-.service_section .serv_logo ul li {
+.service_section .serv ul li {
   color: #fcfcfc;
   font-size: calc(0.4vw 14px);
   position: relative;
   padding: 0;
   font-family: 'Mont-ExtraLightDEMO', sans-serif;
 }
-.service_section .serv_logo ul li::before {
-  content: '';
-  position: absolute;
-  display: block;
-  height: 10px;
-  width: 10px;
-  border-radius: 50%;
-  background-color: #fabf99;
-  top: 27%;
-  margin-right: 10px;
-}
-.service_section .serv_logo svg {
+.service_section .serv svg {
   fill: red;
 }
-.service_section .serv_logo a {
+.service_section .serv a {
   text-decoration: none;
 }
-.service_section .serv_logo a:hover h2 {
-  color: #fabf99;
+.service_section .serv a:hover h2 {
+  color: #f8a454;
 }
-.service_section .serv_logo a:hover svg {
-  fill: #fabf99;
+.service_section .serv a:hover svg {
+  fill: #f8a454;
 }
 /*PRICE SECTION*/
 .price_section {
@@ -741,24 +715,110 @@ button:focus {
   /* Стили для подложки */
   /* Стили для активных классов подложки и окна */
 }
+.price_section .price_widnow {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.price_section .price_list {
+  padding: 0;
+  position: relative;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+.price_section .price_list:hover .each_price {
+  left: 60%;
+  color: #fcfcfc;
+}
+.price_section .price_list:hover h1 {
+  display: none;
+}
+.price_section .price_list:hover .price_content {
+  background-color: #20202c;
+}
+.price_section .price_list:hover .price_content::after {
+  transform: rotate(45deg) translateX(40%);
+}
+.price_section .price_list .price_content {
+  margin: 4px;
+  min-height: 320px;
+  background-color: #fcfcfc;
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.price_section .price_list .price_content h1 {
+  margin: auto;
+  font-family: 'Mont-ExtraLightDEMO', sans-serif;
+  font-size: calc(16.3vw);
+  color: #20202c;
+  text-transform: uppercase;
+}
+.price_section .price_list .price_content::after {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 600px;
+  top: 0;
+  right: 0;
+  transition: all 0.3s;
+  background-color: #f8a454;
+  transform: rotate(45deg) translateX(100%);
+}
+.price_section .price_list .each_price {
+  position: absolute;
+  top: 50%;
+  left: -25%;
+  text-align: left;
+  width: 100%;
+  color: #fcfcfc;
+  transform: translate(-50%, -50%);
+  font-family: 'Mont-ExtraLightDEMO', sans-serif;
+  transition: all 0.3s;
+}
+.price_section .price_list .each_price h5 {
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  font-size: calc(14.5vw);
+  overflow-x: hidden;
+}
+.price_section .price_list .each_price h5:hover {
+  color: #f8a454;
+  margin-left: 20px;
+  overflow-x: visible;
+}
+.price_section .price_list .each_price h5::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 102%;
+  width: calc(6.3vw);
+  transform: rotate(45deg) translate(-50%, -50%);
+  height: calc(6.3vw);
+  border: 0.5px solid #f8a454;
+  border-bottom-style: none;
+  border-left-style: none;
+}
 .price_section .col-md-4 {
   margin-bottom: 20px;
 }
 .price_section .price_box {
   background-color: #fcfcfc;
   box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
-  height: 100%;
+  height: auto;
 }
 .price_section .price_box h4 {
-  font-size: calc(12.7vw);
+  font-size: calc(15.5vw);
   font-family: 'OnePlusOne 2015', sans-serif;
   text-transform: uppercase;
-  padding-top: 50px;
+  padding-top: calc(22vw);
 }
 .price_section .price_box hr {
   width: 100px;
-  background-color: #fabf99;
-  height: 2px;
+  background-color: #f8a454;
+  height: 1px;
   border: 0;
 }
 .price_section .price_box .price_item {
@@ -771,8 +831,8 @@ button:focus {
   font-family: 'Mont-ExtraLightDEMO', sans-serif;
 }
 .price_section .price_box .price_item p {
-  padding-bottom: 20px;
-  color: #fabf99;
+  padding-bottom: calc(8.5vw);
+  color: #f8a454;
   font-family: 'Mont-ExtraLightDEMO', sans-serif;
   font-size: calc(14.7vw);
   margin: 0;
@@ -792,17 +852,17 @@ button:focus {
 }
 .price_section .modal_window .containt_window {
   position: fixed;
-  top: calc(5.2vw);
+  top: 0%;
   bottom: calc(5.2vw);
   z-index: 9999;
-  width: 100%;
   left: 50%;
   right: 50%;
   padding: calc(8vw);
-  transform: translate(-50%);
+  transform: translateX(-50%) translateY(-200%);
+  transition: all 0.3s;
 }
 .price_section .modal_window .containt_window .info_window {
-  max-height: 90vh;
+  max-height: calc(70%);
   position: relative;
   overflow-y: auto;
   background-color: #f9f9f9;
@@ -826,7 +886,7 @@ button:focus {
 .price_section .modal_window .containt_window .info_window .modal_title hr {
   width: 100px;
   height: 1.5px;
-  background-color: #fabf99;
+  background-color: #f8a454;
   border: 0;
   margin-top: 5px;
 }
@@ -839,7 +899,7 @@ button:focus {
 }
 .price_section .modal_window .containt_window .info_window .modal_title .close:hover,
 .price_section .modal_window .containt_window .info_window .modal_title .close:focus {
-  color: #fabf99;
+  color: #f8a454;
   transform: rotate(360deg);
 }
 .price_section .modal_window .containt_window .info_window .col-md-6 {
@@ -863,7 +923,7 @@ button:focus {
   width: 100%;
   height: 1px;
   bottom: 0%;
-  background-color: #fabf99;
+  background-color: #f8a454;
 }
 .price_section .modal_window .containt_window .info_window .questions ul {
   margin: 0;
@@ -887,7 +947,7 @@ button:focus {
   display: block;
   height: 10px;
   width: 10px;
-  background-color: #fabf99;
+  background-color: #f8a454;
   border-radius: 50%;
   top: 20%;
   left: 0;
@@ -909,7 +969,7 @@ button:focus {
   width: 100%;
   height: 1px;
   bottom: 0%;
-  background-color: #fabf99;
+  background-color: #f8a454;
 }
 .price_section .modal_window .containt_window .info_window .desc_info p {
   padding-top: 20px;
@@ -922,8 +982,12 @@ button:focus {
   margin: 0;
   padding: 0;
 }
+.price_section .modal_window .containt_window .info_window button {
+  margin: 0;
+  padding: 0;
+}
 .price_section .modal_window .containt_window .info_window .modal_btn {
-  border: 1px solid #fabf99;
+  border: 1px solid #f8a454;
   background-color: #f9f9f9;
   position: relative;
   margin-top: calc(4.5vw);
@@ -934,12 +998,12 @@ button:focus {
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
-  padding: calc(5.3vw) calc(15vw);
+  padding: calc(5.3vw) calc(21.3vw);
 }
 .price_section .modal_window .containt_window .info_window .modal_btn span {
   letter-spacing: 8px;
-  color: #fabf99;
-  font-size: calc(5.7vw);
+  color: #f8a454;
+  font-size: calc(11.3vw);
   transition: 0.5s all ease;
   font-family: 'OnePlusOne 2015', sans-serif;
 }
@@ -949,7 +1013,7 @@ button:focus {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #fabf99;
+  background: #f8a454;
   z-index: -1;
   transition: 0.5s all ease;
 }
@@ -973,7 +1037,7 @@ button:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 20;
   transition: .3s all;
 }
@@ -993,7 +1057,7 @@ button:focus {
   box-shadow: none;
 }
 .portfolio .project-filter .active span {
-  color: #fabf99;
+  color: #f8a454;
 }
 .portfolio .title_general h1 {
   color: #fcfcfc !important;
@@ -1011,7 +1075,7 @@ button:focus {
 }
 .portfolio .portfolio_menu ul li {
   display: inline-block;
-  margin-right: 25px;
+  margin-right: calc(16vw);
   transition: 0.5s;
   cursor: pointer;
   transform: scale(1);
@@ -1020,10 +1084,10 @@ button:focus {
   transform: scale(1.2);
 }
 .portfolio .portfolio_menu ul li:hover span {
-  color: #fabf99;
+  color: #f8a454;
 }
 .portfolio .portfolio_menu ul li span {
-  font-size: calc(14.16px);
+  font-size: calc(12.2vw);
   font-family: 'Mont-ExtraLightDEMO', sans-serif;
   text-transform: uppercase;
   color: #fcfcfc;
@@ -1080,7 +1144,7 @@ button:focus {
   margin-bottom: 2px;
 }
 .portfolio .photo .name hr {
-  background-color: #fabf99;
+  background-color: #f8a454;
   height: .5px;
   width: 0%;
   transition: 1s;
@@ -1109,16 +1173,14 @@ button:focus {
   padding-bottom: 80px;
 }
 .partners_section .partners_logo {
+  box-sizing: border-box;
+}
+.partners_section .partners_logo div {
   text-align: center;
+  padding: 40px;
 }
-.partners_section .partners_logo img {
-  margin: 0 20px;
-}
-.partners_section .partners_logo hr {
-  border: 0;
-  height: 2px;
-  background-color: #20202c;
-  margin-top: 40px;
+.partners_section .partners_logo div img {
+  width: calc(84vw);
 }
 .partners_section .feed_box {
   background-color: #fcfcfc;
@@ -1148,7 +1210,7 @@ button:focus {
   color: #707070;
   margin-bottom: 30px;
   position: relative;
-  padding: 0;
+  padding: 10px 0;
 }
 .partners_section .feed_box .date span {
   font-family: none;
@@ -1158,7 +1220,7 @@ button:focus {
   position: absolute;
   content: '';
   display: block;
-  background-color: #fabf99;
+  background-color: #f8a454;
   height: 2px;
   width: 50px;
   bottom: 0;
@@ -1177,22 +1239,22 @@ button:focus {
   font-family: 'OnePlusOne 2015', sans-serif;
   text-transform: uppercase;
   position: relative;
-  padding: 0;
+  padding: 10px 0;
 }
 .partners_section .feed_box .name::before {
   position: absolute;
   content: '';
   display: block;
-  background-color: #fabf99;
+  background-color: #f8a454;
   height: 2px;
   width: 80px;
-  top: -10%;
+  top: 0%;
 }
 .partners_section .btn_group {
   text-align: center;
 }
 .partners_section .btn_group button {
-  background-color: #fabf99;
+  background-color: #f8a454;
   height: 10px;
   width: 10px;
   border: 0;
@@ -1212,10 +1274,9 @@ button:focus {
   font-family: 'Mont-ExtraLightDEMO', sans-serif;
   font-size: calc(15.75vw);
   color: #fcfcfc;
-  padding-top: 60px;
 }
 .footer .form span {
-  color: #fabf99;
+  color: #f8a454;
   text-transform: uppercase;
 }
 .footer .form form {
@@ -1243,7 +1304,7 @@ button:focus {
   font-family: 'Mont-ExtraLightDEMO', sans-serif;
 }
 .footer .form form .btn_footer {
-  border: 1.2px solid #fabf99;
+  border: 1.2px solid #f8a454;
   position: relative;
   background-color: #20202c;
   margin-top: 30px;
@@ -1255,11 +1316,10 @@ button:focus {
   overflow: hidden;
   cursor: pointer;
   padding: 10px 40px;
-  margin-bottom: 80px;
 }
 .footer .form form .btn_footer span {
   letter-spacing: 12px;
-  color: #fabf99;
+  color: #f8a454;
   font-size: 15px;
   transition: 0.5s all ease;
   font-family: 'OnePlusOne 2015', sans-serif;
@@ -1270,7 +1330,7 @@ button:focus {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #fabf99;
+  background: #f8a454;
   z-index: -1;
   transition: 0.5s all ease;
 }
@@ -1286,7 +1346,7 @@ button:focus {
   color: #20202c;
 }
 .footer h4 {
-  color: #fabf99;
+  color: #f8a454;
   text-transform: uppercase;
   font-family: 'Mont-ExtraLightDEMO', sans-serif;
   font-size: 17px;
@@ -1297,7 +1357,7 @@ button:focus {
 }
 .footer .footer_info {
   padding-left: 80px;
-  padding-top: 162px;
+  padding-top: calc(34.8vw);
 }
 .footer .footer_social ul {
   padding: 0;
@@ -1319,7 +1379,7 @@ button:focus {
   transform: scale(1);
 }
 .footer .footer_social ul li svg:hover {
-  fill: #fabf99;
+  fill: #f8a454;
   transform: scale(1.2);
 }
 .footer .footer_social hr {
@@ -1341,7 +1401,7 @@ button:focus {
   padding-bottom: 0px;
 }
 .footer .footer_contact a {
-  color: #fabf99;
+  color: #f8a454;
   text-decoration: none;
 }
 .footer .footer_contact svg {
@@ -1349,12 +1409,13 @@ button:focus {
 }
 .footer .copyright {
   text-align: center;
-  padding-bottom: 20px;
+  padding: 20px 0;
 }
 .footer .copyright p {
   color: #fcfcfc;
   display: inline-block;
-  font-size: 12px;
+  font-size: calc(10.2vw);
+  padding: 0 5px;
   font-family: 'Mont-ExtraLightDEMO', sans-serif;
 }
 .footer .copyright span {
@@ -1372,120 +1433,53 @@ button:focus {
   font-family: 'OnePlusOne 2015', sans-serif;
 }
 /*****MEDIA*****/
-@media (max-width: 575.98px) {
-  .title_general {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-  .title_general h1 {
-    letter-spacing: 3px;
-  }
-  .about_section .about_btn {
-    margin: 0;
-    margin-top: 20px;
-  }
-  .about_section .about_info {
-    padding: 0;
-  }
-  .about_section .about_logo img {
-    padding: 0;
-    padding-bottom: 20px;
-  }
-  .portfolio .portfolio_menu ul {
-    margin: 0;
-  }
-  .portfolio .portfolio_menu ul li {
-    margin-right: 15px;
-  }
-  .portfolio .portfolio_menu ul li span {
-    font-size: 12px;
-  }
-  .price_section .price_box h4 {
-    padding-top: 20px;
-  }
-  .footer {
-    text-align: center;
-  }
-  .footer .footer_info {
-    padding: 0;
-  }
-  .footer .form h3 {
-    padding-top: 20px;
-  }
-  .footer .form form .btn_footer {
-    margin-bottom: 20px;
-    padding: 10px 30px;
-  }
-  .footer .footer_contact {
-    text-align: center;
-  }
-  .footer .adress {
-    margin-top: 20px;
-    padding-bottom: 10px;
-  }
-  .footer .mail {
-    margin-bottom: 10px;
-  }
-  .footer .footer_social {
-    margin-bottom: 30px;
-  }
-  .footer .copyright p {
-    font-size: 8px;
-  }
-}
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .footer {
-    text-align: center;
-  }
-  .footer h3 {
-    text-align: center;
-  }
-  .footer .footer_info {
-    padding-top: 0;
-    padding-left: 0;
-  }
-  .footer .footer_contact {
-    text-align: center;
-  }
-  .footer .form form .btn_footer {
-    margin-bottom: 20px;
-  }
-  .footer h4 {
-    text-align: center;
-  }
-  .footer .footer_social {
-    text-align: center;
-  }
-  .about_section .about_logo {
-    padding-top: 0;
-  }
-  .about_section .about_info {
-    padding-left: 0;
-    padding-top: 20px;
-  }
-  .about_section .about_btn {
-    margin-left: 0;
-  }
-}
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .footer .footer_info {
-    padding-top: 82px;
-    padding-left: 20px;
-  }
-  .about_section .about_info {
-    padding-left: 0;
-  }
-  .about_section .about_btn {
-    margin-left: 0;
-    margin-top: 0;
-  }
-}
 @media (min-width: 769px) {
+  .navbar {
+    padding: 30px 0 0 0;
+  }
+  .navbar img {
+    width: 64px;
+  }
+  .active .navbar {
+    padding: 10px 0 10px 0;
+  }
+  .active .navbar img {
+    width: 54px;
+  }
+  .fixed_Lang {
+    position: fixed;
+    top: 23px;
+  }
+  .select_lang_box {
+    top: 48px;
+  }
   .about_slogan {
     padding: 40% 0;
   }
+  .footer .copyright {
+    padding-top: 80px;
+  }
 }
 @media (max-width: 767px) {
+  .navbar {
+    padding: 20px 0 0 0;
+  }
+  .navbar img {
+    width: 40px;
+  }
+  .active .navbar {
+    padding: 5px 0 5px 0;
+  }
+  .active .navbar img {
+    width: 40px;
+  }
+  .select_lang_box {
+    top: 30px;
+  }
+  .fixed_Lang {
+    position: fixed;
+    top: 15px;
+  }
   .about_section {
     text-align: center;
   }
@@ -1495,7 +1489,23 @@ button:focus {
   .about_slogan {
     padding-bottom: 30px;
   }
+  .footer {
+    text-align: center;
+  }
+  .footer .footer_info {
+    padding: 0;
+    margin-left: 0;
+  }
+  .footer .footer_info .footer_contact {
+    text-align: center;
+  }
 }
+@media (max-width: 991px) {
+  .home-section .follow_us {
+    display: none;
+  }
+}
+/*Media querys for slide show*/
 @media (min-width: 992px) {
   #container .shaurma .title {
     top: 37%;
@@ -1575,11 +1585,6 @@ button:focus {
   }
   #container .shaurma .title-bottom .ump {
     font-size: 35px;
-  }
-}
-@media (max-width: 991px) {
-  .home-section .follow_us {
-    display: none;
   }
 }
 /******************ABOUT PAGE******************/
@@ -1681,7 +1686,7 @@ button:focus {
   margin-bottom: 2px;
 }
 .team_section .photo .name hr {
-  background-color: #fabf99;
+  background-color: #f8a454;
   height: .5px;
   width: 0%;
   transition: 1s;
@@ -1801,12 +1806,12 @@ button:focus {
   transform: translate(0%, -50%);
 }
 .info_sld .s .slide_btn .next:hover::before {
-  border-color: #fabf99;
+  border-color: #f8a454;
   transform: translate(92%, -50%) rotate(-45deg);
 }
 .info_sld .s .slide_btn .next:hover span::after {
   width: 30px;
-  background-color: #fabf99;
+  background-color: #f8a454;
   left: 100%;
 }
 .info_sld .s .slide_btn .prev::before {
@@ -1835,12 +1840,12 @@ button:focus {
   transform: translate(-92%, -50%);
 }
 .info_sld .s .slide_btn .prev:hover::before {
-  border-color: #fabf99;
+  border-color: #f8a454;
   transform: translate(-180%, -50%) rotate(-45deg);
 }
 .info_sld .s .slide_btn .prev:hover span::after {
   width: 30px;
-  background-color: #fabf99;
+  background-color: #f8a454;
   right: 100%;
 }
 .info_sld .slider {
@@ -1883,7 +1888,7 @@ button:focus {
 .info_res h3 {
   font-family: 'OnePlusOne 2015', sans-serif;
   text-transform: uppercase;
-  color: #fabf99;
+  color: #f8a454;
   font-size: calc(14.3vw);
 }
 .info_res p {
@@ -1932,7 +1937,7 @@ button:focus {
 .logo_info h3 {
   font-family: 'OnePlusOne 2015', sans-serif;
   text-transform: uppercase;
-  color: #fabf99;
+  color: #f8a454;
   font-size: calc(14.3vw);
   padding-top: 70px;
   padding-left: 40px;
@@ -1984,12 +1989,12 @@ button:focus {
   transform: translate(0%, -50%);
 }
 .logo_slider .s .slide_btn .next:hover::before {
-  border-color: #fabf99;
+  border-color: #f8a454;
   transform: translate(92%, -50%) rotate(-45deg);
 }
 .logo_slider .s .slide_btn .next:hover span::after {
   width: 30px;
-  background-color: #fabf99;
+  background-color: #f8a454;
   left: 100%;
 }
 .logo_slider .s .slide_btn .prev::before {
@@ -2018,12 +2023,12 @@ button:focus {
   transform: translate(-92%, -50%);
 }
 .logo_slider .s .slide_btn .prev:hover::before {
-  border-color: #fabf99;
+  border-color: #f8a454;
   transform: translate(-180%, -50%) rotate(-45deg);
 }
 .logo_slider .s .slide_btn .prev:hover span::after {
   width: 30px;
-  background-color: #fabf99;
+  background-color: #f8a454;
   right: 100%;
 }
 .logo_slider .col-md-4 {
