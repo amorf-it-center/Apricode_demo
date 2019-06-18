@@ -91,11 +91,13 @@ document.addEventListener('DOMContentLoaded', function() {
          /* При каждом клике на кнопку мы будем забирать содержимое атрибута data-modal
             и будем искать модальное окно с таким же атрибутом. */
          var modalId = this.getAttribute('data-modal'),
-             modalElem = document.querySelector('.modal_window[data-modal="' + modalId + '"]');
+             modalElem = document.querySelector('.modal_window[data-modal="' + modalId + '"]'),
+             modalCont = document.querySelector('.containt_window');
 
 
          /* После того как нашли нужное модальное окно, добавим классы
             подложке и окну чтобы показать их. */
+          modalCont.style.transform = 'translateY(0) translateX(-50%)';
          modalElem.classList.add('active');
          overlay.classList.add('active');
       }); // end click
@@ -103,17 +105,19 @@ document.addEventListener('DOMContentLoaded', function() {
    }); // end foreach
 
 
-   closeButtons.forEach(function(item){
+   closeButtons.forEach(function (item) {
 
-      item.addEventListener('click', function(e) {
-         var parentModal = this.closest('.modal_window');
+       item.addEventListener('click', function (e) {
+           var parentModal = this.closest('.modal_window'),
+               modalCont = document.querySelector('.containt_window');
 
-         parentModal.classList.remove('active');
-         overlay.classList.remove('active');
-      });
+           parentModal.classList.remove('active');
+           modalCont.style.transform = 'translateY(-200%) translateX(-50%)';
+           modalCont.style.transition = 'all 0.3s';
+           overlay.classList.remove('active');
+       });
 
    }); // end foreach
-
 
     document.body.addEventListener('keyup', function (e) {
         var key = e.keyCode;
