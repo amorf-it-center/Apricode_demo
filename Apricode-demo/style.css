@@ -2119,6 +2119,17 @@ button:focus {
   bottom: 0%;
   background-color: #f8a454;
 }
+.modal_window .containt_window .info_window .questions h4 {
+  font-size: calc(13vw);
+  color: #f8a454;
+  position: relative;
+  display: inline-block;
+  font-family: 'Mont-ExtraLightDEMO', sans-serif;
+}
+.modal_window .containt_window .info_window .questions p {
+  font-family: 'Mont-ExtraLightDEMO', sans-serif;
+  color: #707070;
+}
 .modal_window .containt_window .info_window .questions ul {
   margin: 0;
   padding: 0;
