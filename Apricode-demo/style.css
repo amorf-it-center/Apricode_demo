@@ -101,7 +101,9 @@ button:focus {
 }
 .header .navbar .navbar-toggler {
   border: none;
+  line-height: 0;
   padding: 0;
+  margin-right: 5px;
 }
 .header .navbar .navbar-toggler .nav-icon-5 {
   width: 25px;
