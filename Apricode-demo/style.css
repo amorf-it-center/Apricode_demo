@@ -671,6 +671,9 @@ button:focus {
 .service_section .title_general h3 {
   color: #fcfcfc;
 }
+.service_section .serv_top {
+  margin-top: 32px;
+}
 .service_section .serv {
   text-align: center;
   padding-top: calc(11.5vw);
