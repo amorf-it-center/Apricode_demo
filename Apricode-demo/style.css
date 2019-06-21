@@ -1515,6 +1515,9 @@ button:focus {
   .about_section {
     text-align: center;
   }
+  .about_section .s {
+    text-align: center;
+  }
   .price_item p {
     font-weight: 600;
   }
