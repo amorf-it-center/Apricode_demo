@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
                modalCont = document.querySelector('.containt_window');
 
            parentModal.classList.remove('active');
-           modalCont.style.transform = 'translateY(-200%) translateX(-50%)';
+           modalCont.style.transform = 'translateY(-150%) translateX(-50%)';
            overlay.classList.remove('active');
        });
 
