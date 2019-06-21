@@ -852,7 +852,7 @@ button:focus {
 }
 .price_section .modal_window .containt_window {
   position: fixed;
-  top: 0%;
+  top: calc(5.2vw);
   bottom: calc(5.2vw);
   z-index: 9999;
   left: 50%;
@@ -884,7 +884,7 @@ button:focus {
   margin-left: 12px;
 }
 .price_section .modal_window .containt_window .info_window .modal_title hr {
-  width: 100px;
+  width: calc(35vw);
   height: 1.5px;
   background-color: #f8a454;
   border: 0;
