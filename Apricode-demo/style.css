@@ -688,8 +688,9 @@ button:focus {
   color: #fcfcfc;
   position: relative;
   text-transform: uppercase;
-  font-size: calc(13.5vw);
+  font-size: calc(17.2vw);
   padding-top: 30px;
+  letter-spacing: 1px;
   padding-bottom: 10px;
   display: inline-block;
   transition: 0.5s;
