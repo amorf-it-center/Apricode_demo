@@ -677,7 +677,7 @@ button:focus {
 }
 .service_section .serv_pos {
   position: relative;
-  padding-top: 15px;
+  padding: 15px;
 }
 .service_section .serv {
   text-align: center;
