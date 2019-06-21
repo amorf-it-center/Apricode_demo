@@ -673,38 +673,67 @@ button:focus {
 }
 .service_section .serv {
   text-align: center;
+  padding-top: calc(11.5vw);
 }
 .service_section .serv h2 {
   font-family: 'Mont-ExtraLightDEMO', sans-serif;
-  color: #707070;
+  color: #fcfcfc;
+  position: relative;
   text-transform: uppercase;
   font-size: calc(14.5vw);
-  padding-top: 20px;
-  padding-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  display: inline-block;
   transition: 0.5s;
+  text-align: center;
 }
-.service_section .serv ul {
-  padding: 0;
-  list-style: none;
+.service_section .serv h2::before {
+  content: '';
+  position: absolute;
+  background-color: #f8a454;
+  height: 1px;
+  width: 2.5px;
+  left: 50%;
+  bottom: -1%;
+  transition: all 0.3s;
+  transform: translateY(-50%);
 }
-.service_section .serv ul li {
-  color: #fcfcfc;
-  font-size: calc(0.4vw 14px);
+.service_section .serv h2::after {
+  content: '';
+  position: absolute;
+  background-color: #f8a454;
+  height: 1px;
+  width: 2.5px;
+  right: 50%;
+  bottom: -1%;
+  transition: all 0.3s;
+  transform: translateY(-50%);
+}
+.service_section .serv:hover h2::before {
+  width: 100%;
+  left: 0;
+}
+.service_section .serv:hover h2::after {
+  width: 100%;
+  right: 0;
+}
+.service_section .serv:hover .serv_icon img {
+  bottom: 10px;
+}
+.service_section .serv .serv_icon {
   position: relative;
-  padding: 0;
+}
+.service_section .serv .serv_icon img {
+  position: absolute;
+  bottom: 1px;
+  transform: translateX(-50%);
+  width: 64px;
+  height: auto;
+  transition: all 0.3s;
+}
+.service_section .serv .serv_text p {
   font-family: 'Mont-ExtraLightDEMO', sans-serif;
-}
-.service_section .serv svg {
-  fill: red;
-}
-.service_section .serv a {
-  text-decoration: none;
-}
-.service_section .serv a:hover h2 {
-  color: #f8a454;
-}
-.service_section .serv a:hover svg {
-  fill: #f8a454;
+  color: #fcfcfc;
 }
 /*PRICE SECTION*/
 .price_section {
