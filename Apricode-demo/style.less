@@ -827,50 +827,97 @@ button {
 
 /*SERVICE SECTION*/
 .service_section {
-	background-color: @section_bkg2;
+    background-color: @section_bkg2;
     padding-bottom: 80px;
+
     .title_general {
-        h1{
+        h1 {
             color: @text_dark;
         }
-        h3{
+
+        h3 {
             color: @text_dark;
         }
+    }
+    .serv_top {
+	margin-top: 32px;
 }
-    .serv{
+
+    .serv {
         text-align: center;
-        h2{
+        padding-top: calc(1.5vw + 10px);
+
+        h2 {
             .MontExtraLight;
-            color: @text_light;
+            color: @text_dark;
+            position: relative;
             text-transform: uppercase;
             font-size: calc(0.5vw + 14px);
-            padding-top: 20px;
-            padding-bottom: 30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+            display: inline-block;
             transition: 0.5s;
-        }
-        ul{
-            padding: 0;
-            list-style: none;
-            li{
-                color: @text_dark;
-                font-size: calc(0.4vw +14px) ;
-                position: relative;
-                padding: 0;
-                .MontExtraLight;
+            text-align:center;
+            &::before{
+                content: '';
+                position: absolute;
+                background-color: @main_color;
+                height: 1px;
+                width: 2.5px;
+                left: 50%;
+                bottom: -1%;
+                transition: all 0.3s;
+                transform: translateY(-50%);
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                background-color: @main_color;
+                height: 1px;
+                width: 2.5px;
+                right: 50%;
+                bottom: -1%;
+                transition: all 0.3s;
+                transform: translateY(-50%);
             }
         }
-        svg{
-            fill: red;
+        &:hover{
+            h2{
+                &::before{
+                    width: 100%;
+                    left: 0;
+                }
+                &::after{
+                    width: 100%;
+                    right: 0;
+                }
+
+            }
+            .serv_icon{
+                img{
+                   top: -10%;
+
+                }
+            }
         }
-        a{
-            text-decoration: none;
-            &:hover{
-                h2{
-                    color: @main_color;
-                }
-                svg{
-                    fill: @main_color;
-                }
+
+        .serv_icon {
+            img {
+                //position: absolute;
+                top: -5%;
+                transform: translateX(-50%);
+                width: 64px;
+                height: auto;
+                transition: all 0.3s;
+            }
+
+        }
+
+        .serv_text {
+            p {
+                .MontExtraLight;
+                color: @text_dark;
+
             }
         }
     }
@@ -2451,21 +2498,21 @@ button {
 /*******MODAL WINDOWS*******/
     /* Стили для подложки */
     .modal_window {
-        position: inherit;
-        z-index: 9999;
+        //.position: inherit;
+        //z-index: 9999;
         //visibility:hidden;
-        opacity: 1;
-        transition: 0.3s all;
+       // opacity: 1;
+       // transition: 0.3s all;
         .containt_window {
-            position: fixed;
-            top: 0%; //calc(0.2vw + 5px);
-            bottom: calc(0.2vw + 5px);
-            z-index: 9999;
-            left: 50%;
-            right: 50%;
+           // position: fixed;
+           // top: 0%; //calc(0.2vw + 5px);
+           // bottom: calc(0.2vw + 5px);
+           // z-index: 9999;
+           // left: 50%;
+           // right: 50%;
             padding: calc(3vw + 5px);
-            transform: translateX(-50%) translateY(-200%);
-            transition: all 0.3s;
+          //  transform: translateX(-50%) translateY(-200%);
+         //   transition: all 0.3s;
             .info_window {
                 max-height: calc(100% - 30px);
                 position: relative;
@@ -2485,6 +2532,16 @@ button {
                         color: @text_light;
                         letter-spacing: calc(1vw + 1px);
                         margin-left: 12px;
+                        text-align: center;
+                    }
+                    h3{
+                        font-size: calc(0.8vw + 8px);
+                        .OnePlusOne;
+                        text-transform: uppercase;
+                        margin-bottom: 0;
+                        color: @text_light;
+                        margin-left: 12px;
+                        text-align: center;
                     }
                     hr {
                         width: 100px;
@@ -2531,6 +2588,17 @@ button {
                                 background-color: @main_color;
                             }
                         }
+                    h4{
+                            font-size: calc(1vw + 12px);
+                            color: @main_color;
+                            position: relative;
+                            display: inline-block;
+                            .MontExtraLight;
+                    }
+                    p{
+                        .MontExtraLight;
+                        color: @text_light;
+                    }
 
                         ul {
                             margin: 0;
@@ -2558,6 +2626,9 @@ button {
                                     border-radius: 50%;
                                     top: 20%;
                                     left: 0;
+                                }
+                                span{
+                                    font-family: none;
                                 }
                             }
                         }
