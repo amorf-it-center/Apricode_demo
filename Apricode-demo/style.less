@@ -395,6 +395,113 @@ button {
             margin: 0;
         }
     }
+/*SLIDE BTN*/
+.slide_btn {
+            display: inline-block;
+            bottom: 90px;
+            font-size: 20px;
+
+            span {
+                color: @text_light;
+            }
+
+            .next {
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 15px;
+                    height: 15px;
+                    border: 1.5px solid @text_light;
+                    border-top: none;
+                    border-left: none;
+                    transform: translate(-100%, -50%) rotate(-45deg);
+                    transition: 0.2s;
+
+                }
+
+                span {
+                    overflow: hidden;
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        width: 0px;
+                        height: 1.5px;
+                        position: absolute;
+                        transition: 0.2s;
+                        left: 0;
+                        right: 0;
+                        transform: translate(0%, -50%);
+                    }
+
+                }
+
+                &:hover {
+                    &::before {
+                        border-color: @main_color;
+                        transform: translate(92%, -50%) rotate(-45deg);
+                    }
+
+                    span {
+                        &::after {
+                            width: 30px;
+                            background-color: @main_color;
+                            left: 100%;
+                        }
+                    }
+
+                }
+            }
+
+            .prev {
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 15px;
+                    height: 15px;
+                    border: 1.5px solid @text_light;
+                    border-bottom: none;
+                    border-right: none;
+                    transform: translate(0%, -50%) rotate(-45deg);
+                    transition: 0.2s;
+
+                }
+
+                span {
+                    overflow: hidden;
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        width: 0px;
+                        height: 1.5px;
+                        position: absolute;
+                        transition: 0.2s;
+                        left: 0;
+                        right: 0;
+                        transform: translate(-92%, -50%);
+                    }
+
+                }
+
+                &:hover {
+                    &::before {
+                        border-color: @main_color;
+                        transform: translate(-180%, -50%) rotate(-45deg);
+                    }
+
+                    span {
+                        &::after {
+                            width: 30px;
+                            background-color: @main_color;
+                            right: 100%;
+                        }
+                    }
+
+                }
+
+            }
+        }
 
 /* HOME SECTION*/
 .home-section {
@@ -685,113 +792,6 @@ button {
     .slide-group-btn {
         padding-top: 30px;
         text-align: right;
-
-        .slide_btn {
-            display: inline-block;
-            bottom: 90px;
-            font-size: 20px;
-
-            span {
-                color: @text_light;
-            }
-
-            .next {
-                &::before {
-                    content: '';
-                    position: absolute;
-                    width: 15px;
-                    height: 15px;
-                    border: 1.5px solid @text_light;
-                    border-top: none;
-                    border-left: none;
-                    transform: translate(-100%, -50%) rotate(-45deg);
-                    transition: 0.2s;
-
-                }
-
-                span {
-                    overflow: hidden;
-                    position: relative;
-
-                    &::after {
-                        content: '';
-                        width: 0px;
-                        height: 1.5px;
-                        position: absolute;
-                        transition: 0.2s;
-                        left: 0;
-                        right: 0;
-                        transform: translate(0%, -50%);
-                    }
-
-                }
-
-                &:hover {
-                    &::before {
-                        border-color: @main_color;
-                        transform: translate(92%, -50%) rotate(-45deg);
-                    }
-
-                    span {
-                        &::after {
-                            width: 30px;
-                            background-color: @main_color;
-                            left: 100%;
-                        }
-                    }
-
-                }
-            }
-
-            .prev {
-                &::before {
-                    content: '';
-                    position: absolute;
-                    width: 15px;
-                    height: 15px;
-                    border: 1.5px solid @text_light;
-                    border-bottom: none;
-                    border-right: none;
-                    transform: translate(0%, -50%) rotate(-45deg);
-                    transition: 0.2s;
-
-                }
-
-                span {
-                    overflow: hidden;
-                    position: relative;
-
-                    &::after {
-                        content: '';
-                        width: 0px;
-                        height: 1.5px;
-                        position: absolute;
-                        transition: 0.2s;
-                        left: 0;
-                        right: 0;
-                        transform: translate(-92%, -50%);
-                    }
-
-                }
-
-                &:hover {
-                    &::before {
-                        border-color: @main_color;
-                        transform: translate(-180%, -50%) rotate(-45deg);
-                    }
-
-                    span {
-                        &::after {
-                            width: 30px;
-                            background-color: @main_color;
-                            right: 100%;
-                        }
-                    }
-
-                }
-
-            }
-        }
     }
     /* Собственно сам слайдер */
     .slider{
@@ -2154,114 +2154,6 @@ button {
     .slide-group-btn {
         padding-top: 30px;
         text-align: center;
-
-        .slide_btn {
-
-            display: inline-block;
-            bottom: 90px;
-            font-size: 20px;
-
-            span {
-                color: @text_light;
-            }
-
-            .next {
-                &::before {
-                    content: '';
-                    position: absolute;
-                    width: 15px;
-                    height: 15px;
-                    border: 1.5px solid @text_light;
-                    border-top: none;
-                    border-left: none;
-                    transform: translate(-100%, -50%) rotate(-45deg);
-                    transition: 0.2s;
-
-                }
-
-                span {
-                    overflow: hidden;
-                    position: relative;
-
-                    &::after {
-                        content: '';
-                        width: 0px;
-                        height: 1.5px;
-                        position: absolute;
-                        transition: 0.2s;
-                        left: 0;
-                        right: 0;
-                        transform: translate(0%, -50%);
-                    }
-
-                }
-
-                &:hover {
-                    &::before {
-                        border-color: @main_color;
-                        transform: translate(92%, -50%) rotate(-45deg);
-                    }
-
-                    span {
-                        &::after {
-                            width: 30px;
-                            background-color: @main_color;
-                            left: 100%;
-                        }
-                    }
-
-                }
-            }
-
-            .prev {
-                &::before {
-                    content: '';
-                    position: absolute;
-                    width: 15px;
-                    height: 15px;
-                    border: 1.5px solid @text_light;
-                    border-bottom: none;
-                    border-right: none;
-                    transform: translate(0%, -50%) rotate(-45deg);
-                    transition: 0.2s;
-
-                }
-
-                span {
-                    overflow: hidden;
-                    position: relative;
-
-                    &::after {
-                        content: '';
-                        width: 0px;
-                        height: 1.5px;
-                        position: absolute;
-                        transition: 0.2s;
-                        left: 0;
-                        right: 0;
-                        transform: translate(-92%, -50%);
-                    }
-
-                }
-
-                &:hover {
-                    &::before {
-                        border-color: @main_color;
-                        transform: translate(-180%, -50%) rotate(-45deg);
-                    }
-
-                    span {
-                        &::after {
-                            width: 30px;
-                            background-color: @main_color;
-                            right: 100%;
-                        }
-                    }
-
-                }
-
-            }
-        }
     }
     /* Собственно сам слайдер */
     .slider{
@@ -2382,114 +2274,6 @@ button {
 	    .slide-group-btn {
         padding-top: 30px;
         text-align: center;
-
-        .slide_btn {
-
-            display: inline-block;
-            bottom: 90px;
-            font-size: 20px;
-
-            span {
-                color: @text_light;
-            }
-
-            .next {
-                &::before {
-                    content: '';
-                    position: absolute;
-                    width: 15px;
-                    height: 15px;
-                    border: 1.5px solid @text_light;
-                    border-top: none;
-                    border-left: none;
-                    transform: translate(-100%, -50%) rotate(-45deg);
-                    transition: 0.2s;
-
-                }
-
-                span {
-                    overflow: hidden;
-                    position: relative;
-
-                    &::after {
-                        content: '';
-                        width: 0px;
-                        height: 1.5px;
-                        position: absolute;
-                        transition: 0.2s;
-                        left: 0;
-                        right: 0;
-                        transform: translate(0%, -50%);
-                    }
-
-                }
-
-                &:hover {
-                    &::before {
-                        border-color: @main_color;
-                        transform: translate(92%, -50%) rotate(-45deg);
-                    }
-
-                    span {
-                        &::after {
-                            width: 30px;
-                            background-color: @main_color;
-                            left: 100%;
-                        }
-                    }
-
-                }
-            }
-
-            .prev {
-                &::before {
-                    content: '';
-                    position: absolute;
-                    width: 15px;
-                    height: 15px;
-                    border: 1.5px solid @text_light;
-                    border-bottom: none;
-                    border-right: none;
-                    transform: translate(0%, -50%) rotate(-45deg);
-                    transition: 0.2s;
-
-                }
-
-                span {
-                    overflow: hidden;
-                    position: relative;
-
-                    &::after {
-                        content: '';
-                        width: 0px;
-                        height: 1.5px;
-                        position: absolute;
-                        transition: 0.2s;
-                        left: 0;
-                        right: 0;
-                        transform: translate(-92%, -50%);
-                    }
-
-                }
-
-                &:hover {
-                    &::before {
-                        border-color: @main_color;
-                        transform: translate(-180%, -50%) rotate(-45deg);
-                    }
-
-                    span {
-                        &::after {
-                            width: 30px;
-                            background-color: @main_color;
-                            right: 100%;
-                        }
-                    }
-
-                }
-
-            }
-        }
     }
         .col-md-4 {
         margin-bottom: 20px;
