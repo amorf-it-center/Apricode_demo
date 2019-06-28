@@ -16,6 +16,111 @@ textarea:focus {
 button:focus {
   outline: none;
 }
+/*TITLE*/
+.title_general {
+  padding: calc(23vw) 0;
+  text-align: center;
+}
+.title_general h1 {
+  font-family: 'OnePlusOne 2015', sans-serif;
+  color: #707070;
+  text-transform: uppercase;
+  letter-spacing: calc(2vw);
+  font-size: calc(15vw);
+}
+.title_general hr {
+  width: calc(23vw);
+  height: 1px;
+  background-color: #f8a454;
+  border: 0;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.title_general h3 {
+  font-size: calc(10.84vw);
+  padding: 10px 0;
+  font-family: 'Mont-ExtraLightDEMO', sans-serif;
+  color: #707070;
+  margin: 0;
+}
+/*SLIDE BTN*/
+.slide_btn {
+  display: inline-block;
+  bottom: 90px;
+  font-size: 20px;
+}
+.slide_btn span {
+  color: #707070;
+}
+.slide_btn .next::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 1.5px solid #707070;
+  border-top: none;
+  border-left: none;
+  transform: translate(-100%, -50%) rotate(-45deg);
+  transition: 0.2s;
+}
+.slide_btn .next span {
+  overflow: hidden;
+  position: relative;
+}
+.slide_btn .next span::after {
+  content: '';
+  width: 0px;
+  height: 1.5px;
+  position: absolute;
+  transition: 0.2s;
+  left: 0;
+  right: 0;
+  transform: translate(0%, -50%);
+}
+.slide_btn .next:hover::before {
+  border-color: #f8a454;
+  transform: translate(92%, -50%) rotate(-45deg);
+}
+.slide_btn .next:hover span::after {
+  width: 30px;
+  background-color: #f8a454;
+  left: 100%;
+}
+.slide_btn .prev::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 1.5px solid #707070;
+  border-bottom: none;
+  border-right: none;
+  transform: translate(0%, -50%) rotate(-45deg);
+  transition: 0.2s;
+}
+.slide_btn .prev span {
+  overflow: hidden;
+  position: relative;
+}
+.slide_btn .prev span::after {
+  content: '';
+  width: 0px;
+  height: 1.5px;
+  position: absolute;
+  transition: 0.2s;
+  left: 0;
+  right: 0;
+  transform: translate(-92%, -50%);
+}
+.slide_btn .prev:hover::before {
+  border-color: #f8a454;
+  transform: translate(-180%, -50%) rotate(-45deg);
+}
+.slide_btn .prev:hover span::after {
+  width: 30px;
+  background-color: #f8a454;
+  right: 100%;
+}
 /*FONTS*/
 @font-face {
   font-family: 'Impact';
@@ -285,111 +390,6 @@ button:focus {
   color: #f8a454;
   font-family: 'Impact', sans-serif;
 }
-/*TITLE*/
-.title_general {
-  padding: calc(23vw) 0;
-  text-align: center;
-}
-.title_general h1 {
-  font-family: 'OnePlusOne 2015', sans-serif;
-  color: #707070;
-  text-transform: uppercase;
-  letter-spacing: calc(2vw);
-  font-size: calc(15vw);
-}
-.title_general hr {
-  width: calc(23vw);
-  height: 1px;
-  background-color: #f8a454;
-  border: 0;
-  margin: 0;
-  margin-left: auto;
-  margin-right: auto;
-}
-.title_general h3 {
-  font-size: calc(10.84vw);
-  padding: 10px 0;
-  font-family: 'Mont-ExtraLightDEMO', sans-serif;
-  color: #707070;
-  margin: 0;
-}
-/*SLIDE BTN*/
-.slide_btn {
-  display: inline-block;
-  bottom: 90px;
-  font-size: 20px;
-}
-.slide_btn span {
-  color: #707070;
-}
-.slide_btn .next::before {
-  content: '';
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  border: 1.5px solid #707070;
-  border-top: none;
-  border-left: none;
-  transform: translate(-100%, -50%) rotate(-45deg);
-  transition: 0.2s;
-}
-.slide_btn .next span {
-  overflow: hidden;
-  position: relative;
-}
-.slide_btn .next span::after {
-  content: '';
-  width: 0px;
-  height: 1.5px;
-  position: absolute;
-  transition: 0.2s;
-  left: 0;
-  right: 0;
-  transform: translate(0%, -50%);
-}
-.slide_btn .next:hover::before {
-  border-color: #f8a454;
-  transform: translate(92%, -50%) rotate(-45deg);
-}
-.slide_btn .next:hover span::after {
-  width: 30px;
-  background-color: #f8a454;
-  left: 100%;
-}
-.slide_btn .prev::before {
-  content: '';
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  border: 1.5px solid #707070;
-  border-bottom: none;
-  border-right: none;
-  transform: translate(0%, -50%) rotate(-45deg);
-  transition: 0.2s;
-}
-.slide_btn .prev span {
-  overflow: hidden;
-  position: relative;
-}
-.slide_btn .prev span::after {
-  content: '';
-  width: 0px;
-  height: 1.5px;
-  position: absolute;
-  transition: 0.2s;
-  left: 0;
-  right: 0;
-  transform: translate(-92%, -50%);
-}
-.slide_btn .prev:hover::before {
-  border-color: #f8a454;
-  transform: translate(-180%, -50%) rotate(-45deg);
-}
-.slide_btn .prev:hover span::after {
-  width: 30px;
-  background-color: #f8a454;
-  right: 100%;
-}
 /* HOME SECTION*/
 .home-section {
   position: relative;
@@ -404,6 +404,18 @@ button:focus {
 }
 .home-section .slide_btn span {
   color: #f3f3f3;
+}
+.home-section .slide_btn .prev::before {
+  border-color: #f3f3f3;
+}
+.home-section .slide_btn .prev:hover::before {
+  border-color: #f8a454;
+}
+.home-section .slide_btn .next::before {
+  border-color: #f3f3f3;
+}
+.home-section .slide_btn .next:hover::before {
+  border-color: #f8a454;
 }
 .home-section .follow_us {
   z-index: 10;
